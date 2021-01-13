@@ -28,7 +28,7 @@
                 android:id="@+id/button1"
                 android:translationX="130px" />
             <CheckBox
-                android:text="CheckBox"
+                android:text="Hello There!"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox1"
@@ -59,10 +59,13 @@
         android:minWidth="25px"
         android:minHeight="25px">
         <Button
-            android:text="Hallo Freunde"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/button2" />
+            android:text="Pirngruber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:layout_gravity="right"
+            android:translationX="-100px"
+            android:translationY="50px" />
     </DatePicker>
 
 </android.support.design.widget.CoordinatorLayout>
