@@ -27,8 +27,13 @@
                 android:minHeight="25px"
                 android:id="@+id/button1"
                 android:translationX="130px" />
-            android:minHeight="25px"
-            android:layout_marginLeft="0.0dp">
+            <CheckBox
+                android:text="CheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox1"
+                android:layout_marginRight="0.0dp"
+                android:translationX="130px" />
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
@@ -50,6 +55,9 @@
         android:layout_marginTop="0.0dp"
         android:layout_marginLeft="0.0dp"
         android:translationX="20px"
-        android:translationY="150px"/>
+        android:translationY="150px"
+        android:minWidth="25px"
+        android:minHeight="25px">
+    </DatePicker>
 
 </android.support.design.widget.CoordinatorLayout>
