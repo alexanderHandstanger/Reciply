@@ -58,6 +58,11 @@
         android:translationY="150px"
         android:minWidth="25px"
         android:minHeight="25px">
+        <Button
+            android:text="Hallo Freunde"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button2" />
     </DatePicker>
 
 </android.support.design.widget.CoordinatorLayout>
