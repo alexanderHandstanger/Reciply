@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:input="http://xamarin.com/schemas/2014/forms/design"
              x:Class="Reciply.MainPage">
 
     <StackLayout>
@@ -8,9 +8,32 @@
             BackgroundColor="#2196F3" 
             Padding="24" 
             CornerRadius="0"/>
-        <ListView 
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="AUTO"/>
+                <ColumnDefinition Width="AUTO"/>
+            </Grid.ColumnDefinitions>
+
+            <ListView 
             x:Name="Einkaufsliste"
-            HeightRequest="250"/>
+            HeightRequest="250" Grid.Column="0"/>
+
+            <ListView x:Name="EinkaufslisteCheckbox" HeightRequest="250" Grid.Column="1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <input:CheckBox HorizontalOptions="End"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        
+
+
         <Button 
             Text="Ausgewählte Rezepte" 
             Margin="10,10,10,0" 

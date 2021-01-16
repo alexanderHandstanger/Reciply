@@ -16,6 +16,7 @@ namespace Reciply
             InitializeComponent();
             list = Initials();
             Einkaufsliste.ItemsSource = list;
+            EinkaufslisteCheckbox.ItemsSource = list;
         }
 
         public List<string> Initials()
