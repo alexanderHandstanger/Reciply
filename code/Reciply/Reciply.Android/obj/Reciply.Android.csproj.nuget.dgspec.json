@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\XAMARIN APPS\\Prokekt\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj": {}
+    "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj": {}
   },
   "projects": {
-    "D:\\XAMARIN APPS\\Prokekt\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj": {
+    "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\XAMARIN APPS\\Prokekt\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
+        "projectUniqueName": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
         "projectName": "Reciply.Android",
-        "projectPath": "D:\\XAMARIN APPS\\Prokekt\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "D:\\XAMARIN APPS\\Prokekt\\code\\Reciply\\Reciply.Android\\obj\\",
+        "projectPath": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
+        "packagesPath": "C:\\Users\\Michael Enkner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Michael Enkner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "D:\\XAMARIN APPS\\Prokekt\\code\\Reciply\\Reciply\\Reciply.csproj": {
-                "projectPath": "D:\\XAMARIN APPS\\Prokekt\\code\\Reciply\\Reciply\\Reciply.csproj"
+              "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj": {
+                "projectPath": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj"
               }
             }
           }
@@ -54,21 +54,20 @@
         }
       }
     },
-    "D:\\XAMARIN APPS\\Prokekt\\code\\Reciply\\Reciply\\Reciply.csproj": {
+    "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\XAMARIN APPS\\Prokekt\\code\\Reciply\\Reciply\\Reciply.csproj",
+        "projectUniqueName": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
         "projectName": "Reciply",
-        "projectPath": "D:\\XAMARIN APPS\\Prokekt\\code\\Reciply\\Reciply\\Reciply.csproj",
-        "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
-        "outputPath": "D:\\XAMARIN APPS\\Prokekt\\code\\Reciply\\Reciply\\obj\\",
+        "projectPath": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
+        "packagesPath": "C:\\Users\\Michael Enkner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Michael Enkner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
