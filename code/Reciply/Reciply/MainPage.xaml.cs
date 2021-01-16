@@ -44,5 +44,11 @@ namespace Reciply
             initialsList.Add("Miguel");
             return initialsList;
         }
+        private async void RecipeButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Recipes(), true);
+        }
+
+
     }
 }

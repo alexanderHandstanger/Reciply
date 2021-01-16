@@ -1933,24 +1933,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\Robin\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\Schule\\4Chif\\SYP\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
+      "projectUniqueName": "D:\\XAMARIN APPS\\ReciplyProjekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
       "projectName": "Reciply.Android",
-      "projectPath": "C:\\Users\\User\\Documents\\Schule\\4Chif\\SYP\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\Schule\\4Chif\\SYP\\Reciply\\code\\Reciply\\Reciply.Android\\obj\\",
+      "projectPath": "D:\\XAMARIN APPS\\ReciplyProjekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
+      "packagesPath": "C:\\Users\\Robin\\.nuget\\packages\\",
+      "outputPath": "D:\\XAMARIN APPS\\ReciplyProjekt\\Reciply\\code\\Reciply\\Reciply.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1964,8 +1964,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\User\\Documents\\Schule\\4Chif\\SYP\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj": {
-              "projectPath": "C:\\Users\\User\\Documents\\Schule\\4Chif\\SYP\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj"
+            "D:\\XAMARIN APPS\\ReciplyProjekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj": {
+              "projectPath": "D:\\XAMARIN APPS\\ReciplyProjekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj"
             }
           }
         }

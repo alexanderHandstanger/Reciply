@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9sHXKl6G9iHj4h45KxOFcOr7/ddYdkMUYmbxSmFoy6II41vgFXUg68nGc9IVD4uYtRae9d4UZfV8Rp2P/pa8dA==",
+  "dgSpecHash": "vyaFLGuhB+lB+hfo/hChcdWy1G6BknsPcJARa6KqIyibEowc6+QYw/NnRa2OTWQtbMzzxLB0QYt17qzeb3DrCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Documents\\Schule\\4Chif\\SYP\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
+  "projectFilePath": "D:\\XAMARIN APPS\\ReciplyProjekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",

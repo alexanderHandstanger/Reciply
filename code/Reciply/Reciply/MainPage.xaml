@@ -47,6 +47,7 @@
             BackgroundColor="#70DBFF" 
             CornerRadius="10" 
             TextTransform="None" 
+            Clicked="RecipeButton_Clicked"
             HeightRequest="60"/>
         <Button 
             Text="Einkauf Verlauf" 
