@@ -1,0 +1,14 @@
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\bin\Debug\netstandard2.0\Reciply.deps.json
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\bin\Debug\netstandard2.0\Reciply.dll
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\bin\Debug\netstandard2.0\ref\Reciply.dll
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\bin\Debug\netstandard2.0\Reciply.pdb
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.csprojAssemblyReference.cache
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.AssemblyInfoInputs.cache
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.AssemblyInfo.cs
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.csproj.CoreCompileInputs.cache
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\obj\Debug\netstandard2.0\XamlC.stamp
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.dll
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\obj\Debug\netstandard2.0\ref\Reciply.dll
+D:\XAMARIN APPS\Projekt\Reciply\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.pdb
