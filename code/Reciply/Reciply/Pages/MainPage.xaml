@@ -40,6 +40,7 @@
             BackgroundColor="#70DBFF" 
             CornerRadius="10" 
             TextTransform="None" 
+            Clicked="SelectedRecipes_Clicked"
             HeightRequest="60"/>
         <Button 
             Text="Rezepte" 
@@ -59,6 +60,7 @@
             HorizontalOptions="Fill" 
             FlowDirection="MatchParent" 
             ContentLayout="Left,-110" 
+            Clicked="EinkaufVerlauf_Clicked"
             HeightRequest="60"/>
     </StackLayout>
 </ContentPage>

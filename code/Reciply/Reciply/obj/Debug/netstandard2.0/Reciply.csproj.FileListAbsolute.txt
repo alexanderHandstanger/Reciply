@@ -46,8 +46,6 @@ D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\bin\Debug\netstandar
 D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\bin\Debug\netstandard2.0\Reciply.pdb
 D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.csprojAssemblyReference.cache
 D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\App.xaml.g.cs
-D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
-D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Recipes.xaml.g.cs
 D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.AssemblyInfoInputs.cache
 D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.AssemblyInfo.cs
 D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.csproj.CoreCompileInputs.cache
@@ -55,3 +53,7 @@ D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandar
 D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.dll
 D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\ref\Reciply.dll
 D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.pdb
+D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\MainPage.xaml.g.cs
+D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\Recipes.xaml.g.cs
+D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\EinkaufVerlauf.xaml.g.cs
+D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\SelectedRecipes.xaml.g.cs

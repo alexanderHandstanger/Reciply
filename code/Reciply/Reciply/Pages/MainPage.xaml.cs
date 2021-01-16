@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reciply.Pages;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -48,6 +49,17 @@ namespace Reciply
         {
             await Navigation.PushAsync(new Recipes(), true);
         }
+
+        private async void SelectedRecipes_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SelectedRecipes(), true);
+        }
+        private async void EinkaufVerlauf_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EinkaufVerlauf(), true);
+        }
+
+
 
 
     }
