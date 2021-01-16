@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/8tS5io21ew9rSBgmyftBLD4Ovf1rBjbx5r+nYeM1PUuDM1JaGLPK9sqgydldnDXTnbr6IDUfy6rWqGsEz1jfQ==",
+  "dgSpecHash": "UV4TKNnvWCDDSkdgGnD8rYs+Ijrc3mWtZjoJeoJP02vfekP0cCfL+HmDH5bwJfC9P7hEGdUrGbf5DqPp7TxUJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
+  "projectFilePath": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Michael Enkner\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Michael Enkner\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

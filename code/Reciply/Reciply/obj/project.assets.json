@@ -637,11 +637,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
+      "projectUniqueName": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
       "projectName": "Reciply",
-      "projectPath": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
+      "projectPath": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
       "packagesPath": "C:\\Users\\Michael Enkner\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\obj\\",
+      "outputPath": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

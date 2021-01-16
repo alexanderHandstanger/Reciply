@@ -10,9 +10,38 @@ namespace Reciply
 {
     public partial class MainPage : ContentPage
     {
+        private List<string> list;
         public MainPage()
         {
             InitializeComponent();
+            list = Initials();
+            Einkaufsliste.ItemsSource = list;
+        }
+
+        public List<string> Initials()
+        {
+            List<string> initialsList = new List<string>();
+            initialsList.Add("Bob");
+            initialsList.Add("Alex");
+            initialsList.Add("Robert");
+            initialsList.Add("Miguel");
+            initialsList.Add("Bob");
+            initialsList.Add("Alex");
+            initialsList.Add("Robert");
+            initialsList.Add("Miguel");
+            initialsList.Add("Bob");
+            initialsList.Add("Alex");
+            initialsList.Add("Robert");
+            initialsList.Add("Miguel");
+            initialsList.Add("Bob");
+            initialsList.Add("Alex");
+            initialsList.Add("Robert");
+            initialsList.Add("Miguel");
+            initialsList.Add("Bob");
+            initialsList.Add("Alex");
+            initialsList.Add("Robert");
+            initialsList.Add("Miguel");
+            return initialsList;
         }
     }
 }

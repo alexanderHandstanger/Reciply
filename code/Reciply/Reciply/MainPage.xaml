@@ -4,10 +4,37 @@
              x:Class="Reciply.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0"></Frame>
-        <Button Text="Ausgewählte Rezepte" Margin="10,0" BackgroundColor="#70DBFF" CornerRadius="10" TextTransform="None" HeightRequest="60"></Button>
-        <Button Text="Rezepte" Margin="10,0" BackgroundColor="#70DBFF" CornerRadius="10" TextTransform="None" HeightRequest="60"></Button>
-        <Button Text="Einkauf Verlauf" Margin="10,0" BackgroundColor="#70DBFF" CornerRadius="10" ImageSource="EinkaufVerlauf.png" TextTransform="None" HorizontalOptions="Fill" FlowDirection="MatchParent" ContentLayout="Left,-110" HeightRequest="60"></Button>
+        <Frame 
+            BackgroundColor="#2196F3" 
+            Padding="24" 
+            CornerRadius="0"/>
+        <ListView 
+            x:Name="Einkaufsliste"
+            HeightRequest="250"/>
+        <Button 
+            Text="Ausgewählte Rezepte" 
+            Margin="10,10,10,0" 
+            BackgroundColor="#70DBFF" 
+            CornerRadius="10" 
+            TextTransform="None" 
+            HeightRequest="60"/>
+        <Button 
+            Text="Rezepte" 
+            Margin="10,0" 
+            BackgroundColor="#70DBFF" 
+            CornerRadius="10" 
+            TextTransform="None" 
+            HeightRequest="60"/>
+        <Button 
+            Text="Einkauf Verlauf" 
+            Margin="10,0,10,10" 
+            BackgroundColor="#70DBFF" 
+            CornerRadius="10" 
+            ImageSource="EinkaufVerlauf.png" 
+            TextTransform="None" 
+            HorizontalOptions="Fill" 
+            FlowDirection="MatchParent" 
+            ContentLayout="Left,-110" 
+            HeightRequest="60"/>
     </StackLayout>
-
 </ContentPage>

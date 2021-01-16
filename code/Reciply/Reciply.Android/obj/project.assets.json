@@ -1939,11 +1939,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
       "projectName": "Reciply.Android",
-      "projectPath": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
+      "projectPath": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
       "packagesPath": "C:\\Users\\Michael Enkner\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\obj\\",
+      "outputPath": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1964,8 +1964,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj": {
-              "projectPath": "C:\\Users\\Michael Enkner\\Desktop\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj"
+            "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj": {
+              "projectPath": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj"
             }
           }
         }
