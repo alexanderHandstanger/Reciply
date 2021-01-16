@@ -4,12 +4,10 @@
              x:Class="Reciply.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            
-        </Frame>
-        <Button Text="Ausgewählte Rezepte" Margin="10" BackgroundColor="#70DBFF" CornerRadius="10"></Button>
-        <Button Text="Rezepte" Margin="10" BackgroundColor="#70DBFF" CornerRadius="10"></Button>
-        <Button Text="Einkauf Verlauf" Margin="10" BackgroundColor="#70DBFF" CornerRadius="10" ImageSource="EinkaufVerlauf.png"></Button>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0"></Frame>
+        <Button Text="Ausgewählte Rezepte" Margin="10,0" BackgroundColor="#70DBFF" CornerRadius="10" TextTransform="None" HeightRequest="60"></Button>
+        <Button Text="Rezepte" Margin="10,0" BackgroundColor="#70DBFF" CornerRadius="10" TextTransform="None" HeightRequest="60"></Button>
+        <Button Text="Einkauf Verlauf" Margin="10,0" BackgroundColor="#70DBFF" CornerRadius="10" ImageSource="EinkaufVerlauf.png" TextTransform="None" HorizontalOptions="Fill" FlowDirection="MatchParent" ContentLayout="Left,-110" HeightRequest="60"></Button>
     </StackLayout>
 
 </ContentPage>
