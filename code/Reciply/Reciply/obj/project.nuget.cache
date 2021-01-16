@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "O1ocy6WoLYCB46hfdBuQwlF3EH+21gq0bu4CZqzwXHuLsUCIG1z+pEO8Hv7eFd3zMIGBf7Nopggh2BjmuTR4fg==",
+  "dgSpecHash": "RlofjD5l4gKyaf3srXOh3o6x3aTYNHSROu4ujniPguHFTALoN89Ejfcz6XVUkMh//Do1T3d6R7Z8Og9faZoP3Q==",
   "success": true,
-  "projectFilePath": "D:\\XAMARIN APPS\\ReciplyProjekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\Schule\\4Chif\\SYP\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Robin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Robin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Robin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
   ],

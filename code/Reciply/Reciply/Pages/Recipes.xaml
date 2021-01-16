@@ -4,9 +4,42 @@
              x:Class="Reciply.Recipes">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame 
+            BackgroundColor="#2196F3" 
+            Padding="24" 
+            CornerRadius="0"/>
+            
+            <Button 
+            Text="Eigene Rezepte" 
+            Margin="10,0,10,0" 
+            BackgroundColor="#70DBFF" 
+            CornerRadius="10" 
+            TextTransform="None" 
+            HeightRequest="60"/>
+            
+            <Button 
+            Text="Favoriten" 
+            Margin="10,0,10,0" 
+            BackgroundColor="#70DBFF" 
+            CornerRadius="10" 
+            TextTransform="None" 
+            HeightRequest="60"/>
+            
+            <Button 
+            Text="Gekochte Rezepte" 
+            Margin="10,0,10,0" 
+            BackgroundColor="#70DBFF" 
+            CornerRadius="10" 
+            TextTransform="None" 
+            HeightRequest="60"/>
+
+            <Button 
+            Text="Entdecken" 
+            Margin="10,0,10,0" 
+            BackgroundColor="#70DBFF" 
+            CornerRadius="10" 
+            TextTransform="None" 
+            HeightRequest="60"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
