@@ -4,6 +4,7 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "Reciply.Android.dll" comes first in this list. */
 		"Reciply.Android.dll",
 		"FormsViewGroup.dll",
+		"Plugin.InputKit.dll",
 		"Reciply.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",

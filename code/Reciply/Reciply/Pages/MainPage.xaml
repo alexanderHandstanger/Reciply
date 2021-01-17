@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:input="http://xamarin.com/schemas/2014/forms/design"
-             x:Class="Reciply.MainPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Reciply.MainPage"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
 
     <StackLayout>
         <Frame 
@@ -9,30 +10,27 @@
             Padding="24" 
             CornerRadius="0"/>
 
-
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="AUTO"/>
-                <ColumnDefinition Width="AUTO"/>
-            </Grid.ColumnDefinitions>
-
-            <ListView 
-            x:Name="Einkaufsliste"
-            HeightRequest="250" Grid.Column="0"/>
-
-            <ListView x:Name="EinkaufslisteCheckbox" HeightRequest="250" Grid.Column="1">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <input:CheckBox HorizontalOptions="End"/>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
-        </Grid>
-        
-
+        <ListView 
+            IsVisible="true" 
+            x:Name="Einkaufsliste" 
+            ItemsSource="{Binding einkaufsliste}"
+            Margin="10,10,10,10"
+            CachingStrategy="RecycleElement" 
+            SeparatorColor="Transparent" 
+            BackgroundColor="Transparent">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding item}" />
+                            <Label Text="{Binding amount}" />
+                            <Label Text="{Binding unitOfMeasurement}" />
+                            <input:CheckBox FlowDirection="RightToLeft"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
         <Button 
             Text="Ausgewählte Rezepte" 

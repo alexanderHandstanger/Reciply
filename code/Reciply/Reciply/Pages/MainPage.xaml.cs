@@ -1,4 +1,5 @@
-﻿using Reciply.Pages;
+﻿using Reciply.Models;
+using Reciply.Pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,45 +12,35 @@ namespace Reciply
 {
     public partial class MainPage : ContentPage
     {
-        private List<string> list;
+        private List<ItemToBuy> einkaufsliste = new List<ItemToBuy>();
         public MainPage()
         {
             InitializeComponent();
-            list = Initials();
-            Einkaufsliste.ItemsSource = list;
-            EinkaufslisteCheckbox.ItemsSource = list;
+            einkaufsliste = Initials();
+            Einkaufsliste.ItemsSource = einkaufsliste;
         }
 
-        public List<string> Initials()
+        public List<ItemToBuy> Initials()
         {
-            List<string> initialsList = new List<string>();
-            initialsList.Add("Bob");
-            initialsList.Add("Alex");
-            initialsList.Add("Robert");
-            initialsList.Add("Miguel");
-            initialsList.Add("Bob");
-            initialsList.Add("Alex");
-            initialsList.Add("Robert");
-            initialsList.Add("Miguel");
-            initialsList.Add("Bob");
-            initialsList.Add("Alex");
-            initialsList.Add("Robert");
-            initialsList.Add("Miguel");
-            initialsList.Add("Bob");
-            initialsList.Add("Alex");
-            initialsList.Add("Robert");
-            initialsList.Add("Miguel");
-            initialsList.Add("Bob");
-            initialsList.Add("Alex");
-            initialsList.Add("Robert");
-            initialsList.Add("Miguel");
+            List<ItemToBuy> initialsList = new List<ItemToBuy>();
+            initialsList.Add(new ItemToBuy { item = "Mehl", amount = 1, unitOfMeasurement = UnitOfMeasurement.kg, isInShoppingBasket = false });
+            initialsList.Add(new ItemToBuy { item = "Kartoffeln", amount = 2, unitOfMeasurement = UnitOfMeasurement.kg, isInShoppingBasket = false });
+            initialsList.Add(new ItemToBuy { item = "Schinken", amount = 50, unitOfMeasurement = UnitOfMeasurement.dag, isInShoppingBasket = false });
+            initialsList.Add(new ItemToBuy { item = "Eier", amount = 2, unitOfMeasurement = UnitOfMeasurement.Stück, isInShoppingBasket = false });
+            initialsList.Add(new ItemToBuy { item = "Pizzateig", amount = 1, unitOfMeasurement = UnitOfMeasurement.Pkg, isInShoppingBasket = false });
+            initialsList.Add(new ItemToBuy { item = "Reis", amount = 2, unitOfMeasurement = UnitOfMeasurement.kg, isInShoppingBasket = false });
+            initialsList.Add(new ItemToBuy { item = "Wasser", amount = 5, unitOfMeasurement = UnitOfMeasurement.l, isInShoppingBasket = false });
+            initialsList.Add(new ItemToBuy { item = "Essig", amount = 2, unitOfMeasurement = UnitOfMeasurement.Teelöffel, isInShoppingBasket = false });
+            initialsList.Add(new ItemToBuy { item = "Salz", amount = 150, unitOfMeasurement = UnitOfMeasurement.g, isInShoppingBasket = false });
+            initialsList.Add(new ItemToBuy { item = "Mais", amount = 10, unitOfMeasurement = UnitOfMeasurement.kg, isInShoppingBasket = false });
             return initialsList;
         }
+
+        //Navigation
         private async void RecipeButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Recipes(), true);
         }
-
         private async void SelectedRecipes_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SelectedRecipes(), true);
@@ -58,9 +49,5 @@ namespace Reciply
         {
             await Navigation.PushAsync(new EinkaufVerlauf(), true);
         }
-
-
-
-
     }
 }

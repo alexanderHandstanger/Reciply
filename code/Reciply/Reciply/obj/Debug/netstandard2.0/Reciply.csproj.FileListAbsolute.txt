@@ -16,9 +16,7 @@ C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reci
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\bin\Debug\netstandard2.0\Reciply.dll
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\bin\Debug\netstandard2.0\ref\Reciply.dll
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\bin\Debug\netstandard2.0\Reciply.pdb
-C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.csprojAssemblyReference.cache
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.AssemblyInfoInputs.cache
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.AssemblyInfo.cs
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.csproj.CoreCompileInputs.cache
@@ -60,3 +58,7 @@ C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply\obj\Debug\
 C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\MainPage.xaml.g.cs
 C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\Recipes.xaml.g.cs
 C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\SelectedRecipes.xaml.g.cs
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\EinkaufVerlauf.xaml.g.cs
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\MainPage.xaml.g.cs
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\Recipes.xaml.g.cs
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\SelectedRecipes.xaml.g.cs

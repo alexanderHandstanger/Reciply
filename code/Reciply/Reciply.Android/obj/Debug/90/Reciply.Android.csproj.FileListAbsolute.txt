@@ -506,16 +506,9 @@ C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reci
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\res.flag
-C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\12\jl\files.cache
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\13\jl\files.cache
-C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\17\jl\files.cache
-C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\19\jl\files.cache
-C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\26\jl\files.cache
-C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\30\jl\files.cache
-C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\32\jl\files.cache
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\33\jl\files.cache
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\34\jl\files.cache
-C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\38\jl\files.cache
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\files.cache
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\R.txt
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\R.cs.flag
@@ -1969,3 +1962,18 @@ D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90
 D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\XAMARIN APPS\ReciplyProjekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\1\jl\files.cache
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\14\jl\files.cache
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\18\jl\files.cache
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\20\jl\files.cache
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\27\jl\files.cache
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\31\jl\files.cache
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\35\jl\files.cache
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\files.cache
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\android\assets\Plugin.InputKit.dll
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\android\src\crc64dbf290ea7e69bd26\AutoCompleteViewRenderer.java
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\android\src\crc64dbf290ea7e69bd26\BoxArrayAdapter.java
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\android\src\crc64dbf290ea7e69bd26\CustomFilter.java
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\android\src\crc64dbf290ea7e69bd26\EmptyEntryRenderer.java
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\android\src\crc64dbf290ea7e69bd26\NewIconViewRenderer.java
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\android\src\crc64dbf290ea7e69bd26\StatefulStackLayoutRenderer.java

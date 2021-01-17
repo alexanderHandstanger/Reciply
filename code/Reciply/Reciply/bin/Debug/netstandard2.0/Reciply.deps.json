@@ -11,7 +11,8 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1451"
+          "Xamarin.Forms": "4.8.0.1451",
+          "Xamarin.Forms.InputKit": "3.4.4"
         },
         "runtime": {
           "Reciply.dll": {}
@@ -57,6 +58,14 @@
             "fileVersion": "4.8.0.372"
           }
         }
+      },
+      "Xamarin.Forms.InputKit/3.4.4": {
+        "runtime": {
+          "lib/netstandard2.0/Plugin.InputKit.dll": {
+            "assemblyVersion": "3.4.4.0",
+            "fileVersion": "3.4.4.0"
+          }
+        }
       }
     }
   },
@@ -100,6 +109,13 @@
       "sha512": "sha512-3RUzBpcaBxOjufLLqJnuZRGLhzAbVyfe/Pyp0AFY/H1MkCHYxXIRzgB8h6yC9NTs39NLK2SgGiaMbvC4TJ/zFA==",
       "path": "xamarin.forms/4.8.0.1451",
       "hashPath": "xamarin.forms.4.8.0.1451.nupkg.sha512"
+    },
+    "Xamarin.Forms.InputKit/3.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8LTkXu1lljnvKfZivfilElzx3sefM/bTJf84xFS/RykY4ANdTrnFche1NXv+j5YCY9y+MzKtKykSO4ILe8D5/A==",
+      "path": "xamarin.forms.inputkit/3.4.4",
+      "hashPath": "xamarin.forms.inputkit.3.4.4.nupkg.sha512"
     }
   }
 }
