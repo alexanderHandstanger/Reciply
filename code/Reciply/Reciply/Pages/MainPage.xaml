@@ -25,7 +25,7 @@
                             <Label Text="{Binding item}" />
                             <Label Text="{Binding amount}" />
                             <Label Text="{Binding unitOfMeasurement}" />
-                            <input:CheckBox FlowDirection="RightToLeft"/>
+                            <input:CheckBox HorizontalOptions="EndAndExpand" TranslationY="-10"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
