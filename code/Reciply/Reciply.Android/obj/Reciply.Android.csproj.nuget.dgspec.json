@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj": {}
+    "D:\\1. Schule\\HTL\\4CHIF-NonSync\\SYP\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj": {
+    "D:\\1. Schule\\HTL\\4CHIF-NonSync\\SYP\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
+        "projectUniqueName": "D:\\1. Schule\\HTL\\4CHIF-NonSync\\SYP\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
         "projectName": "Reciply.Android",
-        "projectPath": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
-        "packagesPath": "C:\\Users\\Michael Enkner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply.Android\\obj\\",
+        "projectPath": "D:\\1. Schule\\HTL\\4CHIF-NonSync\\SYP\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
+        "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
+        "outputPath": "D:\\1. Schule\\HTL\\4CHIF-NonSync\\SYP\\Reciply\\code\\Reciply\\Reciply.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Michael Enkner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj": {
-                "projectPath": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj"
+              "D:\\1. Schule\\HTL\\4CHIF-NonSync\\SYP\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj": {
+                "projectPath": "D:\\1. Schule\\HTL\\4CHIF-NonSync\\SYP\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj"
               }
             }
           }
@@ -54,20 +54,21 @@
         }
       }
     },
-    "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj": {
+    "D:\\1. Schule\\HTL\\4CHIF-NonSync\\SYP\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
+        "projectUniqueName": "D:\\1. Schule\\HTL\\4CHIF-NonSync\\SYP\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
         "projectName": "Reciply",
-        "projectPath": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
-        "packagesPath": "C:\\Users\\Michael Enkner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\obj\\",
+        "projectPath": "D:\\1. Schule\\HTL\\4CHIF-NonSync\\SYP\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
+        "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
+        "outputPath": "D:\\1. Schule\\HTL\\4CHIF-NonSync\\SYP\\Reciply\\code\\Reciply\\Reciply\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Michael Enkner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

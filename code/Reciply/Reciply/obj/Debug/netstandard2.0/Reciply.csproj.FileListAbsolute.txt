@@ -62,3 +62,20 @@ C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reci
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\MainPage.xaml.g.cs
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\Recipes.xaml.g.cs
 C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\SelectedRecipes.xaml.g.cs
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\bin\Debug\netstandard2.0\Reciply.deps.json
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\bin\Debug\netstandard2.0\Reciply.dll
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\bin\Debug\netstandard2.0\ref\Reciply.dll
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\bin\Debug\netstandard2.0\Reciply.pdb
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.csprojAssemblyReference.cache
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\EinkaufVerlauf.xaml.g.cs
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\MainPage.xaml.g.cs
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\Recipes.xaml.g.cs
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\SelectedRecipes.xaml.g.cs
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.AssemblyInfoInputs.cache
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.AssemblyInfo.cs
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.csproj.CoreCompileInputs.cache
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\XamlC.stamp
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.dll
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\ref\Reciply.dll
+D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.pdb
