@@ -1,52 +1,52 @@
-@string/appbar_scrolling_view_behavior;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
-@string/appbar_scrolling_view_behavior;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+@string/appbar_scrolling_view_behavior;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
+@string/appbar_scrolling_view_behavior;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-alpha;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
-alpha;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
-android.support.design.widget.AppBarLayout;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.AppBarLayout;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
-android.support.design.widget.AppBarLayout;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
-android.support.design.widget.BottomNavigationView;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
-android.support.design.widget.CoordinatorLayout;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.CoordinatorLayout;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
-android.support.design.widget.CoordinatorLayout;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
-android.support.design.widget.TabLayout;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+alpha;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
+alpha;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
+android.support.design.widget.AppBarLayout;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.AppBarLayout;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+android.support.design.widget.AppBarLayout;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
+android.support.design.widget.BottomNavigationView;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
+android.support.design.widget.TabLayout;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
 android.support.design.widget.TabLayout;obj\Debug\90\res\layout\tabbar.xml
-android.support.v7.widget.RecyclerView;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
-android.support.v7.widget.Toolbar;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
-android.support.v7.widget.Toolbar;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
+android.support.v7.widget.RecyclerView;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
+android.support.v7.widget.Toolbar;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+android.support.v7.widget.Toolbar;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\toolbar.xml
-attr;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
+attr;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-cache-path;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+cache-path;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\90\res\values\colors.xml
-declare-styleable;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
-external-cache-path;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-path;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+declare-styleable;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
+external-cache-path;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-FrameLayout;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
-item;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
-LinearLayout;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
-paths;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-resources;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\1\jl\res\values\input_styles.xml
-resources;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
-resources;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\strings.xml
-resources;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
+FrameLayout;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
+item;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
+LinearLayout;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
+paths;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+resources;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\1\jl\res\values\input_styles.xml
+resources;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
+resources;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\strings.xml
+resources;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\styles.xml
-set;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
-set;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromright.xml
-set;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
-set;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoright.xml
-string;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\strings.xml
-style;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\1\jl\res\values\input_styles.xml
-style;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
+set;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
+set;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromright.xml
+set;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
+set;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoright.xml
+string;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\strings.xml
+style;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\1\jl\res\values\input_styles.xml
+style;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
 style;obj\Debug\90\res\values\styles.xml
-translate;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
-translate;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromright.xml
-translate;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
-translate;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoright.xml
-xamarin.forms.platform.android.appcompat.FormsViewPager;D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+translate;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
+translate;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromright.xml
+translate;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
+translate;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoright.xml
+xamarin.forms.platform.android.appcompat.FormsViewPager;C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml

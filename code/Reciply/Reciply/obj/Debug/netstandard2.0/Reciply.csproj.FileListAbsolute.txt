@@ -79,3 +79,5 @@ D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netsta
 D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.dll
 D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\ref\Reciply.dll
 D:\1. Schule\HTL\4CHIF-NonSync\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.pdb
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.csprojAssemblyReference.cache
+C:\Users\Michael Enkner\OneDrive\Schule\4 CHIF\SYP\SYP Projekt\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\Recipepage.xaml.g.cs
