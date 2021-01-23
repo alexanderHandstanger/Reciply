@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iSbzuivQnkEaHX9FR2YdZLLlV//aEZU6SYD9KNFrlRWuxDpc6iajYt2OqUytQhJwVZzHsxWLl4C7PaQ7jTu3zg==",
+  "dgSpecHash": "thBSyvLddd4o6bgZ2G4o8/BjXoDDLYJTxPaxzu2ranvGqj6TBRZJ3Whu++kdykGIcotUbgO6A1EmPBI2vZsSYA==",
   "success": true,
-  "projectFilePath": "D:\\XAMARIN APPS\\Reciply\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\Schule\\4Chif\\SYP\\Reciply\\code\\Reciply\\Reciply.Android\\Reciply.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",
@@ -43,7 +43,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512",
-    "C:\\Users\\Robin\\.nuget\\packages\\xamarin.forms.inputkit\\3.4.4\\xamarin.forms.inputkit.3.4.4.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\xamarin.forms.inputkit\\3.4.4\\xamarin.forms.inputkit.3.4.4.nupkg.sha512"
   ],
   "logs": []
 }

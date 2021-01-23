@@ -49,5 +49,10 @@ namespace Reciply
         {
             await Navigation.PushAsync(new EinkaufVerlauf(), true);
         }
+
+        private async void Einkaufsliste_Edit_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EinkaufslisteEdit(), true);
+        }
     }
 }

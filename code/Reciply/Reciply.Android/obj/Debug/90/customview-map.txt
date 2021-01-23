@@ -1,52 +1,52 @@
-@string/appbar_scrolling_view_behavior;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
-@string/appbar_scrolling_view_behavior;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+@string/appbar_scrolling_view_behavior;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
+@string/appbar_scrolling_view_behavior;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-alpha;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
-alpha;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
-android.support.design.widget.AppBarLayout;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.AppBarLayout;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
-android.support.design.widget.AppBarLayout;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
-android.support.design.widget.BottomNavigationView;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
-android.support.design.widget.CoordinatorLayout;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.CoordinatorLayout;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
-android.support.design.widget.CoordinatorLayout;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
-android.support.design.widget.TabLayout;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+alpha;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
+alpha;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
+android.support.design.widget.AppBarLayout;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.AppBarLayout;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+android.support.design.widget.AppBarLayout;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
+android.support.design.widget.BottomNavigationView;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
+android.support.design.widget.TabLayout;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
 android.support.design.widget.TabLayout;obj\Debug\90\res\layout\tabbar.xml
-android.support.v7.widget.RecyclerView;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
-android.support.v7.widget.Toolbar;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
-android.support.v7.widget.Toolbar;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
+android.support.v7.widget.RecyclerView;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\flyoutcontent.xml
+android.support.v7.widget.Toolbar;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+android.support.v7.widget.Toolbar;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\shellcontent.xml
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\toolbar.xml
-attr;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
+attr;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-cache-path;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+cache-path;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\90\res\values\colors.xml
-declare-styleable;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
-external-cache-path;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-path;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+declare-styleable;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
+external-cache-path;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-FrameLayout;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
-item;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
-LinearLayout;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
-paths;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-resources;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\1\jl\res\values\input_styles.xml
-resources;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
-resources;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\strings.xml
-resources;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
+FrameLayout;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
+item;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
+LinearLayout;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\bottomtablayout.xml
+paths;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\39\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+resources;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\1\jl\res\values\input_styles.xml
+resources;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\attrs.xml
+resources;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\strings.xml
+resources;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\styles.xml
-set;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
-set;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromright.xml
-set;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
-set;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoright.xml
-string;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\strings.xml
-style;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\1\jl\res\values\input_styles.xml
-style;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
+set;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
+set;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromright.xml
+set;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
+set;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoright.xml
+string;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\strings.xml
+style;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\1\jl\res\values\input_styles.xml
+style;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\values\styles.xml
 style;obj\Debug\90\res\values\styles.xml
-translate;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
-translate;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromright.xml
-translate;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
-translate;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoright.xml
-xamarin.forms.platform.android.appcompat.FormsViewPager;D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml
+translate;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromleft.xml
+translate;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\enterfromright.xml
+translate;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoleft.xml
+translate;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\anim\exittoright.xml
+xamarin.forms.platform.android.appcompat.FormsViewPager;C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply.Android\obj\Debug\90\lp\40\jl\res\layout\rootlayout.xml

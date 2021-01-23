@@ -99,3 +99,5 @@ D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Xa
 D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.dll
 D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\ref\Reciply.dll
 D:\XAMARIN APPS\Reciply\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Reciply.pdb
+C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\EinkaufslisteEdit.xaml.g.cs
+C:\Users\User\Documents\Schule\4Chif\SYP\Reciply\code\Reciply\Reciply\obj\Debug\netstandard2.0\Pages\Recipepage.xaml.g.cs

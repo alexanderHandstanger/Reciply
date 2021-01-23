@@ -51,6 +51,7 @@
                     HeightRequest="30"
                     WidthRequest="30"
                     Grid.Column="2"
+                    Clicked="Einkaufsliste_Edit_Clicked"
                     BackgroundColor="#70DBFF"
                     />
             </Grid>
