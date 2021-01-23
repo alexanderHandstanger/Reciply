@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "e4XqsPOQv4DsnqfDE9BGpSGafEORnlZqDzV8PecfaaKkiGftZbFCmuJaB/2VboPbT8kiGjQ1W6ulEPAsRgWSoQ==",
+  "dgSpecHash": "33GuVoP8EsxDVXWmDfTWv6m1mtBBKLYoUpRXGuLkEytbz/gtUxcTvZs7wDFx1IA09I/tumk1PiIUh7m7SxriGg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michael Enkner\\OneDrive\\Schule\\4 CHIF\\SYP\\SYP Projekt\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
+  "projectFilePath": "D:\\XAMARIN APPS\\Reciply\\Reciply\\code\\Reciply\\Reciply\\Reciply.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Michael Enkner\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Michael Enkner\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Michael Enkner\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\Michael Enkner\\.nuget\\packages\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512",
-    "C:\\Users\\Michael Enkner\\.nuget\\packages\\xamarin.forms.inputkit\\3.4.4\\xamarin.forms.inputkit.3.4.4.nupkg.sha512"
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512",
+    "C:\\Users\\Robin\\.nuget\\packages\\xamarin.forms.inputkit\\3.4.4\\xamarin.forms.inputkit.3.4.4.nupkg.sha512"
   ],
   "logs": []
 }

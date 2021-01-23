@@ -7,8 +7,58 @@
     <StackLayout>
         <Frame 
             BackgroundColor="#2196F3" 
-            Padding="24" 
+            Padding="0" 
             CornerRadius="0"/>
+
+        <Frame
+            BackgroundColor="#70DBFF"
+            HeightRequest="30"
+            CornerRadius="10"
+            Margin="10,0,10,10">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    
+                </Grid.ColumnDefinitions>
+
+                <Button 
+                    ImageSource="share.png"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    Grid.Column="0"
+                    Margin="0,0,0,0"
+                    BackgroundColor="#70DBFF"
+                    />
+                
+                <Label
+                Text="Einkaufsliste" 
+                FontSize="Medium" 
+                TextColor="#000000" 
+                HorizontalOptions="Center"
+                Grid.Column="1"  
+                    />
+
+                <Button 
+                    ImageSource="edit.png"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    Grid.Column="2"
+                    BackgroundColor="#70DBFF"
+                    />
+            </Grid>
+            
+                
+
+
+        </Frame>
 
         <ListView 
             IsVisible="true" 
