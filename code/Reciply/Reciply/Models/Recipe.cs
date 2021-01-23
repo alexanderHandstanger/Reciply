@@ -6,7 +6,8 @@ namespace Reciply.Models
 {
     class Recipe
     {
-        public Ingredient Ingredient { get; set; } //The Ingredients
+        public int Id { get; set; }
+        public List<Ingredient> Ingredient { get; set; } //The Ingredients
         public int Portion { get; set; } //One Portion = food for one people
         public int Rating { get; set; } //How many stars the food is rated 
         public string Tags { get; set; } //Which tags the food has for example

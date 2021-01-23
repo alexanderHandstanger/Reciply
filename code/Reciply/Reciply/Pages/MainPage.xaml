@@ -64,7 +64,7 @@
         <ListView 
             IsVisible="true" 
             x:Name="Einkaufsliste" 
-            ItemsSource="{Binding einkaufsliste}"
+            ItemsSource="{Binding EinkaufsListe}"
             Margin="10,10,10,0"
             CachingStrategy="RecycleElement" 
             SeparatorColor="Transparent" 
@@ -73,9 +73,9 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding item}" />
-                            <Label Text="{Binding amount}" />
-                            <Label Text="{Binding unitOfMeasurement}" />
+                            <Label Text="{Binding Item}" />
+                            <Label Text="{Binding Amount}" />
+                            <Label Text="{Binding UnitOfMeasurement}" />
                             <input:CheckBox HorizontalOptions="EndAndExpand" TranslationY="-10" TranslationX="-10"/>
                         </StackLayout>
                     </ViewCell>

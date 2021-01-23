@@ -1,4 +1,5 @@
-﻿using Reciply.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Reciply.Models;
 using Reciply.Pages;
 using System;
 using System.Collections.Generic;
@@ -12,28 +13,42 @@ namespace Reciply
 {
     public partial class MainPage : ContentPage
     {
-        private List<Ingredient> einkaufsliste = new List<Ingredient>();
+        private List<Ingredient> EinkaufsListe = new List<Ingredient>();
         public MainPage()
         {
             InitializeComponent();
-            einkaufsliste = Initials();
-            Einkaufsliste.ItemsSource = einkaufsliste;
+            Initials();
+            using (var dataContext = new DataContext())
+            {
+                var ingredientsWithKg = dataContext.Ingredients
+                    .Where(i => i.UnitOfMeasurement == UnitOfMeasurement.kg)
+                    .ToList();
+                EinkaufsListe.AddRange(ingredientsWithKg);
+                Einkaufsliste.ItemsSource = ingredientsWithKg;
+            }
         }
 
-        public List<Ingredient> Initials()
+        public void Initials()
         {
             List<Ingredient> initialsList = new List<Ingredient>();
-            initialsList.Add(new Ingredient { item = "Mehl", amount = 1, unitOfMeasurement = UnitOfMeasurement.kg, isInShoppingBasket = false });
-            initialsList.Add(new Ingredient { item = "Kartoffeln", amount = 2, unitOfMeasurement = UnitOfMeasurement.kg, isInShoppingBasket = false });
-            initialsList.Add(new Ingredient { item = "Schinken", amount = 50, unitOfMeasurement = UnitOfMeasurement.dag, isInShoppingBasket = false });
-            initialsList.Add(new Ingredient { item = "Eier", amount = 2, unitOfMeasurement = UnitOfMeasurement.Stück, isInShoppingBasket = false });
-            initialsList.Add(new Ingredient { item = "Pizzateig", amount = 1, unitOfMeasurement = UnitOfMeasurement.Pkg, isInShoppingBasket = false });
-            initialsList.Add(new Ingredient { item = "Reis", amount = 2, unitOfMeasurement = UnitOfMeasurement.kg, isInShoppingBasket = false });
-            initialsList.Add(new Ingredient { item = "Wasser", amount = 5, unitOfMeasurement = UnitOfMeasurement.l, isInShoppingBasket = false });
-            initialsList.Add(new Ingredient { item = "Essig", amount = 2, unitOfMeasurement = UnitOfMeasurement.Teelöffel, isInShoppingBasket = false });
-            initialsList.Add(new Ingredient { item = "Salz", amount = 150, unitOfMeasurement = UnitOfMeasurement.g, isInShoppingBasket = false });
-            initialsList.Add(new Ingredient { item = "Mais", amount = 10, unitOfMeasurement = UnitOfMeasurement.kg, isInShoppingBasket = false });
-            return initialsList;
+            initialsList.Add(new Ingredient { Item = "Mehl", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.kg, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Kartoffeln", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.kg, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Schinken", Amount = 50, UnitOfMeasurement = UnitOfMeasurement.dag, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Eier", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Stück, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Pizzateig", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Pkg, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Reis", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.kg, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Wasser", Amount = 5, UnitOfMeasurement = UnitOfMeasurement.l, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Essig", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Teelöffel, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Salz", Amount = 150, UnitOfMeasurement = UnitOfMeasurement.g, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Mais", Amount = 10, UnitOfMeasurement = UnitOfMeasurement.kg, IsInShoppingBasket = false });
+            using (var dataContext = new DataContext())
+            {
+                dataContext.RemoveRange(dataContext.Ingredients);
+                dataContext.Database.ExecuteSqlRaw("delete from sqlite_sequence where name='Ingredients';");
+                dataContext.Database.ExecuteSqlRaw("delete from sqlite_sequence where name='Recipes';");
+                dataContext.Ingredients.AddRange(initialsList);
+                dataContext.SaveChanges();
+            }
         }
 
         //Navigation
@@ -49,7 +64,6 @@ namespace Reciply
         {
             await Navigation.PushAsync(new EinkaufVerlauf(), true);
         }
-
         private async void Einkaufsliste_Edit_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new EinkaufslisteEdit(), true);
