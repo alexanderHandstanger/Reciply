@@ -33,12 +33,14 @@
             TextTransform="None" 
             HeightRequest="60"/>
 
+            <!--Only a temporary farwarding to the recipepage for testing -AH -->
             <Button 
             Text="Entdecken" 
             Margin="10,0,10,0" 
             BackgroundColor="#70DBFF" 
             CornerRadius="10" 
             TextTransform="None" 
+            Clicked="Temp_Farwarding_Clicked"
             HeightRequest="60"/>
         </StackLayout>
     </ContentPage.Content>

@@ -4,9 +4,71 @@
              x:Class="Reciply.Pages.Recipepage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame 
+            BackgroundColor="#2196F3" 
+            Padding="24" 
+            CornerRadius="0"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label 
+                   Grid.Column="0"
+                   Text="Zutaten:"
+                   FontAttributes="Bold"
+                   FontSize="20">
+                </Label>
+
+                <ListView
+                    IsVisible="true"
+                    Grid.Column="1"
+                    x:Name="PlaceHolderList"
+                    ItemsSource="{Binding placeHolderList}"
+                    CachingStrategy="RecycleElement"
+                    SeparatorColor="Transparent"
+                    BackgroundColor="Transparent">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding item}"></Label>
+                                    <Label Text="{Binding amount}"></Label>
+                                    <Label Text="{Binding unitOfMeasurement}"></Label>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
+
+            <Label Text="Portionen:"
+                   FontAttributes="Bold"
+                   FontSize="20">
+            </Label>
+
+            <Label Text="Dauer:"
+                   FontAttributes="Bold"
+                   FontSize="20">
+            </Label>
+
+            <Label Text="Tags:"
+                   FontAttributes="Bold"
+                   FontSize="20">
+            </Label>
+
+            <Label Text="Beschreibung:"
+                   FontAttributes="Bold"
+                   FontSize="20">
+            </Label>
+
+            <Label Text="Zubereitung:"
+                   FontAttributes="Bold"
+                   FontSize="20">
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

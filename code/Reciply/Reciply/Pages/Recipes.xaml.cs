@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reciply.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,12 @@ namespace Reciply
         public Recipes()
         {
             InitializeComponent();
+        }
+
+        //Only for testing, will be removed soon -AH
+        private async void Temp_Farwarding_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Recipepage(), true);
         }
     }
 }
