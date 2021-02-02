@@ -43,6 +43,13 @@ namespace Reciply
             initialsList.Add(new Ingredient { Item = "Essig", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Teelöffel, IsInShoppingBasket = false });
             initialsList.Add(new Ingredient { Item = "Salz", Amount = 150, UnitOfMeasurement = UnitOfMeasurement.g, IsInShoppingBasket = false });
             initialsList.Add(new Ingredient { Item = "Mais", Amount = 10, UnitOfMeasurement = UnitOfMeasurement.kg, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Zuccini", Amount = 0.5, UnitOfMeasurement = UnitOfMeasurement.kg, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Zucker", Amount = 12, UnitOfMeasurement = UnitOfMeasurement.kg, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Karotten", Amount = 6, UnitOfMeasurement = UnitOfMeasurement.kg, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsInShoppingBasket = false });
+            initialsList.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsInShoppingBasket = false });
+
+
             using (var dataContext = new DataContext())
             {
                 dataContext.RemoveRange(dataContext.Ingredients);
@@ -70,10 +77,6 @@ namespace Reciply
         {
             await Navigation.PushAsync(new Recipes(), true);
         }
-        private void SelectedRecipes_Clicked(object sender, EventArgs e)
-        {
-            selectRecipe.IsVisible = !selectRecipe.IsVisible;
-        }
         private async void EinkaufVerlauf_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new EinkaufVerlauf(), true);
@@ -87,6 +90,12 @@ namespace Reciply
         private async void Einkaufsliste_Edit_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new EinkaufslisteEdit(), true);
+        }
+
+        //Other
+        private void SelectedRecipes_Clicked(object sender, EventArgs e)
+        {
+            selectRecipe.IsVisible = !selectRecipe.IsVisible;
         }
     }
 }
