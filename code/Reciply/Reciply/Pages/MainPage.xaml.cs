@@ -63,14 +63,16 @@ namespace Reciply
             selectRecipe.ItemsSource = SelectRecipe;
         }
 
+        
+
         //Navigation
         private async void RecipeButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Recipes(), true);
         }
-        private async void SelectedRecipes_Clicked(object sender, EventArgs e)
+        private void SelectedRecipes_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SelectedRecipes(), true);
+            selectRecipe.IsVisible = !selectRecipe.IsVisible;
         }
         private async void EinkaufVerlauf_Clicked(object sender, EventArgs e)
         {
