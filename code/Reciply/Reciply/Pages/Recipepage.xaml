@@ -34,9 +34,9 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding item}"></Label>
-                                    <Label Text="{Binding amount}"></Label>
-                                    <Label Text="{Binding unitOfMeasurement}"></Label>
+                                    <Label Text="{Binding Item}"></Label>
+                                    <Label Text="{Binding Amount}"></Label>
+                                    <Label Text="{Binding UnitOfMeasurement}"></Label>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
