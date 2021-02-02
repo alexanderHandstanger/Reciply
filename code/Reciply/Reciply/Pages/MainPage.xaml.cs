@@ -14,9 +14,11 @@ namespace Reciply
     public partial class MainPage : ContentPage
     {
         private List<Ingredient> EinkaufsListe = new List<Ingredient>();
+        private List<SelectedRecipe> SelectRecipe = new List<SelectedRecipe>();
         public MainPage()
         {
             InitializeComponent();
+            InitialSelectedRecipes();
             Initials();
             using (var dataContext = new DataContext())
             {
@@ -51,6 +53,16 @@ namespace Reciply
             }
         }
 
+        public void InitialSelectedRecipes()
+        {
+
+            SelectRecipe.Add(new SelectedRecipe { RecipeName = "Gulasch" });
+            SelectRecipe.Add(new SelectedRecipe { RecipeName = "Kuchen" });
+            SelectRecipe.Add(new SelectedRecipe { RecipeName = "Pizza" });
+            SelectRecipe.Add(new SelectedRecipe { RecipeName = "Schnitzel" });
+            selectRecipe.ItemsSource = SelectRecipe;
+        }
+
         //Navigation
         private async void RecipeButton_Clicked(object sender, EventArgs e)
         {
@@ -63,6 +75,12 @@ namespace Reciply
         private async void EinkaufVerlauf_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new EinkaufVerlauf(), true);
+        }
+
+        private async void ButtonClicked_JetztKochen(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new CookRecipesIngrediants(), true);
         }
         private async void Einkaufsliste_Edit_Clicked(object sender, EventArgs e)
         {

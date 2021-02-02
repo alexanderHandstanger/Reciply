@@ -100,6 +100,29 @@
             TextTransform="None" 
             Clicked="SelectedRecipes_Clicked"
             HeightRequest="60"/>
+
+        <ListView
+            IsVisible="true" 
+            x:Name="selectRecipe" 
+            Margin="10,10,10,0"
+            CachingStrategy="RecycleElement" 
+            SeparatorColor="Transparent" 
+            BackgroundColor="Transparent">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding RecipeName}" />
+                            <Button Text="Jetzt kochen" FontSize="8" CommandParameter="{Binding}" Clicked="ButtonClicked_JetztKochen" 
+                                    HorizontalOptions="EndAndExpand" TranslationY="-35" BackgroundColor="White" Margin="10,10,10,0" HeightRequest="30"
+                                    CornerRadius="10" BorderColor="Black" BorderWidth="1"/>
+                        </StackLayout>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
         <Button 
             Text="Rezepte" 
             Margin="10,0" 
