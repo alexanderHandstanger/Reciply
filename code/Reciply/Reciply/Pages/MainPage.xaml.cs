@@ -11,7 +11,7 @@ using Xamarin.Forms;
 
 namespace Reciply
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : ContentPage //currently finished
     {
         private List<Ingredient> EinkaufsListe = new List<Ingredient>();
         private List<SelectedRecipe> SelectRecipe = new List<SelectedRecipe>();
