@@ -3,7 +3,7 @@
   <PropertyGroup>
     <SelectedDevice>test2</SelectedDevice>
     <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
-    <DefaultDevice>test2</DefaultDevice>
+    <DefaultDevice>pixel_2_-_api_28</DefaultDevice>
     <ActiveDebugProfile>Samsung SM-G800F</ActiveDebugProfile>
   </PropertyGroup>
 </Project>
