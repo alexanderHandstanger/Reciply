@@ -2,73 +2,90 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Reciply.Pages.Recipepage">
-    <ContentPage.Content>
-        <StackLayout>
+
+    <ScrollView>
+        <StackLayout Margin="10" >
             <Frame 
             BackgroundColor="#2196F3" 
-            Padding="24" 
+            Padding="0" 
             CornerRadius="0"/>
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
-                <Label 
-                   Grid.Column="0"
-                   Text="Zutaten:"
-                   FontAttributes="Bold"
-                   FontSize="20">
-                </Label>
-
-                <ListView
-                    IsVisible="true"
-                    Grid.Column="1"
-                    x:Name="PlaceHolderList"
-                    ItemsSource="{Binding placeHolderList}"
-                    CachingStrategy="RecycleElement"
-                    SeparatorColor="Transparent"
-                    BackgroundColor="Transparent">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Item}"></Label>
-                                    <Label Text="{Binding Amount}"></Label>
-                                    <Label Text="{Binding UnitOfMeasurement}"></Label>
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </Grid>
-
-
-            <Label Text="Portionen:"
-                   FontAttributes="Bold"
-                   FontSize="20">
+            <Label 
+            Text="Name:"
+            FontAttributes="Bold"
+            FontSize="20">
             </Label>
 
-            <Label Text="Dauer:"
-                   FontAttributes="Bold"
-                   FontSize="20">
+            <Label Text="{Binding Name}"/>
+
+            <Label 
+            Grid.Column="0"
+            Text="Zutaten:"
+            FontAttributes="Bold"
+            FontSize="20">
             </Label>
 
-            <Label Text="Tags:"
-                   FontAttributes="Bold"
-                   FontSize="20">
+            <ListView
+            IsVisible="true"
+            x:Name="ingredients"
+            Margin="10"
+            HeightRequest="200"
+            ItemsSource="{Binding ingredients}"
+            CachingStrategy="RecycleElement"
+            SeparatorColor="Transparent"
+            BackgroundColor="Transparent">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Item}"/>
+                                <Label Text="{Binding Amount}"/>
+                                <Label Text="{Binding UnitOfMeasurement}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label 
+            Text="Portionen:"
+            FontAttributes="Bold"
+            FontSize="20">
             </Label>
 
-            <Label Text="Beschreibung:"
-                   FontAttributes="Bold"
-                   FontSize="20">
+            <Label Text="{Binding Portion}"/>
+
+            <Label 
+            Text="Dauer:"
+            FontAttributes="Bold"
+            FontSize="20">
             </Label>
 
-            <Label Text="Zubereitung:"
-                   FontAttributes="Bold"
-                   FontSize="20">
+            <Label Text="{Binding Duration}"/>
+
+            <Label 
+            Text="Tags:"
+            FontAttributes="Bold"
+            FontSize="20">
             </Label>
+
+            <Label Text="{Binding Tags}"/>
+
+            <Label 
+            Text="Beschreibung:"
+            FontAttributes="Bold"
+            FontSize="20">
+            </Label>
+
+            <Label Text="{Binding Description}"/>
+
+            <Label 
+            Text="Zubereitung:"
+            FontAttributes="Bold"
+            FontSize="20">
+            </Label>
+
+            <Label Text="{Binding Preparation}"/>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>

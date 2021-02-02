@@ -13,15 +13,14 @@ namespace Reciply.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Recipepage : ContentPage
     {
-        private List<Ingredient> placeHolderList = new List<Ingredient>();
         public Recipepage()
         {
             InitializeComponent();
-            placeHolderList = Initials();
-            PlaceHolderList.ItemsSource = placeHolderList;
+            ingredients.ItemsSource = Initials().Ingredient;
+            BindingContext = Initials();
         }
 
-        private List<Ingredient> Initials()
+        private Recipe Initials()
         {
             List<Ingredient> initialList = new List<Ingredient>();
             initialList.Add(new Ingredient { Item = "Dotter", Amount = 4, UnitOfMeasurement = UnitOfMeasurement.Stück });
@@ -32,7 +31,7 @@ namespace Reciply.Pages
             initialList.Add(new Ingredient { Item = "Vanillies", Amount = 18, UnitOfMeasurement = UnitOfMeasurement.Stück });
             initialList.Add(new Ingredient { Item = "Backpulver", Amount = 0.5, UnitOfMeasurement = UnitOfMeasurement.Pkg });
             initialList.Add(new Ingredient { Item = "Kakau", Amount = 10, UnitOfMeasurement = UnitOfMeasurement.Esslöffel });
-            return initialList;
+            return new Recipe { Id = 1, Description = "Leckeres Nudelgericht", Ingredient = initialList, Portion = 4, Preparation = "Die Zwiebel schälen und in Ringe schneiden. Die gekochten Kartoffel schälen und in Scheiben schneiden. Das Backrohr auf 180° vorheizen.Eine Gratinform mit Butter einstreichen und schichtweise Kartoffel und Zwiebel hineingeben.Jede Schicht mit Salz,Pfeffer und Kümmel würzen.Die oberste Schicht mit Kartoffel abschließen.Den Schlagobers mit Creme Fraiche mischen und darübergießen. 40 Minuten im vorgeheizten Backrohr,Heißluft überbacken.", Rating = 5, Tags = "#Pasta", Duration = 25, Name = "Gulasch" };
         }
     }
 }
