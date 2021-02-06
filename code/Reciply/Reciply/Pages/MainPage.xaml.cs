@@ -70,13 +70,14 @@ namespace Reciply
             selectRecipe.ItemsSource = SelectRecipe;
         }
 
-        
+
 
         //Navigation
         private async void RecipeButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Recipes(), true);
         }
+
         private async void EinkaufVerlauf_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new EinkaufVerlauf(), true);
@@ -84,12 +85,17 @@ namespace Reciply
 
         private async void ButtonClicked_JetztKochen(object sender, EventArgs e)
         {
-
             await Navigation.PushAsync(new CookRecipesIngrediants(), true);
         }
+
         private async void Einkaufsliste_Edit_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new EinkaufslisteEdit(), true);
+        }
+
+        private async void Einkaufsliste_Share_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Test_AddRecipes(), true);
         }
 
         //Other

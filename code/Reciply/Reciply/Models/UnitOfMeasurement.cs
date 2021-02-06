@@ -17,6 +17,8 @@ namespace Reciply.Models
         Pkg,
         Stück,
         Esslöffel,
-        Teelöffel
+        Teelöffel,
+        Prise,
+        Packung
     }
 }
