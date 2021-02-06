@@ -20,14 +20,13 @@ namespace Reciply
             InitializeComponent();
             InitialSelectedRecipes();
             Initials();
-            using (var dataContext = new DataContext())
-            {
-                var ingredientsWithKg = dataContext.Ingredients
-                    .Where(i => i.UnitOfMeasurement == UnitOfMeasurement.kg)
-                    .ToList();
-                EinkaufsListe.AddRange(ingredientsWithKg);
-                Einkaufsliste.ItemsSource = ingredientsWithKg;
-            }
+            //using (var dataContext = new DataContext())
+            //{
+            //    var ingredientsWithKg = dataContext.Ingredients
+            //        .Where(i => i.UnitOfMeasurement == UnitOfMeasurement.kg)
+            //        .ToList();
+                
+            //}
         }
 
         public void Initials()
@@ -48,16 +47,17 @@ namespace Reciply
             initialsList.Add(new Ingredient { Item = "Karotten", Amount = 6, UnitOfMeasurement = UnitOfMeasurement.kg, IsInShoppingBasket = false });
             initialsList.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsInShoppingBasket = false });
             initialsList.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsInShoppingBasket = false });
+            EinkaufsListe.AddRange(initialsList);
+            Einkaufsliste.ItemsSource = initialsList;
 
-
-            using (var dataContext = new DataContext())
-            {
-                dataContext.RemoveRange(dataContext.Ingredients);
-                dataContext.Database.ExecuteSqlRaw("delete from sqlite_sequence where name='Ingredients';");
-                dataContext.Database.ExecuteSqlRaw("delete from sqlite_sequence where name='Recipes';");
-                dataContext.Ingredients.AddRange(initialsList);
-                dataContext.SaveChanges();
-            }
+            //using (var dataContext = new DataContext())
+            //{
+            //    dataContext.RemoveRange(dataContext.Ingredients);
+            //    dataContext.Database.ExecuteSqlRaw("delete from sqlite_sequence where name='Ingredients';");
+            //    dataContext.Database.ExecuteSqlRaw("delete from sqlite_sequence where name='Recipes';");
+            //    dataContext.Ingredients.AddRange(initialsList);
+            //    dataContext.SaveChanges();
+            //}
         }
 
         public void InitialSelectedRecipes()
@@ -70,13 +70,14 @@ namespace Reciply
             selectRecipe.ItemsSource = SelectRecipe;
         }
 
-        
+
 
         //Navigation
         private async void RecipeButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Recipes(), true);
         }
+
         private async void EinkaufVerlauf_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new EinkaufVerlauf(), true);
@@ -84,12 +85,17 @@ namespace Reciply
 
         private async void ButtonClicked_JetztKochen(object sender, EventArgs e)
         {
-
             await Navigation.PushAsync(new CookRecipesIngrediants(), true);
         }
+
         private async void Einkaufsliste_Edit_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new EinkaufslisteEdit(), true);
+        }
+
+        private async void Einkaufsliste_Share_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Test_AddRecipes(), true);
         }
 
         //Other

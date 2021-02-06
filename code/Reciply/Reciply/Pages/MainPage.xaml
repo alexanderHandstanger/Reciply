@@ -36,6 +36,7 @@
                     Grid.Column="0"
                     Margin="0,0,0,0"
                     BackgroundColor="#70DBFF"
+                    Clicked="Einkaufsliste_Share_Clicked"
                     />
 
                 <Label
