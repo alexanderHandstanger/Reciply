@@ -56,6 +56,20 @@
             </Frame>
 
             
+                <Label Text="Artikel hinzufügen:" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+            
+
+            <Grid Margin="10,0,10,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Entry Placeholder="Artikel" Grid.Column="0" HeightRequest="75" FontSize="14"/>
+                <Entry Placeholder="Menge" Grid.Column="1" HeightRequest="75" FontSize="14"/>
+                <Button Grid.Column="2" HeightRequest="75"/>
+            </Grid>
             
             
             <ListView 
@@ -79,6 +93,27 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button 
+            Text="Zur Einkaufsliste hinzufügen" 
+            Margin="10,0,10,0" 
+            BackgroundColor="#38DA38" 
+            CornerRadius="10" 
+            TextTransform="None"               
+            HeightRequest="60"/>
+            <Button 
+            Text="Ausgewählte löschen" 
+            Margin="10,0,10,0" 
+            BackgroundColor="#FF0000" 
+            CornerRadius="10" 
+            TextTransform="None"               
+            HeightRequest="60"/>
+            <Button 
+            Text="Alles löschen" 
+            Margin="10,0,10,0" 
+            BackgroundColor="#FF0000" 
+            CornerRadius="10" 
+            TextTransform="None"               
+            HeightRequest="60"/>
 
         </StackLayout>
     </ContentPage.Content>
