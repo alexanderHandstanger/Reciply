@@ -26,7 +26,7 @@
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
-                    
+
                 </Grid.ColumnDefinitions>
 
                 <Button 
@@ -37,7 +37,7 @@
                     Margin="0,0,0,0"
                     BackgroundColor="#70DBFF"
                     />
-                
+
                 <Label
                 Text="Einkaufsliste" 
                 FontSize="Medium" 
@@ -55,9 +55,6 @@
                     BackgroundColor="#70DBFF"
                     />
             </Grid>
-            
-                
-
 
         </Frame>
 
@@ -102,7 +99,7 @@
             HeightRequest="60"/>
 
         <ListView
-            IsVisible="true" 
+            IsVisible="false" 
             x:Name="selectRecipe" 
             Margin="10,10,10,0"
             CachingStrategy="RecycleElement" 
