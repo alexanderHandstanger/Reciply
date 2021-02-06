@@ -103,7 +103,7 @@
             HeightRequest="60"/>
 
         <ListView
-            IsVisible="true" 
+            IsVisible="false" 
             x:Name="selectRecipe" 
             Margin="10,10,10,0"
             CachingStrategy="RecycleElement" 

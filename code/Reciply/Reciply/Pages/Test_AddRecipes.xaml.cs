@@ -25,7 +25,7 @@ namespace Reciply.Pages
             {
                 new Recipe()
                 {
-                    Ingredients = new List<Ingredient>()
+                    Ingredient = new List<Ingredient>()
                     {
                         new Ingredient { Item = "Mehl", Amount = 150, UnitOfMeasurement = UnitOfMeasurement.g, IsInShoppingBasket = false },
                         new Ingredient { Item = "Milch", Amount = 150, UnitOfMeasurement = UnitOfMeasurement.ml, IsInShoppingBasket = false },
@@ -35,6 +35,7 @@ namespace Reciply.Pages
                         new Ingredient { Item = "Backpulver", Amount = 0.5, UnitOfMeasurement = UnitOfMeasurement.Packung, IsInShoppingBasket = false }
 
                     },
+                    Duration = 20,
                     Name = "Pancakes",
                     Portion = 2,
                     Rating = 4,
@@ -47,9 +48,9 @@ namespace Reciply.Pages
                 },
                 new Recipe()
                 {
-                    Ingredients = new List<Ingredient>()
+                    Ingredient = new List<Ingredient>()
                     {
-                        new Ingredient { Item = "Zucker", Amount = 75, UnitOfMeasurement = UnitOfMeasurement.g, IsInShoppingBasket = false },
+                        new Ingredient { Item = "Zucker", Amount = 75, UnitOfMeasurement = UnitOfMeasurement.g, IsInShoppingBasket = false,  },
                         new Ingredient { Item = "Butter (weich)", Amount = 125, UnitOfMeasurement = UnitOfMeasurement.g, IsInShoppingBasket = false },
                         new Ingredient { Item = "Vanillezucker", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Packung, IsInShoppingBasket = false },
                         new Ingredient { Item = "Mehl", Amount = 250, UnitOfMeasurement = UnitOfMeasurement.g, IsInShoppingBasket = false },
@@ -57,6 +58,7 @@ namespace Reciply.Pages
                         new Ingredient { Item = "Ei", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Stück, IsInShoppingBasket = false }
 
                     },
+                    Duration = 90,
                     Name = "Vanille Kekse",
                     Portion = 2,
                     Rating = 4,
@@ -66,7 +68,7 @@ namespace Reciply.Pages
                 },
                 new Recipe()
                 {
-                    Ingredients = new List<Ingredient>()
+                    Ingredient = new List<Ingredient>()
                     {
                         new Ingredient { Item = "Kartoffeln, festkochende", Amount = 75, UnitOfMeasurement = UnitOfMeasurement.g, IsInShoppingBasket = false },
                         new Ingredient { Item = "Salz", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Prise, IsInShoppingBasket = false },
@@ -77,12 +79,36 @@ namespace Reciply.Pages
                         new Ingredient { Item = "Zwiebel", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Stück, IsInShoppingBasket = false }
 
                     },
+                    Duration = 30,
                     Name = "Kartoffelpuffer",
                     Portion = 4,
                     Rating = 5,
                     Tags = "#kartoffeln #puffer",
                     Description = "Kartoffelpuffer sind eine köstliche und einfache Sache und passen eigentlich fast immer.",
                     Preparation = "Kartoffelpuffer kennen die meisten von uns schon aus unseren Kindheitstagen. Zuerst schält man die Zwiebel und die Kartoffeln und dann reibt man sie mit einer Reibe - nicht zu fein aber auch nicht zu grob. Das Ganze kommt danach in eine große Schüssel, wo die Eier, das Mehl, das Salz und der Pfeffer hinzu kommen. Alles wird mit den Händen gut durchgeknetet. Wenn die Kartoffeln nicht sofort verarbeitet werden, empfiehlt es sich, sie vorher auszudrücken, da sie sehr viel Wasser verlieren - allzu lange sollten sie dennoch trotzdem nicht stehen. Nun wird in einer Pfanne Öl erhitzt. Mit einem Schöpfer gibt man immer zirka eineinhalb Schöpfer Klecks in die Pfanne und brät ihn von beiden Seiten goldbraun an."
+
+                },
+                new Recipe()
+                {
+                    Ingredient = new List<Ingredient>()
+                    {
+                        new Ingredient { Item = "Dotter", Amount = 4, UnitOfMeasurement = UnitOfMeasurement.Stück },
+                        new Ingredient { Item = "Zucker", Amount = 25, UnitOfMeasurement = UnitOfMeasurement.dag },
+                        new Ingredient { Item = "Mehl", Amount = 25, UnitOfMeasurement = UnitOfMeasurement.dag },
+                        new Ingredient { Item = "Wasser", Amount = 125, UnitOfMeasurement = UnitOfMeasurement.ml },
+                        new Ingredient { Item = "Öl", Amount = 125, UnitOfMeasurement = UnitOfMeasurement.ml },
+                        new Ingredient { Item = "Vanillies", Amount = 18, UnitOfMeasurement = UnitOfMeasurement.Stück },
+                        new Ingredient { Item = "Backpulver", Amount = 0.5, UnitOfMeasurement = UnitOfMeasurement.Pkg },
+                        new Ingredient { Item = "Kakau", Amount = 10, UnitOfMeasurement = UnitOfMeasurement.Esslöffel }
+
+                    },
+                    Duration = 25,
+                    Name = "Gulasch",
+                    Portion = 4,
+                    Rating = 5,
+                    Tags = "#Pasta",
+                    Description = "Leckeres Nudelgericht",
+                    Preparation = "Die Zwiebel schälen und in Ringe schneiden. Die gekochten Kartoffel schälen und in Scheiben schneiden. Das Backrohr auf 180° vorheizen.Eine Gratinform mit Butter einstreichen und schichtweise Kartoffel und Zwiebel hineingeben.Jede Schicht mit Salz,Pfeffer und Kümmel würzen.Die oberste Schicht mit Kartoffel abschließen.Den Schlagobers mit Creme Fraiche mischen und darübergießen. 40 Minuten im vorgeheizten Backrohr,Heißluft überbacken."
 
                 }
             };
