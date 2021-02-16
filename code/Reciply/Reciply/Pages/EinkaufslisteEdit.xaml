@@ -66,9 +66,9 @@
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
 
-                <Entry Placeholder="Artikel" Grid.Column="0" HeightRequest="75" FontSize="14"/>
-                <Entry Placeholder="Menge" Grid.Column="1" HeightRequest="75" FontSize="14"/>
-                <Button Grid.Column="2" HeightRequest="75"/>
+                <Entry Placeholder="Artikel" Grid.Column="0" HeightRequest="110" FontSize="14"/>
+                <Entry Placeholder="Menge" Grid.Column="1" HeightRequest="110" FontSize="14"/>
+                <Button Grid.Column="2" HeightRequest="110"/>
             </Grid>
             
             
