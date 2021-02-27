@@ -31,18 +31,29 @@ namespace Reciply.Pages
 
         private void AddPortion(object sender, EventArgs e)
         {
+            double onePortionPercentage = 100 / recipe.Portion; //percentage of one portion
+            for (int i = 0; i < recipe.Ingredient.Count; i++)
+            {
+                recipe.Ingredient[i].Amount = recipe.Ingredient[i].Amount * (1 + onePortionPercentage / 100 );
+            }
             recipe.Portion++;
-            //TODO Portionen erhöhen (Zutaten erhöhen)
+            //TODO add portion and raise ingridients
         }
 
         private void RemovePortion(object sender, EventArgs e)
         {
-            //TODO Portionen sinken (Zutaten vermindern)
+            double onePortionPercentage = 100 / recipe.Portion; //percentage of one portion
+            for (int i = 0; i < recipe.Ingredient.Count; i++)
+            {
+                recipe.Ingredient[i].Amount = recipe.Ingredient[i].Amount * (1 - onePortionPercentage / 100);
+            }
+            recipe.Portion--;
+            //TODO reduce portion and ingridients
         }
 
         private void AddToShoppingList(object sender, EventArgs e)
         {
-            //TODO Rezept hinzufügen zur Einkaufsliste
+            //TODO add recipe to shoppinglist
         }
     }
 }
