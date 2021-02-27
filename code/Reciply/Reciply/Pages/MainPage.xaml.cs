@@ -24,8 +24,7 @@ namespace Reciply
             //{
             //    var ingredientsWithKg = dataContext.Ingredients
             //        .Where(i => i.UnitOfMeasurement == UnitOfMeasurement.kg)
-            //        .ToList();
-                
+            //        .ToList();    
             //}
         }
 
@@ -62,7 +61,6 @@ namespace Reciply
 
         public void InitialSelectedRecipes()
         {
-
             SelectRecipe.Add(new SelectedRecipe { RecipeName = "Gulasch" });
             SelectRecipe.Add(new SelectedRecipe { RecipeName = "Kuchen" });
             SelectRecipe.Add(new SelectedRecipe { RecipeName = "Pizza" });
