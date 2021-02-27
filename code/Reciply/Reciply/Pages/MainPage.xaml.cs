@@ -103,5 +103,12 @@ namespace Reciply
         {
             selectRecipe.IsVisible = !selectRecipe.IsVisible;
         }
+
+        //Tapped
+        private async void Recipe_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Recipepage());
+            //Now navigate to a new Recipepage, but not the right one
+        }
     }
 }

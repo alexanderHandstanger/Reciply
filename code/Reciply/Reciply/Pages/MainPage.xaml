@@ -110,7 +110,11 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
-                            <Label Text="{Binding RecipeName}" />
+                            <Label Text="{Binding RecipeName}">
+                                <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Recipe_Tapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
                             <Button Text="Jetzt kochen" FontSize="8" CommandParameter="{Binding}" Clicked="ButtonClicked_JetztKochen" 
                                     HorizontalOptions="EndAndExpand" TranslationY="-35" BackgroundColor="White" Margin="10,10,10,0" HeightRequest="30"
                                     CornerRadius="10" BorderColor="Black" BorderWidth="1"/>
