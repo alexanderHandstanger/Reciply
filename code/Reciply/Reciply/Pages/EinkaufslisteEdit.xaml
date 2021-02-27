@@ -56,7 +56,8 @@
             </Frame>
 
             
-                <Label Text="Artikel hinzufügen:" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+            <Label Text="Artikel hinzufügen:" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="Black"/>
+
             
 
             <Grid Margin="10,0,10,10">
@@ -66,9 +67,9 @@
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
 
-                <Entry Placeholder="Artikel" Grid.Column="0" HeightRequest="110" FontSize="14"/>
-                <Entry Placeholder="Menge" Grid.Column="1" HeightRequest="110" FontSize="14"/>
-                <Button Grid.Column="2" HeightRequest="110"/>
+                <Entry Placeholder="Artikel" Text="{Binding articleEntry}" Grid.Column="0" HeightRequest="110" FontSize="14"/>
+                <Entry Placeholder="Menge" Text="{Binding amountEntry}" Grid.Column="1" HeightRequest="110" FontSize="14"/>
+                <Button Command="{Binding AddIngrediantCommand}" Grid.Column="2" HeightRequest="110"/>
             </Grid>
             
             
