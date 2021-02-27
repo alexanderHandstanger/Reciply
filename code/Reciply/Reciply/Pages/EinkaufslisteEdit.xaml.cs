@@ -66,6 +66,12 @@ namespace Reciply.Pages
             await Navigation.PushAsync(new EinkaufVerlauf(), true);
         }
 
+        private void DeleteAll_Clicked(object sender, EventArgs e)
+        {
+            Edit_Shoppinglist.IsVisible = false;
+            EinkaufsListe.Clear();
+        }
+
 
     }
 }
