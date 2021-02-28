@@ -12,6 +12,6 @@ namespace Reciply.Models
         public string Item { get; set; } //Name des zu einkaufenden Gegenstandes (z.B. Mehl)
         public double Amount { get; set; } //Wie viel davon einzukaufen ist (z.B. 1{kg})
         public UnitOfMeasurement UnitOfMeasurement { get; set; } //Die Einheit von amount (z.B. kg,ml,l,...)
-        public bool IsInShoppingBasket { get; set; } //True = Wenn der Gegenstand in der Einkaufsliste abgehakt ist (im Einkaufskorb), False = Wenn nicht
+        public bool IsSelected { get; set; } //True = Wenn der Gegenstand in der Einkaufsliste abgehakt ist (im Einkaufskorb), False = Wenn nicht
     }
 }
