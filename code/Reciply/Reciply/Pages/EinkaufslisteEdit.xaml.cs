@@ -15,12 +15,12 @@ namespace Reciply.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EinkaufslisteEdit : ContentPage
     {
-        public List<Ingredient> EinkaufsListe = new List<Ingredient>();
-
+        public ObservableCollection<Ingredient> EinkaufsListe = new ObservableCollection<Ingredient>();
         //List<Ingredient> initialList = new List<Ingredient>();
 
-        public string articleEntry { get; set; }
-        public double amountEntry { get; set; }
+        public string ArticleEntry { get; set; }
+
+        private double _amountEntry;
         public EinkaufslisteEdit()
         {
             InitializeComponent();
@@ -53,7 +53,7 @@ namespace Reciply.Pages
             initialList.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             initialList.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
 
-            EinkaufsListe.AddRange(initialList);
+            EinkaufsListe = initialList;
 
             Edit_Shoppinglist.ItemsSource = EinkaufsListe;
 
@@ -73,24 +73,34 @@ namespace Reciply.Pages
         }
 
         //Methods
-        public ICommand AddIngrediantCommand => new Command(AddIngrdiants);
-        public void AddIngrdiants()
+        //public ICommand AddIngrediantCommand => new Command(AddIngredient);
+        public void AddIngredient()
         {
-            EinkaufsListe.Add(new Ingredient { Item = articleEntry, Amount = amountEntry, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+            if (string.IsNullOrEmpty(ArcticleEntry.Text) || string.IsNullOrEmpty(AmountEntry.Text) || !double.TryParse(AmountEntry.Text, out _amountEntry)) return;
+            ArticleEntry = ArcticleEntry.Text;
+            EinkaufsListe.Add(new Ingredient { Item = ArticleEntry, Amount = _amountEntry, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
         }
 
         //public ICommand DeleteSelectedCommand => new Command(DeleteSelcted);
-        public void DeleteSelcted(object sender, EventArgs e)
+        public void DeleteSelectedItemsButton_Clicked(object sender, EventArgs e)
         {
-            foreach (var ingrediant in EinkaufsListe)
+            for (int i = EinkaufsListe.Count - 1; i >= 0; i--)
             {
-                if (ingrediant.IsSelected == true)
+                if (EinkaufsListe[i].IsSelected)
                 {
-                    EinkaufsListe.Remove(ingrediant);
+                    EinkaufsListe.Remove(EinkaufsListe[i]);
                 }
             }
         }
 
+        private void AddIngredientButton_Clicked(object sender, EventArgs e)
+        {
+            AddIngredient();
+        }
 
+        private void DeleteEveryItemButton_Clicked(object sender, EventArgs e)
+        {
+            EinkaufsListe.Clear();
+        }
     }
 }
