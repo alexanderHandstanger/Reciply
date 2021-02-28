@@ -56,8 +56,7 @@
             </Frame>
 
             
-            <Label Text="Artikel hinzufügen:" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="Black"/>
-
+                <Label Text="Artikel hinzufügen:" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="Black"/>
             
 
             <Grid Margin="10,0,10,10">
@@ -88,7 +87,7 @@
                                 <Label Text="{Binding Item}" />
                                 <Label Text="{Binding Amount}" />
                                 <Label Text="{Binding UnitOfMeasurement}" />
-                                <input:CheckBox HorizontalOptions="EndAndExpand" TranslationY="-10" TranslationX="-10"/>
+                                <input:CheckBox HorizontalOptions="EndAndExpand" TranslationY="-10" TranslationX="-10" IsChecked="False" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
@@ -107,7 +106,9 @@
             BackgroundColor="#FF0000" 
             CornerRadius="10" 
             TextTransform="None"               
-            HeightRequest="60"/>
+            HeightRequest="60"
+            Clicked="DeleteSelcted"/>
+            
             <Button 
             Text="Alles löschen" 
             Margin="10,0,10,0" 
