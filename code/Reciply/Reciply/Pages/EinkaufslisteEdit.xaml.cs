@@ -2,10 +2,11 @@
 using Reciply.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,7 +15,12 @@ namespace Reciply.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EinkaufslisteEdit : ContentPage
     {
-        private List<Ingredient> EinkaufsListe = new List<Ingredient>();
+        public ObservableCollection<Ingredient> EinkaufsListe = new ObservableCollection<Ingredient>();
+        //List<Ingredient> initialList = new List<Ingredient>();
+
+        public string ArticleEntry { get; set; }
+
+        private double _amountEntry;
         public EinkaufslisteEdit()
         {
             InitializeComponent();
@@ -30,7 +36,7 @@ namespace Reciply.Pages
 
         public void Initials()
         {
-            List<Ingredient> initialList = new List<Ingredient>();
+            ObservableCollection<Ingredient> initialList = new ObservableCollection<Ingredient>();
             initialList.Add(new Ingredient { Item = "Mehl", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             initialList.Add(new Ingredient { Item = "Kartoffeln", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             initialList.Add(new Ingredient { Item = "Schinken", Amount = 50, UnitOfMeasurement = UnitOfMeasurement.dag, IsSelected = false });
@@ -47,7 +53,7 @@ namespace Reciply.Pages
             initialList.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             initialList.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
 
-            EinkaufsListe.AddRange(initialList);
+            EinkaufsListe = initialList;
 
             Edit_Shoppinglist.ItemsSource = EinkaufsListe;
 
@@ -66,6 +72,35 @@ namespace Reciply.Pages
             await Navigation.PushAsync(new EinkaufVerlauf(), true);
         }
 
+        //Methods
+        //public ICommand AddIngrediantCommand => new Command(AddIngredient);
+        public void AddIngredient()
+        {
+            if (string.IsNullOrEmpty(ArcticleEntry.Text) || string.IsNullOrEmpty(AmountEntry.Text) || !double.TryParse(AmountEntry.Text, out _amountEntry)) return;
+            ArticleEntry = ArcticleEntry.Text;
+            EinkaufsListe.Add(new Ingredient { Item = ArticleEntry, Amount = _amountEntry, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+        }
 
+        //public ICommand DeleteSelectedCommand => new Command(DeleteSelcted);
+        public void DeleteSelectedItemsButton_Clicked(object sender, EventArgs e)
+        {
+            for (int i = EinkaufsListe.Count - 1; i >= 0; i--)
+            {
+                if (EinkaufsListe[i].IsSelected)
+                {
+                    EinkaufsListe.Remove(EinkaufsListe[i]);
+                }
+            }
+        }
+
+        private void AddIngredientButton_Clicked(object sender, EventArgs e)
+        {
+            AddIngredient();
+        }
+
+        private void DeleteEveryItemButton_Clicked(object sender, EventArgs e)
+        {
+            EinkaufsListe.Clear();
+        }
     }
 }
