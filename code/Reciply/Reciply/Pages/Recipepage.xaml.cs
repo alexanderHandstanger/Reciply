@@ -16,12 +16,14 @@ namespace Reciply.Pages
     public partial class Recipepage : ContentPage
     {
         public ObservableCollection<Recipe> recipe { get; } = new ObservableCollection<Recipe>();
+        private List<double> amountOfOnePortionList = new List<double>();
         public Recipepage()
         {
             InitializeComponent();
             recipe = Initials();
             ingredients.ItemsSource = recipe[0].Ingredient;
             BindingContext = recipe[0];
+            SetAmountOfOnePortion();
         }
 
         private ObservableCollection<Recipe> Initials()
@@ -54,24 +56,32 @@ namespace Reciply.Pages
 
         private void AddPortion(object sender, EventArgs e)
         {
-            double onePortionPercentage = 100 / recipe[0].Portion; //percentage of one portion
             for (int i = 0; i < recipe[0].Ingredient.Count; i++)
             {
-                recipe[0].Ingredient[i].Amount = recipe[0].Ingredient[i].Amount * (1 + onePortionPercentage / 100 );
-                recipe[0].Ingredient[i].Amount = Math.Round(recipe[0].Ingredient[i].Amount,2);
+                recipe[0].Ingredient[i].Amount = recipe[0].Ingredient[i].Amount + amountOfOnePortionList[i];
             }
             recipe[0].Portion++;
         }
 
         private void RemovePortion(object sender, EventArgs e)
         {
-            double onePortionPercentage = 100 / recipe[0].Portion; //percentage of one portion
             for (int i = 0; i < recipe[0].Ingredient.Count; i++)
             {
-                recipe[0].Ingredient[i].Amount = recipe[0].Ingredient[i].Amount * (1 - onePortionPercentage / 100);
-                recipe[0].Ingredient[i].Amount = Math.Round(recipe[0].Ingredient[i].Amount,2);
+                recipe[0].Ingredient[i].Amount = recipe[0].Ingredient[i].Amount - amountOfOnePortionList[i];
             }
             recipe[0].Portion--;
+        }
+
+        private void SetAmountOfOnePortion() //sets the ingridient amount of one portion
+        {
+            if (amountOfOnePortionList.Count == 0)
+            {
+                for (int i = 0; i < recipe[0].Ingredient.Count; i++)
+                {
+                    double amountOfOnePortion = recipe[0].Ingredient[i].Amount / recipe[0].Portion;
+                    amountOfOnePortionList.Add(amountOfOnePortion);
+                }
+            }
         }
 
         private void AddToShoppingList(object sender, EventArgs e)
