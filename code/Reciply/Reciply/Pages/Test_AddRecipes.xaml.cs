@@ -27,12 +27,12 @@ namespace Reciply.Pages
                 {
                     Ingredient = new List<Ingredient>()
                     {
-                        new Ingredient { Item = "Mehl", Amount = 150, UnitOfMeasurement = UnitOfMeasurement.g, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Milch", Amount = 150, UnitOfMeasurement = UnitOfMeasurement.ml, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Ei", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Stück, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Salz", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Prise, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Butter oder Öl in der Pfanne", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Esslöffel, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Backpulver", Amount = 0.5, UnitOfMeasurement = UnitOfMeasurement.Packung, IsInShoppingBasket = false }
+                        new Ingredient { Item = "Mehl", Amount = 150, UnitOfMeasurement = UnitOfMeasurement.g, IsSelected = false },
+                        new Ingredient { Item = "Milch", Amount = 150, UnitOfMeasurement = UnitOfMeasurement.ml, IsSelected = false },
+                        new Ingredient { Item = "Ei", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Stück, IsSelected = false },
+                        new Ingredient { Item = "Salz", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Prise, IsSelected = false },
+                        new Ingredient { Item = "Butter oder Öl in der Pfanne", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Esslöffel, IsSelected = false },
+                        new Ingredient { Item = "Backpulver", Amount = 0.5, UnitOfMeasurement = UnitOfMeasurement.Packung, IsSelected = false }
 
                     },
                     Duration = 20,
@@ -50,12 +50,12 @@ namespace Reciply.Pages
                 {
                     Ingredient = new List<Ingredient>()
                     {
-                        new Ingredient { Item = "Zucker", Amount = 75, UnitOfMeasurement = UnitOfMeasurement.g, IsInShoppingBasket = false,  },
-                        new Ingredient { Item = "Butter (weich)", Amount = 125, UnitOfMeasurement = UnitOfMeasurement.g, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Vanillezucker", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Packung, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Mehl", Amount = 250, UnitOfMeasurement = UnitOfMeasurement.g, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Salz", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Prise, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Ei", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Stück, IsInShoppingBasket = false }
+                        new Ingredient { Item = "Zucker", Amount = 75, UnitOfMeasurement = UnitOfMeasurement.g, IsSelected = false,  },
+                        new Ingredient { Item = "Butter (weich)", Amount = 125, UnitOfMeasurement = UnitOfMeasurement.g, IsSelected = false },
+                        new Ingredient { Item = "Vanillezucker", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Packung, IsSelected = false },
+                        new Ingredient { Item = "Mehl", Amount = 250, UnitOfMeasurement = UnitOfMeasurement.g, IsSelected = false },
+                        new Ingredient { Item = "Salz", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Prise, IsSelected = false },
+                        new Ingredient { Item = "Ei", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Stück, IsSelected = false }
 
                     },
                     Duration = 90,
@@ -70,13 +70,13 @@ namespace Reciply.Pages
                 {
                     Ingredient = new List<Ingredient>()
                     {
-                        new Ingredient { Item = "Kartoffeln, festkochende", Amount = 75, UnitOfMeasurement = UnitOfMeasurement.g, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Salz", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Prise, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Pfeffer", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Prise, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Eier", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Stück, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Mehl", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.Esslöffel, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Öl", Amount = 10, UnitOfMeasurement = UnitOfMeasurement.Esslöffel, IsInShoppingBasket = false },
-                        new Ingredient { Item = "Zwiebel", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Stück, IsInShoppingBasket = false }
+                        new Ingredient { Item = "Kartoffeln, festkochende", Amount = 75, UnitOfMeasurement = UnitOfMeasurement.g, IsSelected = false },
+                        new Ingredient { Item = "Salz", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Prise, IsSelected = false },
+                        new Ingredient { Item = "Pfeffer", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Prise, IsSelected = false },
+                        new Ingredient { Item = "Eier", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Stück, IsSelected = false },
+                        new Ingredient { Item = "Mehl", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.Esslöffel, IsSelected = false },
+                        new Ingredient { Item = "Öl", Amount = 10, UnitOfMeasurement = UnitOfMeasurement.Esslöffel, IsSelected = false },
+                        new Ingredient { Item = "Zwiebel", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Stück, IsSelected = false }
 
                     },
                     Duration = 30,

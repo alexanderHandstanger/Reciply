@@ -54,6 +54,7 @@
             <Label Text="{Binding Portion}"/>
             <Button Text="+" Clicked="AddPortion"/>
             <Button Text="-" Clicked="RemovePortion"/>
+            <!--TODO should refresh!-->
 
             <Label 
             Text="Dauer:"

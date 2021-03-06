@@ -89,7 +89,6 @@
             TextTransform="None"               
             HeightRequest="60"/>
 
-
         <Button 
             Text="Ausgewählte Rezepte" 
             Margin="10,10,10,0" 

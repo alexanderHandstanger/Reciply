@@ -4,6 +4,6 @@
     <SelectedDevice>HUAWEI ANE-LX1</SelectedDevice>
     <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
     <DefaultDevice>pixel_2_pie_9_0_-_api_28</DefaultDevice>
-    <ActiveDebugProfile>Samsung SM-G800F</ActiveDebugProfile>
+    <ActiveDebugProfile>HUAWEI ANE-LX1</ActiveDebugProfile>
   </PropertyGroup>
 </Project>
