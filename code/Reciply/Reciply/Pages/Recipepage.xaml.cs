@@ -14,18 +14,22 @@ namespace Reciply.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Recipepage : ContentPage
     {
-        public Recipepage()
+        public Recipepage(string filter)
         {
             InitializeComponent();
-            var recipe = Initials();
+            var recipe = Initials(filter);
             ingredients.ItemsSource = recipe.Ingredient;
             BindingContext = recipe;
         }
 
-        private Recipe Initials()
+        private Recipe Initials(string filter)
         {
             using var dataContext = new DataContext();
-            return dataContext.Recipes.Include(x => x.Ingredient).FirstOrDefault();
+            if (string.IsNullOrEmpty(filter))
+            {
+                return dataContext.Recipes.Include(x => x.Ingredient).FirstOrDefault();
+            }
+            return dataContext.Recipes.Include(x => x.Ingredient).Where(n => filter == n.Name).First();
         }
     }
 }
