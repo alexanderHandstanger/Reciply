@@ -21,7 +21,7 @@ namespace Reciply
         //Only for testing, will be removed soon -AH
         private async void Temp_Farwarding_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Recipepage(null), true); //instead of null we can now write the name of the desired recipe; f. e. "Vanille Keckse"
+            await Navigation.PushAsync(new Recipepage("Kartoffelpuffer"), true); //instead of null we can now write the name of the desired recipe; f. e. "Vanille Keckse"
         }
     }
 }
