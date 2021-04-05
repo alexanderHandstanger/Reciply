@@ -29,7 +29,7 @@ namespace Reciply
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string dbPath = Path.Combine(FileSystem.AppDataDirectory, "test8.db3");
+            string dbPath = Path.Combine(FileSystem.AppDataDirectory, "test9.db3");
 
             optionsBuilder
                 .UseSqlite($"Filename={dbPath}");
