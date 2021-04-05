@@ -14,7 +14,6 @@
                 <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
             </Frame>
             
-
             <Label 
             Grid.Column="0"
             Text="Zutaten:"
