@@ -10,13 +10,17 @@
             Padding="0" 
             CornerRadius="0"/>
 
-            <Label 
+            <Frame BackgroundColor="Pink" Padding="0" CornerRadius="0">
+                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="20"></Label>
+            </Frame>
+            
+            <!--<Label 
             Text="Name:"
             FontAttributes="Bold"
             FontSize="20">
             </Label>
 
-            <Label Text="{Binding Name}"/>
+            <Label Text="{Binding Name}"/>-->
 
             <Label 
             Grid.Column="0"
