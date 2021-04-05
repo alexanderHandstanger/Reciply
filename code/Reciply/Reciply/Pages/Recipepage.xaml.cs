@@ -29,17 +29,7 @@ namespace Reciply.Pages
             {
                 return dataContext.Recipes.Include(x => x.Ingredient).FirstOrDefault();
             }
-            return (Recipe)dataContext.Recipes.Include(x => x.Ingredient).Where(n => filter == n.Name).Select(r => new Recipe
-            {
-                Name = r.Name,
-                Ingredient = r.Ingredient,
-                Portion = r.Portion,
-                Rating = r.Rating,
-                Duration = r.Duration,
-                Tags = r.Tags,
-                Description = r.Description,
-                Preparation = r.Preparation
-            });
+            return dataContext.Recipes.Include(x => x.Ingredient).Where(n => filter == n.Name).First();
         }
     }
 }
