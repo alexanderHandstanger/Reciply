@@ -4,6 +4,22 @@
              x:Class="Reciply.MainPage"
              xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
 
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Image Source="EinkaufVerlauf"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Start" />
+            <Label Text="Reciply"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="20"/>
+            <Image Source="share"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="End" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
     <StackLayout>
         <Frame 
             BackgroundColor="#2196F3" 
