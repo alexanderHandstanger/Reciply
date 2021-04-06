@@ -10,9 +10,14 @@
                     BackgroundColor="Transparent"
                     HeightRequest="30"
                     WidthRequest="30"
-                   VerticalOptions="CenterAndExpand"
+                   VerticalOptions="StartAndExpand"
                    HorizontalOptions="Start" />
             <Label Text="Reciply"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="20"/>
+            <Label Text="Test Username"
                    HorizontalOptions="StartAndExpand"
                    VerticalOptions="CenterAndExpand"
                    FontAttributes="Bold"
