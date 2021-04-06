@@ -6,7 +6,10 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Image Source="EinkaufVerlauf"
+            <Button ImageSource="home"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    WidthRequest="30"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="Start" />
             <Label Text="Reciply"
@@ -14,7 +17,10 @@
                    VerticalOptions="CenterAndExpand"
                    FontAttributes="Bold"
                    FontSize="20"/>
-            <Image Source="share"
+            <Button ImageSource="logout"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    WidthRequest="30"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="End" />
         </StackLayout>
