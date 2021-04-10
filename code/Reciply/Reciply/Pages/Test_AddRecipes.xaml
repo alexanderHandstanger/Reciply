@@ -10,7 +10,7 @@
                     WidthRequest="30"
                     VerticalOptions="StartAndExpand"
                     HorizontalOptions="Start"
-                    Clicked="Button2_Clicked"
+                    Clicked="Button_Clicked"
                     />
             <Label Text="Reciply"
                    HorizontalOptions="StartAndExpand"
@@ -24,6 +24,12 @@
                    FontSize="20"/>
             <!--TODO Add login/logout here with keycloak-->
             <Button ImageSource="logout"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="End" />
+            <Button ImageSource="settings"
                     BackgroundColor="Transparent"
                     HeightRequest="30"
                     WidthRequest="30"

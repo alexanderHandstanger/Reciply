@@ -31,6 +31,12 @@
                     WidthRequest="30"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="End" />
+            <Button ImageSource="settings"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="End" />
         </StackLayout>
     </NavigationPage.TitleView>
 
