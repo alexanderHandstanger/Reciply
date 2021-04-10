@@ -2,6 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Reciply.Pages.SelectedRecipes">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button ImageSource="home"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="Start"
+                    Clicked="Button_Clicked"
+                    />
+            <Label Text="Reciply"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="20"/>
+            <Label Text="Test Username"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="20"/>
+            <!--TODO Add login/logout here with keycloak-->
+            <Button ImageSource="logout"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="End" />
+        </StackLayout>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"

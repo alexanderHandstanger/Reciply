@@ -10,8 +10,10 @@
                     BackgroundColor="Transparent"
                     HeightRequest="30"
                     WidthRequest="30"
-                   VerticalOptions="StartAndExpand"
-                   HorizontalOptions="Start" />
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="Start"
+                    Clicked="Button_Clicked"
+                    />
             <Label Text="Reciply"
                    HorizontalOptions="StartAndExpand"
                    VerticalOptions="CenterAndExpand"
@@ -22,12 +24,13 @@
                    VerticalOptions="CenterAndExpand"
                    FontAttributes="Bold"
                    FontSize="20"/>
+            <!--TODO Add login/logout here with keycloak-->
             <Button ImageSource="logout"
                     BackgroundColor="Transparent"
                     HeightRequest="30"
                     WidthRequest="30"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="End" />
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="End" />
         </StackLayout>
     </NavigationPage.TitleView>
 
