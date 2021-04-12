@@ -69,7 +69,6 @@ namespace Reciply
         }
 
 
-
         //Navigation
         private async void RecipeButton_Clicked(object sender, EventArgs e)
         {
@@ -102,7 +101,7 @@ namespace Reciply
             selectRecipe.IsVisible = !selectRecipe.IsVisible;
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void Home_Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopToRootAsync();
         }

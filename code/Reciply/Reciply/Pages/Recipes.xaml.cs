@@ -16,7 +16,7 @@ namespace Reciply
         {
             InitializeComponent();
         }
-
+        
         //Only for testing, will be removed soon -AH
         //Please fix spelling mistakes (Forwarding) -LN
         private async void Temp_Farwarding_Clicked(object sender, EventArgs e)
@@ -24,9 +24,10 @@ namespace Reciply
             await Navigation.PushAsync(new Recipepage(/*"Kartoffelpuffer"*/), true); //instead of null we can now write the name of the desired recipe; f. e. "Vanille Keckse"
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void Home_Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopToRootAsync();
         }
+
     }
 }

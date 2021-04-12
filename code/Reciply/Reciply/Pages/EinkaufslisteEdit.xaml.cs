@@ -103,7 +103,7 @@ namespace Reciply.Pages
             EinkaufsListe.Clear();
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void Home_Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopToRootAsync();
         }
