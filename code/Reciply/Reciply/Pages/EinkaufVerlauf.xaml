@@ -10,7 +10,7 @@
                     WidthRequest="30"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="EndAndExpand"
-                    Clicked="Button_Clicked"
+                    Clicked="Home_Button_Clicked"
                     />
             <Label Text=""
                    HorizontalOptions="StartAndExpand"                  

@@ -10,7 +10,7 @@
                     WidthRequest="30"
                     VerticalOptions="StartAndExpand"
                     HorizontalOptions="Start"
-                    Clicked="Button_Clicked"
+                    Clicked="Home_Button_Clicked"
                     />
             <Label Text="Reciply"
                    HorizontalOptions="StartAndExpand"

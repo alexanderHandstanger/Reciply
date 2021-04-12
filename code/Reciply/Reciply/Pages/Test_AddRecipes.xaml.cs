@@ -122,12 +122,12 @@ namespace Reciply.Pages
             }
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Add_Recipes_Button_Clicked(object sender, EventArgs e)
         {
             AddRecipes();
         }
 
-        private async void Button2_Clicked(object sender, EventArgs e)
+        private async void Home_Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopToRootAsync();
         }

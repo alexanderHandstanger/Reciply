@@ -32,7 +32,7 @@ namespace Reciply.Pages
             return dataContext.Recipes.Include(x => x.Ingredient).Where(n => filter == n.Name).First();
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void Home_Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopToRootAsync();
         }

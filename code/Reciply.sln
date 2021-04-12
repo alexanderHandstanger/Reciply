@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reciply.Android", "Reciply\Reciply.Android\Reciply.Android.csproj", "{EFB8636D-814E-4712-933A-814B483218BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reciply", "Reciply\Reciply\Reciply.csproj", "{C9C09EE8-6160-4E1C-B759-A74FAE1DF649}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reciply", "Reciply\Reciply\Reciply.csproj", "{C9C09EE8-6160-4E1C-B759-A74FAE1DF649}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
