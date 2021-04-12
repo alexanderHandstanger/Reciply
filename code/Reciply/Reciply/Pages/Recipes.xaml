@@ -9,12 +9,12 @@
                     BackgroundColor="Transparent"
                     HeightRequest="30"
                     WidthRequest="30"
-                    VerticalOptions="StartAndExpand"
-                    HorizontalOptions="Start"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="StartAndExpand"
                     Clicked="Button_Clicked"
                     />
-            <Label Text="Reciply"
-                   HorizontalOptions="StartAndExpand"
+            <Label Text=""
+                   HorizontalOptions="StartAndExpand"                  
                    VerticalOptions="CenterAndExpand"
                    FontAttributes="Bold"
                    FontSize="20"/>

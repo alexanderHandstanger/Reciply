@@ -71,7 +71,6 @@ namespace Reciply
         }
 
 
-
         //Navigation
         private async void RecipeButton_Clicked(object sender, EventArgs e)
         {
