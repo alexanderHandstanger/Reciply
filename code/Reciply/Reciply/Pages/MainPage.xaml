@@ -4,6 +4,42 @@
              x:Class="Reciply.MainPage"
              xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
 
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button ImageSource="home"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="Start"
+                    Clicked="Button_Clicked"
+                    />
+            <Label Text="Reciply"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="20"/>
+            <Label Text="Test Username"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="20"/>
+            <!--TODO Add login/logout here with keycloak-->
+            <Button ImageSource="logout"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="End" />
+            <Button ImageSource="settings"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="End" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
     <StackLayout>
         <Frame 
             BackgroundColor="#2196F3" 

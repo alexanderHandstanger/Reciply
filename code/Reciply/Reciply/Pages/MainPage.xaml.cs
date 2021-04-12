@@ -101,5 +101,10 @@ namespace Reciply
         {
             selectRecipe.IsVisible = !selectRecipe.IsVisible;
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopToRootAsync();
+        }
     }
 }

@@ -21,6 +21,7 @@ namespace Reciply.Pages
         {
             InitializeComponent();
             recipe = Initials();
+            //var recipe = Initials(filter);
             ingredients.ItemsSource = recipe[0].Ingredient;
             BindingContext = recipe[0];
             SetAmountOfOnePortion();
@@ -49,10 +50,19 @@ namespace Reciply.Pages
             initialRecipe.Add( new Recipe { Id = 1, Description = "Ein supergeiles Gericht", Duration = 3, Name = "5 Minutenkuche", Portion = 4, Rating = 3, Preparation = "Einfach Mixen", Tags = "#Kuchen, #Schnell", Ingredient = ingredients });
             
             return initialRecipe;
-
-            //using var dataContext = new DataContext();
-            //return dataContext.Recipes.Include(x => x.Ingredient).FirstOrDefault();
         }
+
+        /*
+        private Recipe Initials(string filter)
+        {
+            using var dataContext = new DataContext();
+            if (string.IsNullOrEmpty(filter))
+            {
+                return dataContext.Recipes.Include(x => x.Ingredient).FirstOrDefault();
+            }
+            return dataContext.Recipes.Include(x => x.Ingredient).Where(n => filter == n.Name).First();
+        } 
+        */
 
         private void AddPortion(object sender, EventArgs e)
         {
@@ -87,6 +97,11 @@ namespace Reciply.Pages
         private void AddToShoppingList(object sender, EventArgs e)
         {
             //TODO add recipe to shoppinglist
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopToRootAsync();
         }
     }
 }
