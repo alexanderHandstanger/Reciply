@@ -85,15 +85,16 @@
             FontAttributes="Bold"
             FontSize="20">
             </Label>
-
             <Label Text="{Binding Portion}"/>
+            <Button Text="+" Clicked="AddPortion"/>
+            <Button Text="-" Clicked="RemovePortion"/>
+            <!--TODO should refresh!-->
 
             <Label 
             Text="Dauer:"
             FontAttributes="Bold"
             FontSize="20">
             </Label>
-
             <Label Text="{Binding Duration}"/>
 
             <Label 
@@ -101,7 +102,6 @@
             FontAttributes="Bold"
             FontSize="20">
             </Label>
-
             <Label Text="{Binding Tags}"/>
 
             <Label 
@@ -109,7 +109,6 @@
             FontAttributes="Bold"
             FontSize="20">
             </Label>
-
             <Label Text="{Binding Description}"/>
 
             <Label 
@@ -117,8 +116,16 @@
             FontAttributes="Bold"
             FontSize="20">
             </Label>
-
             <Label Text="{Binding Preparation}"/>
+
+            <Button 
+            Text="Zur Einkaufsliste hinzufügen" 
+            Clicked="AddToShoppingList"
+            Margin="0,0,0,0" 
+            BackgroundColor="#38DA38" 
+            CornerRadius="10" 
+            TextTransform="None"               
+            HeightRequest="60"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
