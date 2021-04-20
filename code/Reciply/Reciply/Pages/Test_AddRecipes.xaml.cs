@@ -158,10 +158,9 @@ namespace Reciply.Pages
             //Close the document.
             document.Close(true);
             //Open the pdf
-            await CrossXamarinFormsSaveOpenPDFPackage.Current.SaveAndView("myFile.pdf", "application/pdf", stream, PDFOpenContext.InApp);
+            await CrossXamarinFormsSaveOpenPDFPackage.Current.SaveAndView("Einkaufsliste.pdf", "application/pdf", stream, PDFOpenContext.InApp);
             //Close the stream
             stream.Close();
-            //await Launcher.OpenAsync(new Uri(stream));
         }
 
         private async void Home_Button_Clicked(object sender, EventArgs e)
