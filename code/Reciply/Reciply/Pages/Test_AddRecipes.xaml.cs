@@ -6,8 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Syncfusion.Pdf;
+using System.IO;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+using Xamarin.Essentials;
+using Xamarin.Forms;
+using Plugin.XamarinFormsSaveOpenPDFPackage;
 
 namespace Reciply.Pages
 {
@@ -122,9 +128,40 @@ namespace Reciply.Pages
             }
         }
 
-        private void Add_Recipes_Button_Clicked(object sender, EventArgs e)
+        private async void Add_Recipes_Button_Clicked(object sender, EventArgs e)
         {
             AddRecipes();
+            //Create a new PDF document.
+            PdfDocument document = new PdfDocument();
+            //Add a page to the document.
+            PdfPage page = document.Pages.Add();
+            //Create PDF graphics for the page.
+            PdfGraphics graphics = page.Graphics;
+            //Set the standard font.
+            PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
+            //Draw the text.
+            using var dataContext = new DataContext();
+            var str = "";
+            foreach (var item in dataContext.Recipes.Include(x => x.Ingredient))
+            {
+                str += $"{item.Name}\n";
+                foreach (var ingredient in item.Ingredient)
+                {
+                    str += $"=> {ingredient.Item}: {ingredient.Amount} {ingredient.UnitOfMeasurement}\n";
+                }
+            }
+            graphics.DrawString("EinkaufsListe\n" + str, font, PdfBrushes.Black, new PointF(0, 0));
+            graphics.Flush();
+            var stream = new MemoryStream();
+            //Save the document.
+            document.Save(stream);
+            //Close the document.
+            document.Close(true);
+            //Open the pdf
+            await CrossXamarinFormsSaveOpenPDFPackage.Current.SaveAndView("myFile.pdf", "application/pdf", stream, PDFOpenContext.InApp);
+            //Close the stream
+            stream.Close();
+            //await Launcher.OpenAsync(new Uri(stream));
         }
 
         private async void Home_Button_Clicked(object sender, EventArgs e)
