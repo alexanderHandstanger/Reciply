@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Reciply.Pages.AddEditRecipe">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Rezept hinzufügen/bearbeiten"
+                   FontSize="20"
+                   TextColor="Black"
+                   Margin="0,0,0,0" 
+                   BackgroundColor="#70DBFF" 
+                   HeightRequest="60"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Name:" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="Black" Margin="5,0,0,0" FontSize="Medium"/>
+                <Entry x:Name="recipeName" Grid.Column="1"/>
+            </Grid>
+                
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="Zutaten:" Margin="5,0,0,0" TextColor="Black" FontSize="Medium" Grid.Row="0"/>
+                <Entry Placeholder="Zutat" x:Name="ingrediant" Grid.Row="1" Grid.Column="0" Margin="5,0,0,0"/>
+                <Entry Placeholder="Menge" x:Name="Ingrediant" Grid.Row="1" Grid.Column="1" Margin="5,0,0,0"/>
+                <Picker x:Name="Einheit" Grid.Row="1" Grid.Column="2" Title="Einheit" Margin="5,0,5,0">
+                    <Picker.Items>
+                        <x:String>kg</x:String>
+                        <x:String>dag</x:String>
+                        <x:String>g</x:String>
+                        <x:String>l</x:String>
+                        <x:String>ml</x:String>
+                        <x:String>Pkg</x:String>
+                        <x:String>Stück</x:String>
+                        <x:String>Esslöffel</x:String>
+                        <x:String>Teelöffel</x:String>
+                        <x:String>Prise</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Button Grid.Row="1" Grid.Column="3" Margin="0,0,5,0"/>
+            </Grid>
+            <ListView 
+            IsVisible="true" 
+            x:Name="Ingrediant_list" 
+            ItemsSource="{Binding IngrediantList}"
+            Margin="10,10,10,0"
+            CachingStrategy="RecycleElement" 
+            SeparatorColor="Transparent" 
+            BackgroundColor="Transparent">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Item}" />
+                                <Label Text="{Binding Amount}" />
+                                <Label Text="{Binding UnitOfMeasurement}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid>
+                <Entry Placeholder="Portionen" Grid.Column="0"/>
+                <Entry Placeholder="Dauer" Grid.Column="1"/>
+            </Grid>
+            <Entry Placeholder="Tags"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+      
+</ContentPage>
