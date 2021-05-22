@@ -9,27 +9,26 @@
                    TextColor="Black"
                    Margin="0,0,0,0" 
                    BackgroundColor="#70DBFF" 
-                   HeightRequest="60"
+                   HeightRequest="50"
                    VerticalTextAlignment="Center"
                    HorizontalTextAlignment="Center"/>
+            
+            <Entry Placeholder="Name des Rezepts" x:Name="recipeName"/>
+                            
             <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="Name:" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="Black" Margin="5,0,0,0" FontSize="Medium"/>
-                <Entry x:Name="recipeName" Grid.Column="1"/>
-            </Grid>
-                
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Label Text="Zutaten:" Margin="5,0,0,0" TextColor="Black" FontSize="Medium" Grid.Row="0"/>
-                <Entry Placeholder="Zutat" x:Name="ingrediant" Grid.Row="1" Grid.Column="0" Margin="5,0,0,0"/>
-                <Entry Placeholder="Menge" x:Name="Ingrediant" Grid.Row="1" Grid.Column="1" Margin="5,0,0,0"/>
-                <Picker x:Name="Einheit" Grid.Row="1" Grid.Column="2" Title="Einheit" Margin="5,0,5,0">
+                <Entry Placeholder="Zutat" x:Name="ingrediant" Grid.Row="0" Grid.Column="0" Margin="5,0,0,0"/>
+                <Entry Placeholder="Menge" x:Name="Ingrediant" Grid.Row="0" Grid.Column="1" Margin="5,0,0,0"/>
+                <Picker x:Name="Einheit" Grid.Row="0" Grid.Column="2" Title="Einheit" Margin="5,0,5,0">
                     <Picker.Items>
                         <x:String>kg</x:String>
                         <x:String>dag</x:String>
@@ -43,34 +42,51 @@
                         <x:String>Prise</x:String>
                     </Picker.Items>
                 </Picker>
-                <Button Grid.Row="1" Grid.Column="3" Margin="0,0,5,0"/>
+                <Button Text="Add" Grid.Row="0" Grid.Column="3" Margin="0,0,5,0" WidthRequest="5"/>
+
+                <ListView 
+                    IsVisible="true" 
+                    x:Name="Ingrediant_list" 
+                    ItemsSource="{Binding IngrediantList}"
+                    Margin="10,10,10,0"
+                    CachingStrategy="RecycleElement" 
+                    SeparatorColor="Transparent" 
+                    BackgroundColor="Transparent"
+                    Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Item}" />
+                                    <Label Text="{Binding Amount}" />
+                                    <Label Text="{Binding UnitOfMeasurement}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
             </Grid>
-            <ListView 
-            IsVisible="true" 
-            x:Name="Ingrediant_list" 
-            ItemsSource="{Binding IngrediantList}"
-            Margin="10,10,10,0"
-            CachingStrategy="RecycleElement" 
-            SeparatorColor="Transparent" 
-            BackgroundColor="Transparent">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Item}" />
-                                <Label Text="{Binding Amount}" />
-                                <Label Text="{Binding UnitOfMeasurement}"/>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            
             <Grid>
                 <Entry Placeholder="Portionen" Grid.Column="0"/>
                 <Entry Placeholder="Dauer" Grid.Column="1"/>
             </Grid>
             <Entry Placeholder="Tags"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Editor Placeholder="Beschreibung des Gerichts" FontSize="Small" Grid.Row="0"/>
+                <Editor Placeholder="Zubereitung" FontSize="Small" Grid.Row="1"/>
+            </Grid>
             
+
+            <Grid>
+                <Button Text="Verwerfen" BackgroundColor="#FF0000" Grid.Column="0"/>
+                <Button Text="Fertigstellen" BackgroundColor="#38DA38" Grid.Column="1"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
       
