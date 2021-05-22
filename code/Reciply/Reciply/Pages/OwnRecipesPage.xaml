@@ -67,8 +67,7 @@
             x:Name="ingredients"
             Margin="10"
             HeightRequest="200"
-            BackgroundColor="Transparent"
-                ItemTapped="ingredients_ItemTapped">
+            BackgroundColor="Transparent">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -82,8 +81,7 @@
                                     WidthRequest="30"
                                     VerticalOptions="CenterAndExpand"
                                     HorizontalOptions="EndAndExpand"
-                                    Clicked="EditButton_Clicked"
-                                        />
+                                    Clicked="EditButton_Clicked"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
