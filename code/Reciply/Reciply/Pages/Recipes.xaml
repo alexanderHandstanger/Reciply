@@ -52,6 +52,7 @@
             BackgroundColor="#70DBFF" 
             CornerRadius="10" 
             TextTransform="None" 
+            Clicked="OwnRecipeButton_Clicked"
             HeightRequest="60"/>
             
             <Button 

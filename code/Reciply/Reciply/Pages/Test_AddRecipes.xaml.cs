@@ -25,7 +25,7 @@ namespace Reciply.Pages
             InitializeComponent();
         }
 
-        private static void AddRecipes()
+        public static void AddRecipes()
         {
             var recipes = new List<Recipe>()
             {

@@ -29,5 +29,9 @@ namespace Reciply
             await Navigation.PopToRootAsync();
         }
 
+        private async void OwnRecipeButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new OwnRecipesPage(), true);
+        }
     }
 }
