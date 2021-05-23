@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Reciply.Pages.AddEditRecipe">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Rezept hinzufügen/bearbeiten"
+                   FontSize="20"
+                   TextColor="Black"
+                   Margin="0,0,0,0" 
+                   BackgroundColor="#70DBFF" 
+                   HeightRequest="50"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"/>
+            
+            <Entry Placeholder="Name des Rezepts" x:Name="recipeName"/>
+                            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Entry Placeholder="Zutat" x:Name="ingrediant" Grid.Row="0" Grid.Column="0" Margin="5,0,0,0"/>
+                <Entry Placeholder="Menge" x:Name="amount" Grid.Row="0" Grid.Column="1" Margin="5,0,0,0"/>
+                <Picker x:Name="einheit" Grid.Row="0" Grid.Column="2" Title="Einheit" Margin="5,0,5,0">
+                    <Picker.Items>
+                        <x:String>kg</x:String>
+                        <x:String>dag</x:String>
+                        <x:String>g</x:String>
+                        <x:String>l</x:String>
+                        <x:String>ml</x:String>
+                        <x:String>Pkg</x:String>
+                        <x:String>Stück</x:String>
+                        <x:String>Esslöffel</x:String>
+                        <x:String>Teelöffel</x:String>
+                        <x:String>Prise</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Button Text="Add" Clicked="AddIngrediant_Clicked" Grid.Row="0" Grid.Column="3" Margin="0,0,5,0" WidthRequest="5"/>
+
+                <ListView 
+                    IsVisible="true" 
+                    x:Name="Ingrediant_list" 
+                    ItemsSource="{Binding ingredients}"
+                    Margin="10,10,10,0"
+                    CachingStrategy="RecycleElement" 
+                    SeparatorColor="Transparent" 
+                    BackgroundColor="Transparent"
+                    Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Item}" />
+                                    <Label Text="{Binding Amount}" />
+                                    <Label Text="{Binding UnitOfMeasurement}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </Grid>
+            
+            <Grid>
+                <Entry Placeholder="Portionen" x:Name="portion" Grid.Column="0"/>
+                <Entry Placeholder="Dauer" x:Name="dauer" Grid.Column="1"/>
+            </Grid>
+            <Entry Placeholder="Tags" x:Name="tag"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Editor Placeholder="Beschreibung des Gerichts" x:Name="beschreibung" FontSize="Small" Grid.Row="0"/>
+                <Editor Placeholder="Zubereitung" x:Name="zubereitung" FontSize="Small" Grid.Row="1"/>
+            </Grid>
+            
+
+            <Grid>
+                <Button Text="Verwerfen" Clicked="Cancle_Clicked" BackgroundColor="#FF0000" Grid.Column="0" Margin="5,0,0,0"/>
+                <Button Text="Fertigstellen" Clicked="AddRecipe_Clicked" BackgroundColor="#38DA38" Grid.Column="1" Margin="0,0,5,0"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+      
+</ContentPage>

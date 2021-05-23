@@ -138,6 +138,11 @@ namespace Reciply
             SelectedRecipe.IsVisible = !SelectedRecipe.IsVisible;
         }
 
+        private async void Test(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddEditRecipe(), true);
+        }
+
         private async void Home_Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopToRootAsync();
