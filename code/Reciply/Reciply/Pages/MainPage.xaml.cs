@@ -115,11 +115,11 @@ namespace Reciply
 
         private async void ButtonClicked_JetztKochen(object sender, EventArgs e)
         {
-            var selectedObject = ((Button)sender).BindingContext;
+            var selectedObject = ((Button)sender).CommandParameter;
             int selectedItemId = int.Parse(string.Format("{0}", selectedObject));
-            var selectedItem = SelectedRecipes.Where(x => x.Id == selectedItemId).ToList();
+            Recipe selectedItem = SelectedRecipes.Where(x => x.Id == selectedItemId).FirstOrDefault();
 
-            await Navigation.PushAsync(new CookRecipeIngredients(selectedItem[0]), true);
+            await Navigation.PushAsync(new CookRecipeIngredients(selectedItem), true);
         }
 
         private async void Einkaufsliste_Edit_Clicked(object sender, EventArgs e)
