@@ -1,20 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Reciply.Models;
+﻿using Reciply.Models;
 using Reciply.Pages;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Reciply
 {
     public partial class MainPage : ContentPage //currently finished
     {
-        private List<Ingredient> EinkaufsListe = new List<Ingredient>();
-        private List<Recipe> SelectedRecipes = new List<Recipe>();
+        private ObservableCollection<Ingredient> EinkaufsListe = new ObservableCollection<Ingredient>();
+        private ObservableCollection<Recipe> SelectedRecipes = new ObservableCollection<Recipe>();
         public MainPage()
         {
             InitializeComponent();
@@ -30,24 +27,22 @@ namespace Reciply
 
         public void Initials()
         {
-            List<Ingredient> initialsList = new List<Ingredient>();
-            initialsList.Add(new Ingredient { Item = "Mehl", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Kartoffeln", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Schinken", Amount = 50, UnitOfMeasurement = UnitOfMeasurement.dag, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Eier", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Stück, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Pizzateig", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Pkg, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Reis", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Wasser", Amount = 5, UnitOfMeasurement = UnitOfMeasurement.l, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Essig", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Teelöffel, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Salz", Amount = 150, UnitOfMeasurement = UnitOfMeasurement.g, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Mais", Amount = 10, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Zuccini", Amount = 0.5, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Zucker", Amount = 12, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Karotten", Amount = 6, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialsList.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            EinkaufsListe.AddRange(initialsList);
-            Einkaufsliste.ItemsSource = initialsList;
+            EinkaufsListe.Add(new Ingredient { Item = "Mehl", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Kartoffeln", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Schinken", Amount = 50, UnitOfMeasurement = UnitOfMeasurement.dag, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Eier", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Stück, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Pizzateig", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Pkg, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Reis", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Wasser", Amount = 5, UnitOfMeasurement = UnitOfMeasurement.l, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Essig", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Teelöffel, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Salz", Amount = 150, UnitOfMeasurement = UnitOfMeasurement.g, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Mais", Amount = 10, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Zuccini", Amount = 0.5, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Zucker", Amount = 12, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Karotten", Amount = 6, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+            Einkaufsliste.ItemsSource = EinkaufsListe;
 
             //using (var dataContext = new DataContext())
             //{
@@ -141,6 +136,17 @@ namespace Reciply
         private async void Home_Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopToRootAsync();
+        }
+
+        public void ConfimPurchase_Button_Clicked(object sender, EventArgs e)
+        {
+            for (int i = EinkaufsListe.Count - 1; i >= 0; i--)
+            {
+                if (EinkaufsListe[i].IsSelected)
+                {
+                    EinkaufsListe.Remove(EinkaufsListe[i]);
+                }
+            }
         }
     }
 }
