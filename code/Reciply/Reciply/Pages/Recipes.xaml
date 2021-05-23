@@ -2,53 +2,50 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Reciply.Recipes">
-
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal">
-            <Button ImageSource="home"
-                    BackgroundColor="Transparent"
-                    HeightRequest="30"
-                    WidthRequest="30"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="StartAndExpand"
-                    Clicked="Home_Button_Clicked"
-                    />
-            <Label Text=""
-                   HorizontalOptions="StartAndExpand"                  
-                   VerticalOptions="CenterAndExpand"
-                   FontAttributes="Bold"
-                   FontSize="20"/>
-            <Label Text="Test Username"
-                   HorizontalOptions="StartAndExpand"
-                   VerticalOptions="CenterAndExpand"
-                   FontAttributes="Bold"
-                   FontSize="20"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+
+            <Button 
+                Grid.Column="0"
+                ImageSource="home"
+                BackgroundColor="Transparent"
+                Clicked="Home_Button_Clicked"/>
+            <Label 
+                Grid.Column="1" 
+                Text="Test Username"
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalTextAlignment="Center"/>
             <!--TODO Add login/logout here with keycloak-->
-            <Button ImageSource="logout"
-                    BackgroundColor="Transparent"
-                    HeightRequest="30"
-                    WidthRequest="30"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="End" />
-            <Button ImageSource="settings"
-                    BackgroundColor="Transparent"
-                    HeightRequest="30"
-                    WidthRequest="30"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="End" />
-        </StackLayout>
+            <Button 
+                Grid.Column="2" 
+                ImageSource="logout"
+                BackgroundColor="Transparent"
+                Margin="0,0,10,0"/>
+            <Button 
+                Grid.Column="3"
+                ImageSource="settings"
+                BackgroundColor="Transparent"
+                Margin="0,0,10,0"/>
+        </Grid>
     </NavigationPage.TitleView>
     
     <ContentPage.Content>
         <StackLayout>
-            <Frame 
-            BackgroundColor="#2196F3" 
-            Padding="24" 
-            CornerRadius="0"/>
-            
+
             <Button 
             Text="Eigene Rezepte" 
-            Margin="10,0,10,0" 
+            Margin="10,10,10,0" 
             BackgroundColor="#70DBFF" 
             CornerRadius="10" 
             TextTransform="None" 
@@ -71,14 +68,13 @@
             TextTransform="None" 
             HeightRequest="60"/>
 
-            <!--Only a temporary farwarding to the recipepage for testing -AH -->
             <Button 
             Text="Entdecken" 
             Margin="10,0,10,0" 
             BackgroundColor="#70DBFF" 
             CornerRadius="10" 
             TextTransform="None" 
-            Clicked="Temp_Farwarding_Clicked"
+            Clicked="Discover_Button_Clicked"
             HeightRequest="60"/>
         </StackLayout>
     </ContentPage.Content>
