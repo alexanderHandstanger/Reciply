@@ -3,9 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,13 +17,17 @@ namespace Reciply.Pages
             InitializeComponent();
             recipes = Initials();
             DiscoverRecipesList.ItemsSource = recipes;
-            DiscoverRecipesList2.ItemsSource = recipes;
-            DiscoverRecipesList3.ItemsSource = recipes;
 
         }
         private async void Home_Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopToRootAsync();
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var searchResults = recipes.Where(r => r.Name.ToLower().Contains(SearchBar.Text.ToLower()));
+            DiscoverRecipesList.ItemsSource = searchResults;
         }
 
         private ObservableCollection<Recipe> Initials()
@@ -68,7 +69,7 @@ namespace Reciply.Pages
             ingredients.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             ingredients.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
 
-            initialRecipe.Add(new Recipe { Id = 2, Description = "leckere gemüsesuppe", Duration = 30, Name = "Schnitzel", Portion = 4, Rating = 4, Preparation = "Bissi herschneiden und so", Tags = "#Kuchen, #Schnell", Ingredient = ingredients });
+            initialRecipe.Add(new Recipe { Id = 2, Description = "leckere gemüsesuppe", Duration = 30, Name = "Apfel", Portion = 4, Rating = 4, Preparation = "Bissi herschneiden und so", Tags = "#Kuchen, #Schnell", Ingredient = ingredients });
 
             return initialRecipe;
         }
@@ -81,8 +82,20 @@ namespace Reciply.Pages
 
             await Navigation.PushAsync(new RecipePage(selectedItem), true);
         }
+
+        private void Button_Clicked_SortName(object sender, EventArgs e)
+        {
+            DiscoverRecipesList.ItemsSource = recipes.OrderBy(x => x.Name).ToList();
+        }
+
+        private void Button_Clicked_SortDuration(object sender, EventArgs e)
+        {
+            DiscoverRecipesList.ItemsSource = recipes.OrderBy(x => x.Duration).ToList();
+        }
+
+        private void Button_Clicked_SortRating(object sender, EventArgs e)
+        {
+            DiscoverRecipesList.ItemsSource = recipes.OrderByDescending(x => x.Rating).ToList();
+        }
     }
-
-
-
 }

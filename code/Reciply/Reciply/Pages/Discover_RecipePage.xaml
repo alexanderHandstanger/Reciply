@@ -46,7 +46,7 @@
                 <Label x:Name="Name" Text="Entdecken" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
             </Frame>
 
-            <SearchBar x:Name="SearchBar" Placeholder="Search ..."/>
+            <SearchBar x:Name="SearchBar" Placeholder="Search ..." TextChanged="SearchBar_TextChanged"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -59,14 +59,13 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Row="0" Grid.Column="0" Text="Name" Margin="10,0,0,0"/>
-                <Label Grid.Row="0" Grid.Column="1" Text="Kochmützen"/>
-                <Label Grid.Row="0" Grid.Column="2" Text="Dauer"/>
+                <Button Grid.Row="0" Grid.Column="0" Text="Name" Margin="10,0,0,0" Clicked="Button_Clicked_SortName"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="Kochmützen" Clicked="Button_Clicked_SortRating"/>
+                <Button Grid.Row="0" Grid.Column="2" Text="Dauer" Clicked="Button_Clicked_SortDuration"/>
                 
-                <!--1stListview-->
                 <ListView 
-                    Grid.Column="0"
-                    Grid.Row="1"        
+                    Grid.ColumnSpan="3"
+                    Grid.Row="1"
                     IsVisible="true" 
                     x:Name="DiscoverRecipesList"            
                     ItemsSource="{Binding Recipe}"
@@ -77,54 +76,21 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout Orientation="Horizontal">
-                                   <!-- <Label Text="{Binding Name}" Grid.Column="0" /> -->
-                                    <Button Text="{Binding Name}" Grid.Column="0" CommandParameter="{Binding Id}" Clicked="Button_Clicked_Recipepage"></Button>
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
 
-                <!--2ndListview-->
-                <ListView 
-                    Grid.Column="1"
-                    Grid.Row="1"        
-                    IsVisible="true" 
-                    x:Name="DiscoverRecipesList2" 
-                    ItemsSource="{Binding Recipe}"
-                    Margin="10,10,10,0"
-                    CachingStrategy="RecycleElement" 
-                    SeparatorColor="Transparent" 
-                    BackgroundColor="Transparent">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Rating}" Grid.Column="1" /> 
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <!--3ndListview-->
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
 
-                <ListView 
-                    Grid.Column="2"
-                    Grid.Row="1"        
-                    IsVisible="true" 
-                    x:Name="DiscoverRecipesList3" 
-                    ItemsSource="{Binding Recipe}"
-                    Margin="10,10,10,0"
-                    CachingStrategy="RecycleElement" 
-                    SeparatorColor="Transparent" 
-                    BackgroundColor="Transparent">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Duration}" Grid.Column="2" />
-                                </StackLayout>
+                                    <Button Text="{Binding Name}" Grid.Column="0" CommandParameter="{Binding Id}" Clicked="Button_Clicked_Recipepage"/>
+                                    <Label Text="{Binding Rating}" Grid.Column="1"/>
+                                    <Label Text="{Binding Duration}" Grid.Column="2"/>
+                                </Grid>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
