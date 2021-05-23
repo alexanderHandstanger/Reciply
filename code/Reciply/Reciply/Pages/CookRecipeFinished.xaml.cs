@@ -25,5 +25,18 @@ namespace Reciply.Pages
         {
             await Navigation.PushAsync(new CookRecipePreparation(Recipe), true);
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            int rating = int.Parse(Rating.Text);
+            if (rating >= 0 && rating <= 5)
+            {
+                // TODO add rating to recipe
+            }
+            else
+            {
+                await DisplayAlert("Invalid rating", "Rating 1-5", "OK");
+            }
+        }
     }
 }

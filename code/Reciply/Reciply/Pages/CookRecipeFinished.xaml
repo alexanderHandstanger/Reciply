@@ -51,6 +51,9 @@
                 TextColor="#000000" 
                 HorizontalOptions="Center"/>
 
+            <Entry x:Name="Rating" Keyboard="Numeric"/>
+            <Button Text="Bewerten" Clicked="Button_Clicked"/>
+
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
