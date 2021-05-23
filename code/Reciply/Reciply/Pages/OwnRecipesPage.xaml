@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Reciply.Pages.OwnRecipesPage">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Button ImageSource="home"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="Start"
+                    Clicked="Home_Button_Clicked"
+                    />
+            <Label Text="Reciply"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="20"/>
+            <Label Text="Test Username"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="20"/>
+            <!--TODO Add login/logout here with keycloak-->
+            <Button ImageSource="logout"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="End" />
+            <Button ImageSource="settings"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="End" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Eigene Rezepte"
+                   FontSize="20"
+                   BackgroundColor="#70DBFF" 
+                   HeightRequest="60"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10">
+            <StackLayout Orientation="Horizontal">
+                <Button ImageSource="add"
+                    BackgroundColor="Transparent"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="End"
+                    Clicked="AddButton_Clicked"/>
+                <Label Text="Rezept hinzufügen"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="20"/>
+            </StackLayout>
+            </Frame>
+            <SearchBar x:Name="SearchBar" Placeholder="Search ..." TextChanged="SearchBar_TextChanged"/>
+            <ListView
+            x:Name="ingredients"
+            Margin="10"
+            HeightRequest="200"
+            BackgroundColor="Transparent">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}"
+                                       VerticalOptions="CenterAndExpand"
+                                       HorizontalOptions="StartAndExpand"/>
+                                <Button ImageSource="edit"
+                                    BackgroundColor="Transparent"
+                                    HeightRequest="30"
+                                    WidthRequest="30"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="EndAndExpand"
+                                    Clicked="EditButton_Clicked"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

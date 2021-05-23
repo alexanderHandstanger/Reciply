@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Reciply.Recipes">
-
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="Reciply.Pages.CookRecipeIngredients">
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
             <Button ImageSource="home"
@@ -10,7 +11,7 @@
                     HeightRequest="30"
                     WidthRequest="30"
                     VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="StartAndExpand"
+                    HorizontalOptions="EndAndExpand"
                     Clicked="Home_Button_Clicked"
                     />
             <Label Text=""
@@ -41,45 +42,41 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Frame 
-            BackgroundColor="#2196F3" 
-            Padding="24" 
-            CornerRadius="0"/>
             
-            <Button 
-            Text="Eigene Rezepte" 
-            Margin="10,0,10,0" 
-            BackgroundColor="#70DBFF" 
-            CornerRadius="10" 
-            TextTransform="None" 
-            Clicked="OwnRecipeButton_Clicked"
-            HeightRequest="60"/>
+            <Frame BackgroundColor="#70DBFF" Padding="5" CornerRadius="0">
+                <Label x:Name="Name" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Frame>
             
-            <Button 
-            Text="Favoriten" 
-            Margin="10,0,10,0" 
-            BackgroundColor="#70DBFF" 
-            CornerRadius="10" 
-            TextTransform="None" 
-            HeightRequest="60"/>
+            <Label
+                Text="Zutaten" 
+                FontSize="Medium" 
+                TextColor="#000000" 
+                HorizontalOptions="Center"/>
             
-            <Button 
-            Text="Gekochte Rezepte" 
-            Margin="10,0,10,0" 
-            BackgroundColor="#70DBFF" 
-            CornerRadius="10" 
-            TextTransform="None" 
-            HeightRequest="60"/>
+            <ListView 
+                IsVisible="true" 
+                x:Name="ingredients" 
+                ItemsSource="{Binding Ingredient}"
+                Margin="10,10,10,0"
+                CachingStrategy="RecycleElement" 
+                SeparatorColor="Transparent" 
+                BackgroundColor="Transparent"
+                HeightRequest="200">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Item}" />
+                                <Label Text="{Binding Amount}" />
+                                <Label Text="{Binding UnitOfMeasurement}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
-            <!--Only a temporary farwarding to the recipepage for testing -AH -->
-            <Button 
-            Text="Entdecken" 
-            Margin="10,0,10,0" 
-            BackgroundColor="#70DBFF" 
-            CornerRadius="10" 
-            TextTransform="None" 
-            Clicked="Temp_Farwarding_Clicked"
-            HeightRequest="60"/>
+            <Button Text="Next" Clicked="Next_Button_Clicked"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

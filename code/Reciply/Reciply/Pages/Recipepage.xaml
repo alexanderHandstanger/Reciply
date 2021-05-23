@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Reciply.Pages.Recipepage">
+             x:Class="Reciply.Pages.RecipePage">
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
@@ -11,9 +11,8 @@
                     WidthRequest="30"
                     VerticalOptions="StartAndExpand"
                     HorizontalOptions="Start"
-                    Clicked="Home_Button_Clicked"
-                    />
-            <Label Text="Reciply"
+                    Clicked="Home_Button_Clicked"/>
+            <Label Text=""
                    HorizontalOptions="StartAndExpand"
                    VerticalOptions="CenterAndExpand"
                    FontAttributes="Bold"
@@ -42,25 +41,19 @@
     
     <ScrollView>
         <StackLayout Margin="10" >
-            <Frame 
-            BackgroundColor="#2196F3" 
-            Padding="0" 
-            CornerRadius="0"/>
-
             <Frame BackgroundColor="#70DBFF" Padding="5" CornerRadius="0">
-                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
             </Frame>
-            
+
             <Label 
-            Grid.Column="0"
             Text="Zutaten:"
             FontAttributes="Bold"
-            FontSize="20">
-            </Label>
+            FontSize="20"/>
 
+            <!-- TODO fix refresh bug -->
             <ListView
             IsVisible="true"
-            x:Name="ingredients"
+            x:Name="Ingredients"
             Margin="10"
             HeightRequest="200"
             ItemsSource="{Binding ingredients}"
@@ -83,39 +76,45 @@
             <Label 
             Text="Portionen:"
             FontAttributes="Bold"
-            FontSize="20">
-            </Label>
-            <Label Text="{Binding Portion}"/>
-            <Button Text="+" Clicked="AddPortion"/>
-            <Button Text="-" Clicked="RemovePortion"/>
-            <!--TODO should refresh!-->
+            FontSize="20"/>
+            <Label x:Name="Portions" Text="{Binding Portion}"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Text="+" Clicked="AddPortion"/>
+                <Button Grid.Column="1" Text="-" Clicked="RemovePortion"/>
+            </Grid>
 
             <Label 
             Text="Dauer:"
             FontAttributes="Bold"
-            FontSize="20">
-            </Label>
+            FontSize="20"/>
             <Label Text="{Binding Duration}"/>
 
             <Label 
             Text="Tags:"
             FontAttributes="Bold"
-            FontSize="20">
-            </Label>
+            FontSize="20"/>
             <Label Text="{Binding Tags}"/>
 
             <Label 
             Text="Beschreibung:"
             FontAttributes="Bold"
-            FontSize="20">
-            </Label>
+            FontSize="20"/>
             <Label Text="{Binding Description}"/>
 
             <Label 
             Text="Zubereitung:"
             FontAttributes="Bold"
-            FontSize="20">
-            </Label>
+            FontSize="20"/>
             <Label Text="{Binding Preparation}"/>
 
             <Button 

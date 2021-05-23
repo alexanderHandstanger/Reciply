@@ -21,16 +21,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Pages\AddEditRecipe.xaml.cs">
-      <DependentUpon>AddEditRecipe.xaml</DependentUpon>
+    <Compile Update="Pages\Recipepage.xaml.cs">
+      <DependentUpon>RecipePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Pages\AddEditRecipe.xaml">
+    <EmbeddedResource Update="Pages\CookRecipesIngrediants.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\CookRecipesIngrediants.xaml">
+    <EmbeddedResource Update="Pages\Discover_RecipePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\EinkaufslisteEdit.xaml">
@@ -39,7 +39,7 @@
     <EmbeddedResource Update="Pages\EinkaufVerlauf.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\Recipepage.xaml">
+    <EmbeddedResource Update="Pages\RecipePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Recipes.xaml">
