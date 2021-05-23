@@ -46,7 +46,7 @@
             </Frame>
             
             <Label
-                Text="Zutaten" 
+                Text="Zubereitung" 
                 FontSize="Medium" 
                 TextColor="#000000" 
                 HorizontalOptions="Center"/>

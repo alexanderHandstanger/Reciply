@@ -139,7 +139,7 @@
                     <ViewCell>
                         <StackLayout>
                             <Label Text="{Binding Name}" />
-                            <Button Text="Jetzt kochen" 
+                            <Button Text="Jetzt Kochen" 
                                     FontSize="8" 
                                     Clicked="ButtonClicked_JetztKochen" 
                                     HorizontalOptions="EndAndExpand" 
@@ -150,7 +150,7 @@
                                     CornerRadius="10" 
                                     BorderColor="Black" 
                                     BorderWidth="1" 
-                                    BindingContext="{Binding Id}"/>
+                                    CommandParameter="{Binding Id}"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
