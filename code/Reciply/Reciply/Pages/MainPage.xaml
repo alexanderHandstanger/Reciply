@@ -12,8 +12,7 @@
                     WidthRequest="30"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="EndAndExpand"
-                    Clicked="Home_Button_Clicked"
-                    />
+                    Clicked="Home_Button_Clicked"/>
             <Label Text=""
                    HorizontalOptions="StartAndExpand"                  
                    VerticalOptions="CenterAndExpand"
@@ -55,14 +54,12 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
-
                 </Grid.ColumnDefinitions>
 
                 <Button 
@@ -72,16 +69,14 @@
                     Grid.Column="0"
                     Margin="0,0,0,0"
                     BackgroundColor="#70DBFF"
-                    Clicked="Einkaufsliste_Share_Clicked"
-                    />
+                    Clicked="Einkaufsliste_Share_Clicked"/>
 
                 <Label
                 Text="Einkaufsliste" 
                 FontSize="Medium" 
                 TextColor="#000000" 
                 HorizontalOptions="Center"
-                Grid.Column="1"  
-                    />
+                Grid.Column="1"/>
 
                 <Button 
                     ImageSource="edit.png"
@@ -89,10 +84,8 @@
                     WidthRequest="30"
                     Grid.Column="2"
                     Clicked="Einkaufsliste_Edit_Clicked"
-                    BackgroundColor="#70DBFF"
-                    />
+                    BackgroundColor="#70DBFF"/>
             </Grid>
-
         </Frame>
 
         <ListView 
@@ -136,7 +129,7 @@
 
         <ListView
             IsVisible="false" 
-            x:Name="selectRecipe" 
+            x:Name="SelectedRecipe" 
             Margin="10,10,10,0"
             CachingStrategy="RecycleElement" 
             SeparatorColor="Transparent" 
@@ -145,12 +138,20 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
-                            <Label Text="{Binding RecipeName}" />
-                            <Button Text="Jetzt kochen" FontSize="8" CommandParameter="{Binding}" Clicked="ButtonClicked_JetztKochen" 
-                                    HorizontalOptions="EndAndExpand" TranslationY="-35" BackgroundColor="White" Margin="10,10,10,0" HeightRequest="30"
-                                    CornerRadius="10" BorderColor="Black" BorderWidth="1"/>
+                            <Label Text="{Binding Name}" />
+                            <Button Text="Jetzt kochen" 
+                                    FontSize="8" 
+                                    Clicked="ButtonClicked_JetztKochen" 
+                                    HorizontalOptions="EndAndExpand" 
+                                    TranslationY="-35" 
+                                    BackgroundColor="White" 
+                                    Margin="10,10,10,0" 
+                                    HeightRequest="30"
+                                    CornerRadius="10" 
+                                    BorderColor="Black" 
+                                    BorderWidth="1" 
+                                    BindingContext="{Binding Id}"/>
                         </StackLayout>
-
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
