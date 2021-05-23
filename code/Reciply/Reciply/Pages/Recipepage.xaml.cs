@@ -1,30 +1,26 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Reciply.Models;
+﻿using Reciply.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Reciply.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Recipepage : ContentPage
+    public partial class RecipePage : ContentPage
     {
-        public ObservableCollection<Recipe> recipe { get; } = new ObservableCollection<Recipe>();
-        private List<double> amountOfOnePortionList = new List<double>();
-        public Recipepage()
+        public ObservableCollection<Recipe> Recipe { get; } = new ObservableCollection<Recipe>();
+        private List<double> AmountOfOnePortionList = new List<double>();
+        public RecipePage()
         {
             InitializeComponent();
-            recipe = Initials();
+            Recipe = Initials();
             //var recipe = Initials(filter);
-            ingredients.ItemsSource = recipe[0].Ingredient;
-            BindingContext = recipe[0];
             SetAmountOfOnePortion();
+            BindingContext = Recipe[0];
+            Ingredients.ItemsSource = Recipe[0].Ingredient;
+            Portions.Text = Convert.ToString(Recipe[0].Portion);
         }
 
         private ObservableCollection<Recipe> Initials()
@@ -66,30 +62,32 @@ namespace Reciply.Pages
 
         private void AddPortion(object sender, EventArgs e)
         {
-            for (int i = 0; i < recipe[0].Ingredient.Count; i++)
+            for (int i = 0; i < Recipe[0].Ingredient.Count; i++)
             {
-                recipe[0].Ingredient[i].Amount = recipe[0].Ingredient[i].Amount + amountOfOnePortionList[i];
+                Recipe[0].Ingredient[i].Amount = Recipe[0].Ingredient[i].Amount + AmountOfOnePortionList[i];
             }
-            recipe[0].Portion++;
+            Recipe[0].Portion++;
+            Portions.Text = Convert.ToString(Recipe[0].Portion);
         }
 
         private void RemovePortion(object sender, EventArgs e)
         {
-            for (int i = 0; i < recipe[0].Ingredient.Count; i++)
+            for (int i = 0; i < Recipe[0].Ingredient.Count; i++)
             {
-                recipe[0].Ingredient[i].Amount = recipe[0].Ingredient[i].Amount - amountOfOnePortionList[i];
+                Recipe[0].Ingredient[i].Amount = Recipe[0].Ingredient[i].Amount - AmountOfOnePortionList[i];
             }
-            recipe[0].Portion--;
+            Recipe[0].Portion--;
+            Portions.Text = Convert.ToString(Recipe[0].Portion);
         }
 
         private void SetAmountOfOnePortion() //sets the ingridient amount of one portion
         {
-            if (amountOfOnePortionList.Count == 0)
+            if (AmountOfOnePortionList.Count == 0)
             {
-                for (int i = 0; i < recipe[0].Ingredient.Count; i++)
+                for (int i = 0; i < Recipe[0].Ingredient.Count; i++)
                 {
-                    double amountOfOnePortion = recipe[0].Ingredient[i].Amount / recipe[0].Portion;
-                    amountOfOnePortionList.Add(amountOfOnePortion);
+                    double amountOfOnePortion = Recipe[0].Ingredient[i].Amount / Recipe[0].Portion;
+                    AmountOfOnePortionList.Add(amountOfOnePortion);
                 }
             }
         }
