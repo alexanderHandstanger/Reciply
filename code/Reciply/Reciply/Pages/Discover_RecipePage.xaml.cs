@@ -51,7 +51,7 @@ namespace Reciply.Pages
             ObservableCollection<Recipe> initialRecipe = new ObservableCollection<Recipe>();
             initialRecipe.Add(new Recipe { Id = 1, Description = "Ein supergeiles Gericht", Duration = 3, Name = "Suppe", Portion = 4, Rating = 3, Preparation = "Einfach Mixen", Tags = "#Kuchen, #Schnell", Ingredient = ingredients });
 
-            List<Ingredient> ingredients2 = new List<Ingredient>();
+            ingredients.Clear();
             ingredients.Add(new Ingredient { Item = "Mehl", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             ingredients.Add(new Ingredient { Item = "Kartoffeln", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             ingredients.Add(new Ingredient { Item = "Schinken", Amount = 50, UnitOfMeasurement = UnitOfMeasurement.dag, IsSelected = false });
@@ -68,7 +68,7 @@ namespace Reciply.Pages
             ingredients.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             ingredients.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
 
-            initialRecipe.Add(new Recipe { Id = 2, Description = "leckere gemüsesuppe", Duration = 30, Name = "Schnitzel", Portion = 4, Rating = 4, Preparation = "Bissi herschneiden und so", Tags = "#Kuchen, #Schnell", Ingredient = ingredients2 });
+            initialRecipe.Add(new Recipe { Id = 2, Description = "leckere gemüsesuppe", Duration = 30, Name = "Schnitzel", Portion = 4, Rating = 4, Preparation = "Bissi herschneiden und so", Tags = "#Kuchen, #Schnell", Ingredient = ingredients });
 
             return initialRecipe;
         }

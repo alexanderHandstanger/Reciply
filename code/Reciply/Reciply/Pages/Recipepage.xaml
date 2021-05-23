@@ -12,7 +12,7 @@
                     VerticalOptions="StartAndExpand"
                     HorizontalOptions="Start"
                     Clicked="Home_Button_Clicked"/>
-            <Label Text="Reciply"
+            <Label Text=""
                    HorizontalOptions="StartAndExpand"
                    VerticalOptions="CenterAndExpand"
                    FontAttributes="Bold"

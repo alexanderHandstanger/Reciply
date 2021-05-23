@@ -13,7 +13,7 @@ namespace Reciply.Pages
         public ObservableCollection<Recipe> Recipe { get; } = new ObservableCollection<Recipe>();
         private List<double> AmountOfOnePortionList = new List<double>();
         public RecipePage(Recipe recipe)
-        {
+        {           
             InitializeComponent();
             Recipe.Add(recipe);
             //var recipe = Initials(filter);
