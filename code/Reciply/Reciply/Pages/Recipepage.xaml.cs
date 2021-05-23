@@ -12,10 +12,10 @@ namespace Reciply.Pages
     {
         public ObservableCollection<Recipe> Recipe { get; } = new ObservableCollection<Recipe>();
         private List<double> AmountOfOnePortionList = new List<double>();
-        public RecipePage()
+        public RecipePage(Recipe recipe)
         {
             InitializeComponent();
-            Recipe = Initials();
+            Recipe.Add(recipe);
             //var recipe = Initials(filter);
             SetAmountOfOnePortion();
             BindingContext = Recipe[0];

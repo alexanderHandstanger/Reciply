@@ -14,12 +14,14 @@ namespace Reciply.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Discover_RecipePage : ContentPage
     {
+        private ObservableCollection<Recipe> recipes = new ObservableCollection<Recipe>();
         public Discover_RecipePage()
         {
             InitializeComponent();
-            DiscoverRecipesList.ItemsSource = Initials();
-            DiscoverRecipesList2.ItemsSource = Initials();
-            DiscoverRecipesList3.ItemsSource = Initials();
+            recipes = Initials();
+            DiscoverRecipesList.ItemsSource = recipes;
+            DiscoverRecipesList2.ItemsSource = recipes;
+            DiscoverRecipesList3.ItemsSource = recipes;
 
         }
         private async void Home_Button_Clicked(object sender, EventArgs e)
@@ -47,7 +49,7 @@ namespace Reciply.Pages
             ingredients.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
 
             ObservableCollection<Recipe> initialRecipe = new ObservableCollection<Recipe>();
-            initialRecipe.Add(new Recipe { Id = 1, Description = "Ein supergeiles Gericht", Duration = 3, Name = "5 Minutenkuche", Portion = 4, Rating = 3, Preparation = "Einfach Mixen", Tags = "#Kuchen, #Schnell", Ingredient = ingredients });
+            initialRecipe.Add(new Recipe { Id = 1, Description = "Ein supergeiles Gericht", Duration = 3, Name = "Suppe", Portion = 4, Rating = 3, Preparation = "Einfach Mixen", Tags = "#Kuchen, #Schnell", Ingredient = ingredients });
 
             List<Ingredient> ingredients2 = new List<Ingredient>();
             ingredients.Add(new Ingredient { Item = "Mehl", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
@@ -66,12 +68,19 @@ namespace Reciply.Pages
             ingredients.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             ingredients.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
 
-            initialRecipe.Add(new Recipe { Id = 2, Description = "leckere gemüsesuppe", Duration = 3, Name = "Würzige Suppe", Portion = 4, Rating = 3, Preparation = "Bissi herschneiden und so", Tags = "#Kuchen, #Schnell", Ingredient = ingredients2 });
+            initialRecipe.Add(new Recipe { Id = 2, Description = "leckere gemüsesuppe", Duration = 30, Name = "Schnitzel", Portion = 4, Rating = 4, Preparation = "Bissi herschneiden und so", Tags = "#Kuchen, #Schnell", Ingredient = ingredients2 });
 
             return initialRecipe;
         }
 
+        private async void Button_Clicked_Recipepage(object sender, EventArgs e)
+        {
+            var selectedObject = ((Button)sender).CommandParameter;
+            int selectedItemId = int.Parse(string.Format("{0}", selectedObject));
+            Recipe selectedItem = recipes.Where(x => x.Id == selectedItemId).FirstOrDefault();
 
+            await Navigation.PushAsync(new RecipePage(selectedItem), true);
+        }
     }
 
 
