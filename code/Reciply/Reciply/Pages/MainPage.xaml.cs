@@ -10,13 +10,27 @@ namespace Reciply
 {
     public partial class MainPage : ContentPage //currently finished
     {
-        private ObservableCollection<Ingredient> EinkaufsListe = new ObservableCollection<Ingredient>();
+        public ObservableCollection<Ingredient> EinkaufsListe = new ObservableCollection<Ingredient>();
         private ObservableCollection<Recipe> SelectedRecipes = new ObservableCollection<Recipe>();
+        private ObservableCollection<Ingredient> ShoppedItems = new ObservableCollection<Ingredient>();
+        private bool Shopped;
+
+        private static MainPage _instance;
+        public static MainPage PageInstance
+        {
+            get
+            {
+                return _instance;
+            }
+        }
+
         public MainPage()
         {
+            _instance = this;
             InitializeComponent();
             InitialSelectedRecipes();
             Initials();
+            Einkaufsliste.ItemsSource = EinkaufsListe;
             //using (var dataContext = new DataContext())
             //{
             //    var ingredientsWithKg = dataContext.Ingredients
@@ -42,8 +56,6 @@ namespace Reciply
             EinkaufsListe.Add(new Ingredient { Item = "Karotten", Amount = 6, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             EinkaufsListe.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             EinkaufsListe.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            Einkaufsliste.ItemsSource = EinkaufsListe;
-
             //using (var dataContext = new DataContext())
             //{
             //    dataContext.RemoveRange(dataContext.Ingredients);
@@ -105,7 +117,14 @@ namespace Reciply
 
         private async void EinkaufVerlauf_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new EinkaufVerlauf(), true);
+            if (Shopped)
+            {
+                await Navigation.PushAsync(new EinkaufVerlauf(ShoppedItems, DateTime.Now), true);
+            }
+            else
+            {
+                await Navigation.PushAsync(new EinkaufVerlauf(), true);
+            }         
         }
 
         private async void ButtonClicked_JetztKochen(object sender, EventArgs e)
@@ -144,9 +163,11 @@ namespace Reciply
             {
                 if (EinkaufsListe[i].IsSelected)
                 {
+                    ShoppedItems.Add(EinkaufsListe[i]);
                     EinkaufsListe.Remove(EinkaufsListe[i]);
+                    Shopped = true;
                 }
-            }
+            }     
         }
     }
 }
