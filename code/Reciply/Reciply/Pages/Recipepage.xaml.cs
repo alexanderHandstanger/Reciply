@@ -18,6 +18,7 @@ namespace Reciply.Pages
             Recipe.Add(recipe);
             //var recipe = Initials(filter);
             SetAmountOfOnePortion();
+
             BindingContext = Recipe[0];
             Ingredients.ItemsSource = Recipe[0].Ingredient;
             Portions.Text = Convert.ToString(Recipe[0].Portion);

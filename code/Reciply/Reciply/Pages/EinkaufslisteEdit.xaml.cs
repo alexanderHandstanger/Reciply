@@ -1,12 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Reciply.Models;
+﻿using Reciply.Models;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,10 +15,13 @@ namespace Reciply.Pages
         public string ArticleEntry { get; set; }
 
         private double _amountEntry;
-        public EinkaufslisteEdit()
+        public EinkaufslisteEdit(ObservableCollection<Ingredient> einkaufsliste)
         {
             InitializeComponent();
-            Initials();
+            EinkaufsListe = einkaufsliste;
+            Edit_Shoppinglist.ItemsSource = EinkaufsListe;
+
+            //Initials();
             //using (var dataContext = new DataContext())
             //{
             //    var ingredientsWithKg = dataContext.Ingredients

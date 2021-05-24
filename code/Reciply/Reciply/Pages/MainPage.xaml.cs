@@ -119,7 +119,7 @@ namespace Reciply
 
         private async void Einkaufsliste_Edit_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new EinkaufslisteEdit(), true);
+            await Navigation.PushAsync(new EinkaufslisteEdit(EinkaufsListe), true);
         }
 
         private async void Einkaufsliste_Share_Clicked(object sender, EventArgs e)
