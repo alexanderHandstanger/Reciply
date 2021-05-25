@@ -43,6 +43,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Button Text="Add Recipes" Clicked="Add_Recipes_Button_Clicked"/>
+            <Button Text="Einkaufsliste generieren" Clicked="JsonFileShoppingListGenerate_Button_Clicked"/>
+            <Button Text="Einkaufsliste generieren" Clicked="JsonFileSelectedRecipesGenerate_Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
