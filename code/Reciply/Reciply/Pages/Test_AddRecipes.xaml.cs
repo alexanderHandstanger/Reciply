@@ -40,7 +40,7 @@ namespace Reciply.Pages
                         new Ingredient { Item = "Ei", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Stück, IsSelected = false },
                         new Ingredient { Item = "Salz", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Prise, IsSelected = false },
                         new Ingredient { Item = "Butter oder Öl in der Pfanne", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Esslöffel, IsSelected = false },
-                        new Ingredient { Item = "Backpulver", Amount = 0.5, UnitOfMeasurement = UnitOfMeasurement.Packung, IsSelected = false }
+                        new Ingredient { Item = "Backpulver", Amount = 0.5, UnitOfMeasurement = UnitOfMeasurement.Pkg, IsSelected = false }
 
                     },
                     Duration = 20,
@@ -60,7 +60,7 @@ namespace Reciply.Pages
                     {
                         new Ingredient { Item = "Zucker", Amount = 75, UnitOfMeasurement = UnitOfMeasurement.g, IsSelected = false,  },
                         new Ingredient { Item = "Butter (weich)", Amount = 125, UnitOfMeasurement = UnitOfMeasurement.g, IsSelected = false },
-                        new Ingredient { Item = "Vanillezucker", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Packung, IsSelected = false },
+                        new Ingredient { Item = "Vanillezucker", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Pkg, IsSelected = false },
                         new Ingredient { Item = "Mehl", Amount = 250, UnitOfMeasurement = UnitOfMeasurement.g, IsSelected = false },
                         new Ingredient { Item = "Salz", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Prise, IsSelected = false },
                         new Ingredient { Item = "Ei", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Stück, IsSelected = false }

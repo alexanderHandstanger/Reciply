@@ -33,6 +33,11 @@ namespace Reciply.Pages
         {
             if (string.IsNullOrEmpty(ArcticleEntry.Text) || string.IsNullOrEmpty(AmountEntry.Text) || !double.TryParse(AmountEntry.Text, out _amountEntry)) return;
             ArticleEntry = ArcticleEntry.Text;
+
+            if (EinkaufsListe == null)
+            {
+                EinkaufsListe = new ObservableCollection<Ingredient>();
+            }
             EinkaufsListe.Add(new Ingredient { Item = ArticleEntry, Amount = _amountEntry, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
 
             MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, EinkaufsListe);
