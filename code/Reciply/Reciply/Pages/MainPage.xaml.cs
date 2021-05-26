@@ -2,7 +2,6 @@
 using Reciply.Models;
 using Reciply.Pages;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -12,8 +11,8 @@ namespace Reciply
 {
     public partial class MainPage : ContentPage
     {
-        private string FilePathForShoppingList = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Einkaufsliste.json");
-        private string FilePathForSelectedRecipes = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "SelectedRecipes.json");
+        private string FilePathForShoppingList = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Einkaufsliste.json");
+        private string FilePathForSelectedRecipes = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "SelectedRecipes.json");
 
         public ObservableCollection<Ingredient> EinkaufsListe = new ObservableCollection<Ingredient>();
         private ObservableCollection<Recipe> SelectedRecipes = new ObservableCollection<Recipe>();
@@ -35,37 +34,37 @@ namespace Reciply
             _instance = this;
             InitializeComponent();
 
-            ReadShoppingListFromJson();
-            ReadSelectedRecipesFromJson();
+            EinkaufsListe = ReadJson<Ingredient>(FilePathForShoppingList) as ObservableCollection<Ingredient>;
+            SelectedRecipes = ReadJson<Recipe>(FilePathForSelectedRecipes) as ObservableCollection<Recipe>;
 
-            SelectedRecipe.ItemsSource = SelectedRecipes;
             Einkaufsliste.ItemsSource = EinkaufsListe;
+            SelectedRecipe.ItemsSource = SelectedRecipes;
         }
 
         //Methods for Json
-        public void ReadShoppingListFromJson()
+        public object ReadJson<T>(string filePath)
         {
-            using (StreamReader r = new StreamReader(FilePathForShoppingList))
+            if (!File.Exists(filePath))
             {
-                string json = r.ReadToEnd();
-                EinkaufsListe = Newtonsoft.Json.JsonConvert.DeserializeObject<ObservableCollection<Ingredient>>(json);
+                File.WriteAllText(filePath, null);
+                return null;
+            }
+            else
+            {
+                string json;
+                using (StreamReader r = new StreamReader(filePath))
+                {
+                    json = r.ReadToEnd();
+                    return JsonConvert.DeserializeObject<ObservableCollection<T>>(json);
+                }
             }
         }
 
-        private void SaveShoppingListAsJson()
+        public void SaveJson(string filePath, object dataToSave)
         {
-            File.Delete(FilePathForShoppingList);
-            string json = JsonConvert.SerializeObject(EinkaufsListe);
-            File.WriteAllText(FilePathForShoppingList, json);
-        }
-
-        public void ReadSelectedRecipesFromJson()
-        {
-            using (StreamReader r = new StreamReader(FilePathForSelectedRecipes))
-            {
-                string json = r.ReadToEnd();
-                SelectedRecipes = Newtonsoft.Json.JsonConvert.DeserializeObject<ObservableCollection<Recipe>>(json);
-            }
+            File.Delete(filePath);
+            string json = JsonConvert.SerializeObject(dataToSave);
+            File.WriteAllText(filePath, json);
         }
 
         //Navigation Buttons
@@ -127,7 +126,7 @@ namespace Reciply
                     Shopped = true;
                 }
             }
-            SaveShoppingListAsJson();
+            SaveJson(FilePathForShoppingList, EinkaufsListe);
         }
     }
 }

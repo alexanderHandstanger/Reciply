@@ -1,6 +1,7 @@
 ﻿using Reciply.Models;
 using System;
 using System.Collections.ObjectModel;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,7 +22,6 @@ namespace Reciply.Pages
             EinkaufsListe = einkaufsliste;
             Edit_Shoppinglist.ItemsSource = EinkaufsListe;
 
-            //Initials();
             //using (var dataContext = new DataContext())
             //{
             //    var ingredientsWithKg = dataContext.Ingredients
@@ -31,38 +31,6 @@ namespace Reciply.Pages
             //}
         }
 
-        public void Initials()
-        {
-            ObservableCollection<Ingredient> initialList = new ObservableCollection<Ingredient>();
-            initialList.Add(new Ingredient { Item = "Mehl", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Kartoffeln", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Schinken", Amount = 50, UnitOfMeasurement = UnitOfMeasurement.dag, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Eier", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Stück, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Pizzateig", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Pkg, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Reis", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Wasser", Amount = 5, UnitOfMeasurement = UnitOfMeasurement.l, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Essig", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Teelöffel, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Salz", Amount = 150, UnitOfMeasurement = UnitOfMeasurement.g, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Mais", Amount = 10, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Zuccini", Amount = 0.5, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Zucker", Amount = 12, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Karotten", Amount = 6, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            initialList.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-
-            EinkaufsListe = initialList;
-
-            Edit_Shoppinglist.ItemsSource = EinkaufsListe;
-
-            //using (var dataContext = new DataContext())
-            //{
-            //    dataContext.RemoveRange(dataContext.Ingredients);
-            //    dataContext.Database.ExecuteSqlRaw("delete from sqlite_sequence where name='Ingredients';");
-            //    dataContext.Database.ExecuteSqlRaw("delete from sqlite_sequence where name='Recipes';");
-            //    dataContext.Ingredients.AddRange(EinkaufsListe);
-            //    dataContext.SaveChanges();
-            //}
-        }
         //Buttons
         private async void EinkaufVerlauf_Clicked(object sender, EventArgs e)
         {
@@ -76,6 +44,9 @@ namespace Reciply.Pages
             if (string.IsNullOrEmpty(ArcticleEntry.Text) || string.IsNullOrEmpty(AmountEntry.Text) || !double.TryParse(AmountEntry.Text, out _amountEntry)) return;
             ArticleEntry = ArcticleEntry.Text;
             EinkaufsListe.Add(new Ingredient { Item = ArticleEntry, Amount = _amountEntry, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Einkaufsliste.json");
+            MainPage.PageInstance.SaveJson(filePath, EinkaufsListe);
         }
 
         //public ICommand DeleteSelectedCommand => new Command(DeleteSelcted);
@@ -88,6 +59,9 @@ namespace Reciply.Pages
                     EinkaufsListe.Remove(EinkaufsListe[i]);
                 }
             }
+
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Einkaufsliste.json");
+            MainPage.PageInstance.SaveJson(filePath, EinkaufsListe);
         }
 
         private void AddIngredientButton_Clicked(object sender, EventArgs e)

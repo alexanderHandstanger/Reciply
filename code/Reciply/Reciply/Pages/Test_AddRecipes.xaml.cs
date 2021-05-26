@@ -172,7 +172,7 @@ namespace Reciply.Pages
 
         private void JsonFileShoppingListGenerate_Button_Clicked(object sender, EventArgs e)
         {
-            string FilePath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Einkaufsliste.json");
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Einkaufsliste.json");
 
             ObservableCollection<Ingredient> shoppingList = new ObservableCollection<Ingredient>();
             shoppingList.Add(new Ingredient { Item = "Mehl", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
@@ -191,10 +191,7 @@ namespace Reciply.Pages
             shoppingList.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             shoppingList.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
 
-            File.Delete(FilePath);
-            string json = JsonConvert.SerializeObject(shoppingList);
-            File.WriteAllText(FilePath, json);
-            MainPage.PageInstance.ReadShoppingListFromJson();
+            MainPage.PageInstance.SaveJson(filePath, shoppingList);
         }
 
         private void JsonFileSelectedRecipesGenerate_Button_Clicked(object sender, EventArgs e)
