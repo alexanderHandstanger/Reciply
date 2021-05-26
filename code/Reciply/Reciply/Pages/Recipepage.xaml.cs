@@ -12,6 +12,7 @@ namespace Reciply.Pages
     {
         public ObservableCollection<Recipe> Recipe { get; } = new ObservableCollection<Recipe>();
         private List<double> AmountOfOnePortionList = new List<double>();
+
         public RecipePage(Recipe recipe)
         {           
             InitializeComponent();
@@ -61,6 +62,8 @@ namespace Reciply.Pages
             {
                 MainPage.PageInstance.EinkaufsListe.Add(ingredient);
             }
+            MainPage.PageInstance.SelectedRecipes.Add(Recipe[0]);
+            MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForSelectedRecipes, MainPage.PageInstance.SelectedRecipes);
             MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, MainPage.PageInstance.EinkaufsListe);
             await DisplayAlert("Erfolg", "Rezepte erfolgreich auf die Einkaufsliste gesetzt", "OK");
         }
@@ -68,6 +71,18 @@ namespace Reciply.Pages
         private async void Home_Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopToRootAsync();
+        }
+
+        private async void AddToSelectedRecipes_Button_Clicked(object sender, EventArgs e)
+        {
+            MainPage.PageInstance.SelectedRecipes.Add(Recipe[0]);
+            MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForSelectedRecipes, MainPage.PageInstance.SelectedRecipes);
+            await DisplayAlert("Erfolg", "Rezepte erfolgreich auf die ausgewählte Rezepte gesetzt", "OK");
+        }
+
+        private async void JetztKochen_Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CookRecipeIngredients(Recipe[0]), true);
         }
     }
 }

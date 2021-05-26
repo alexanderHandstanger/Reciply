@@ -91,6 +91,8 @@ namespace Reciply
                         if (itemFromDataAlreadySimplified.Item == itemFromDataToSimplify.Item && itemFromDataAlreadySimplified.UnitOfMeasurement == itemFromDataToSimplify.UnitOfMeasurement)
                         {
                             itemFromDataAlreadySimplified.Amount += itemFromDataToSimplify.Amount;
+                            notInList = false;
+                            break;
                         }
                         else
                         {
