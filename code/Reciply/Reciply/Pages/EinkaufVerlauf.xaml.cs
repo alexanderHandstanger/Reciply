@@ -74,6 +74,7 @@ namespace Reciply.Pages
                     Ingredient.IsSelected = false;
                 }
             }
+            MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, MainPage.PageInstance.EinkaufsListe);
             await Navigation.PopAsync();
         }
 
@@ -84,6 +85,7 @@ namespace Reciply.Pages
                 MainPage.PageInstance.EinkaufsListe.Add(Ingredient);
                 Ingredient.IsSelected = false;
             }
+            MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, MainPage.PageInstance.EinkaufsListe);
             await Navigation.PopAsync();
         }
     }

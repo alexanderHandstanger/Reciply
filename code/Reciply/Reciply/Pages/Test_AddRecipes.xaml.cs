@@ -172,8 +172,6 @@ namespace Reciply.Pages
 
         private void JsonFileShoppingListGenerate_Button_Clicked(object sender, EventArgs e)
         {
-            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Einkaufsliste.json");
-
             ObservableCollection<Ingredient> shoppingList = new ObservableCollection<Ingredient>();
             shoppingList.Add(new Ingredient { Item = "Mehl", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             shoppingList.Add(new Ingredient { Item = "Kartoffeln", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
@@ -191,12 +189,11 @@ namespace Reciply.Pages
             shoppingList.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
             shoppingList.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
 
-            MainPage.PageInstance.SaveJson(filePath, shoppingList);
+            MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, shoppingList);
         }
 
         private void JsonFileSelectedRecipesGenerate_Button_Clicked(object sender, EventArgs e)
         {
-            string FilePathForSelectedRecipes = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "SelectedRecipes.json");
             ObservableCollection<Recipe> SelectedRecipes = new ObservableCollection<Recipe>();
 
             List<Ingredient> ingredients = new List<Ingredient>();
@@ -237,9 +234,15 @@ namespace Reciply.Pages
 
             SelectedRecipes.Add(new Recipe { Id = 2, Description = "Leckere Gemüsesuppe", Duration = 3, Name = "Würzige Suppe", Portion = 4, Rating = 3, Preparation = "Bissi herschneiden und so", Tags = "#Kuchen, #Schnell", Ingredient = ingredients });
 
-            File.Delete(FilePathForSelectedRecipes);
-            string json = JsonConvert.SerializeObject(SelectedRecipes);
-            File.WriteAllText(FilePathForSelectedRecipes, json);
+            MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForSelectedRecipes, SelectedRecipes);
+        }
+
+        private void DeleteJsonButton_Clicked(object sender, EventArgs e)
+        {
+            MainPage.PageInstance.EinkaufsListe = null;
+            MainPage.PageInstance.SelectedRecipes = null;
+            File.Delete(MainPage.PageInstance.FilePathForShoppingList);
+            File.Delete(MainPage.PageInstance.FilePathForSelectedRecipes);
         }
     }
 }
