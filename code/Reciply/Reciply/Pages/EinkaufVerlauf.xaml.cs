@@ -16,9 +16,9 @@ namespace Reciply.Pages
             InitializeComponent();
             Initials();
 
-            LastShoppedItemsId = AllLastShoppedItems.Count;
+            LastShoppedItemsId = AllLastShoppedItems.Count - 1;
             Date.Text = Convert.ToString("Test");
-            LastShoppingList.ItemsSource = AllLastShoppedItems[LastShoppedItemsId - 1];
+            LastShoppingList.ItemsSource = AllLastShoppedItems[LastShoppedItemsId];
         }
 
         public EinkaufVerlauf(ObservableCollection<Ingredient> shoppedItems, DateTime shoppedDate)
@@ -29,12 +29,12 @@ namespace Reciply.Pages
             {
                 Ingredient.IsSelected = false;
             }
-
+            
             Initials();
             AllLastShoppedItems.Add(shoppedItems);
-            LastShoppedItemsId = AllLastShoppedItems.Count;
+            LastShoppedItemsId = AllLastShoppedItems.Count - 1;
             Date.Text = Convert.ToString(shoppedDate);
-            LastShoppingList.ItemsSource = AllLastShoppedItems[LastShoppedItemsId - 1];
+            LastShoppingList.ItemsSource = AllLastShoppedItems[LastShoppedItemsId];
         }
 
         public void Initials()
@@ -66,7 +66,7 @@ namespace Reciply.Pages
 
         private async void TakeOverSelected_Button_Clicked(object sender, EventArgs e)
         {
-            foreach (var Ingredient in AllLastShoppedItems[LastShoppedItemsId - 1])
+            foreach (var Ingredient in AllLastShoppedItems[LastShoppedItemsId])
             {
                 if (Ingredient.IsSelected)
                 {
@@ -80,13 +80,27 @@ namespace Reciply.Pages
 
         private async void TakeOverEverything_Button_Clicked(object sender, EventArgs e)
         {
-            foreach (var Ingredient in AllLastShoppedItems[LastShoppedItemsId - 1])
+            foreach (var Ingredient in AllLastShoppedItems[LastShoppedItemsId])
             {
                 MainPage.PageInstance.EinkaufsListe.Add(Ingredient);
                 Ingredient.IsSelected = false;
             }
             MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, MainPage.PageInstance.EinkaufsListe);
             await Navigation.PopAsync();
+        }
+
+        private void Past_Button_Clicked(object sender, EventArgs e)
+        {
+            LastShoppedItemsId--;
+            LastShoppingList.ItemsSource = AllLastShoppedItems[LastShoppedItemsId];
+            Date.Text = Convert.ToString("Past");
+        }
+
+        private void Future_Button_Clicked(object sender, EventArgs e)
+        {
+            LastShoppedItemsId++;
+            LastShoppingList.ItemsSource = AllLastShoppedItems[LastShoppedItemsId];
+            Date.Text = Convert.ToString("Future");
         }
     }
 }

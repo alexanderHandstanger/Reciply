@@ -51,15 +51,19 @@
             <Grid Margin="10,10,10,10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Row="0" Grid.Column="0" Text="Einkauf vom "/>
-                <Label Grid.Row="0" Grid.Column="1" x:Name="Date"/>
+                <Button Grid.Row="0" Grid.Column="0" Text="Past" Clicked="Past_Button_Clicked"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="Future" Clicked="Future_Button_Clicked"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Einkauf vom " HorizontalOptions="End"/>
+                <Label Grid.Row="1" Grid.Column="1" x:Name="Date"/>
             </Grid>
 
             <ListView 

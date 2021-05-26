@@ -64,7 +64,7 @@ namespace Reciply
         {
             if (dataToSave is ObservableCollection<Ingredient>)
             {
-                dataToSave = SimplifyShoppingList(dataToSave as ObservableCollection<Ingredient>);
+                //dataToSave = SimplifyShoppingList(dataToSave as ObservableCollection<Ingredient>);
             }
             File.Delete(filePath);
             string json = JsonConvert.SerializeObject(dataToSave);
