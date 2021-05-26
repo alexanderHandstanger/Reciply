@@ -243,6 +243,7 @@ namespace Reciply.Pages
             MainPage.PageInstance.SelectedRecipes = null;
             File.Delete(MainPage.PageInstance.FilePathForShoppingList);
             File.Delete(MainPage.PageInstance.FilePathForSelectedRecipes);
+            File.Delete(MainPage.PageInstance.FilePathForShoppedList);
         }
     }
 }
