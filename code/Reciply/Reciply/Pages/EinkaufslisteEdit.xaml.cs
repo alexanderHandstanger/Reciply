@@ -38,7 +38,7 @@ namespace Reciply.Pages
             {
                 EinkaufsListe = new ObservableCollection<Ingredient>();
             }
-            EinkaufsListe.Add(new Ingredient { Item = ArticleEntry, Amount = _amountEntry, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+            MainPage.PageInstance.AddToShoppingList(new Ingredient { Item = ArticleEntry, Amount = _amountEntry, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
 
             MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, EinkaufsListe);
         }

@@ -60,7 +60,7 @@ namespace Reciply.Pages
         {
             foreach (var ingredient in Recipe[0].Ingredient)
             {
-                MainPage.PageInstance.EinkaufsListe.Add(ingredient);
+                MainPage.PageInstance.AddToShoppingList(ingredient);
             }
             MainPage.PageInstance.SelectedRecipes.Add(Recipe[0]);
             MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForSelectedRecipes, MainPage.PageInstance.SelectedRecipes);

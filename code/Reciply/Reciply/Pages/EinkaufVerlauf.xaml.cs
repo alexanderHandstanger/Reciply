@@ -75,7 +75,7 @@ namespace Reciply.Pages
                 {
                     if (Ingredient.IsSelected)
                     {
-                        MainPage.PageInstance.EinkaufsListe.Add(Ingredient);
+                        MainPage.PageInstance.AddToShoppingList(Ingredient);
                         Ingredient.IsSelected = false;
                     }
                 }
@@ -95,7 +95,7 @@ namespace Reciply.Pages
             {
                 foreach (var Ingredient in ShoppedItems[ActualShoppedItemsId].Ingredients)
                 {
-                    MainPage.PageInstance.EinkaufsListe.Add(Ingredient);
+                    MainPage.PageInstance.AddToShoppingList(Ingredient);
                     Ingredient.IsSelected = false;
                 }
                 MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, MainPage.PageInstance.EinkaufsListe);

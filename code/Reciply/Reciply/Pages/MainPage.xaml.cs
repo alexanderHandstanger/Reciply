@@ -63,51 +63,23 @@ namespace Reciply
 
         public void SaveJson(string filePath, object dataToSave)
         {
-            if (dataToSave is ObservableCollection<Ingredient>)
-            {
-                dataToSave = SimplifyShoppingList(dataToSave as ObservableCollection<Ingredient>);
-            }
             File.Delete(filePath);
             string json = JsonConvert.SerializeObject(dataToSave);
             File.WriteAllText(filePath, json);
         }
 
         //Other Methods
-        public ObservableCollection<Ingredient> SimplifyShoppingList(ObservableCollection<Ingredient> dataToSimplify)
+        public void AddToShoppingList(Ingredient itemToAdd)
         {
-            bool notInList = false;
-            ObservableCollection<Ingredient> betterList = new ObservableCollection<Ingredient>();
-
-            foreach (var itemFromDataToSimplify in dataToSimplify)
+            if (EinkaufsListe.Any(x => x.Item == itemToAdd.Item))
             {
-                if (betterList.Count == 0)
-                {
-                    betterList.Add(itemFromDataToSimplify);
-                }
-                else
-                {
-                    foreach (var itemFromDataAlreadySimplified in betterList)
-                    {
-                        if (itemFromDataAlreadySimplified.Item == itemFromDataToSimplify.Item && itemFromDataAlreadySimplified.UnitOfMeasurement == itemFromDataToSimplify.UnitOfMeasurement)
-                        {
-                            itemFromDataAlreadySimplified.Amount += itemFromDataToSimplify.Amount;
-                            notInList = false;
-                            break;
-                        }
-                        else
-                        {
-                            notInList = true;
-                        }
-                    }
-                    if (notInList)
-                    {
-                        betterList.Add(itemFromDataToSimplify);
-                        notInList = false;
-                    }
-                }
+                var ingredient = EinkaufsListe.Where(x => x.Item == itemToAdd.Item && x.UnitOfMeasurement == itemToAdd.UnitOfMeasurement).First();
+                ingredient.Amount += itemToAdd.Amount;
             }
-            EinkaufsListe = betterList;
-            return betterList;
+            else
+            {
+                EinkaufsListe.Add(itemToAdd);
+            }
         }
 
         //Navigation Buttons

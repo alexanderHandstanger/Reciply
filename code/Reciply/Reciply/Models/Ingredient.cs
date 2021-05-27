@@ -11,6 +11,7 @@ namespace Reciply.Models
         public Recipe Recipe { get; set; } //The recipe 1/n
         public int RecipeId { get; set; } //Foreign Key
         public string Item { get; set; } //Name des zu einkaufenden Gegenstandes (z.B. Mehl)
+
         private double amount;
         public double Amount
         {
