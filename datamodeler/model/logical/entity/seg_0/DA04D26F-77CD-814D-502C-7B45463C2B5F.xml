@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DA04D26F-77CD-814D-502C-7B45463C2B5F" name="Recipe">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 07:50:10 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="B381FDBA-2C90-85C3-A505-C149E45A851C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="37C4F648-4B2F-F23A-302B-1D512D5528E1">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 07:50:18 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="B381FDBA-2C90-85C3-A505-C149E45A851C" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="0F5E01C5-E2A2-7A8C-8ED8-3B5211BC1C1F">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 07:50:38 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="B381FDBA-2C90-85C3-A505-C149E45A851C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Portion" id="C7A1EB4C-D84F-AA0F-8504-0EA7B3485E98">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 07:50:51 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="B381FDBA-2C90-85C3-A505-C149E45A851C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Rating" id="DF814598-BBB2-DFDE-7A3B-1EE11025D9A4">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 07:51:07 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="B381FDBA-2C90-85C3-A505-C149E45A851C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,1,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Duration" id="2352A6C7-81A7-58BB-AF7A-9A6B1C0F16CA">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 07:51:36 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="B381FDBA-2C90-85C3-A505-C149E45A851C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Tags" id="52F8DAE9-C097-B3F2-A8F2-C608E1B74448">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 07:52:33 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="B381FDBA-2C90-85C3-A505-C149E45A851C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Description" id="1F09CB3F-378D-DA37-046E-0EA1ED54B683">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 07:55:26 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="B381FDBA-2C90-85C3-A505-C149E45A851C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Preparation" id="817767D8-7DA3-BC4A-7D2D-27C18BB42764">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 07:55:40 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="B381FDBA-2C90-85C3-A505-C149E45A851C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0089710E-9021-C328-800E-B5DD1F2C5A50" name="Recipe PK">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 07:50:35 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="B381FDBA-2C90-85C3-A505-C149E45A851C" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>37C4F648-4B2F-F23A-302B-1D512D5528E1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
