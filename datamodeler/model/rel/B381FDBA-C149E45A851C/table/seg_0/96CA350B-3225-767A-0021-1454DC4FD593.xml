@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="96CA350B-3225-767A-0021-1454DC4FD593" name="Recipe_Ingridient">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 08:09:53 UTC</createdTime>
+<generatorID>97B000FC-B341-55CA-4A07-57124534FDED</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RIId" id="561B1843-3D0E-16CE-B555-25F29377538D">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 08:09:53 UTC</createdTime>
+<generatorID>0D8A58BF-8A5A-14FB-46B2-B0E222D384C3</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Amount" id="878A1FF6-728B-1983-8DB9-D56553FCBDCF">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 08:09:53 UTC</createdTime>
+<generatorID>672FC6E8-CED3-F834-DF1A-79D7612A9AF2</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Recipe_Id" id="C641689D-A780-B23D-348B-3CC286969881">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 08:09:53 UTC</createdTime>
+<generatorID>A34974CE-830F-6AB0-F94B-8309556B9D76</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="70E40F5F-75D1-3716-BDE3-2AAAD1C1639D" referredColumn="A0ACF022-BE7D-BE84-1B18-93023D8CDB37"/>
+</associations>
+</Column>
+<Column name="Ingridient_Id" id="47DF1D7D-57A0-93A6-7B6A-D5F8536A1162">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 08:09:53 UTC</createdTime>
+<generatorID>CA2B1E38-EFEB-E059-C6D9-3F2C450A044D</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7AC94AA5-DED8-21C4-115A-F44A2FCFA2B6" referredColumn="6834EBCE-C063-B611-85CC-6C1A420FC964"/>
+</associations>
+</Column>
+<Column name="UnitOfMeasurement_Id" id="20B1EB93-2458-AB42-FB30-FA65800ED72A">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 08:09:53 UTC</createdTime>
+<generatorID>0EECD27F-6A02-D282-13D8-B982B5337FBC</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8831EA8F-07B0-DB4E-1692-7A54E7BD1832" referredColumn="DB8CE863-8CC5-4BC9-6676-BF1FDEFF61F2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FD671D08-FAF7-DEE7-0035-D153ED1A13B2" name="Recipe_Ingridient_PK">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 08:09:53 UTC</createdTime>
+<generatorID>78170E2B-3622-D071-DC4A-CF665BE9213B</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="561B1843-3D0E-16CE-B555-25F29377538D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6A3B712E-E21B-24B4-8C5B-42BB2B73419D" name="Recipe_Ingridient_Ingridient_FK">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 08:09:53 UTC</createdTime>
+<generatorID>B35D9904-F654-6EFB-88B3-A63F695A2196</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47DF1D7D-57A0-93A6-7B6A-D5F8536A1162"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A81CB8CC-D9B9-3701-B2D8-BABBC2BF7A0A" name="Recipe_Ingridient_Recipe_FK">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 08:09:53 UTC</createdTime>
+<generatorID>4EC9D97E-C57B-8BEC-35F9-A99772327D8B</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C641689D-A780-B23D-348B-3CC286969881"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="72CF2DE1-240C-ACA3-F5FB-91514125BA0D" name="Recipe_Ingridient_UnitOfMeasurement_FK">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 08:09:53 UTC</createdTime>
+<generatorID>795083EE-D785-1111-2B08-82ABA71138E2</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20B1EB93-2458-AB42-FB30-FA65800ED72A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

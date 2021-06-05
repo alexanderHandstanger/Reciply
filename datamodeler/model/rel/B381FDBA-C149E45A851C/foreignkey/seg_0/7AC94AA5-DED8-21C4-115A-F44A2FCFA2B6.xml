@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="7AC94AA5-DED8-21C4-115A-F44A2FCFA2B6" containerWithKeyObject="96CA350B-3225-767A-0021-1454DC4FD593" localFKIndex="6A3B712E-E21B-24B4-8C5B-42BB2B73419D" name="Recipe_Ingridient_Ingridient_FK">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 08:09:53 UTC</createdTime>
+<generatorID>B35D9904-F654-6EFB-88B3-A63F695A2196</generatorID>
+<ownerDesignName>model</ownerDesignName>
+<referredTableLongName>Ingridient</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FEE8FBB3-ED91-5DC4-390D-DD21A6EABCB6</referredTableID>
+<keyObject>DE6A34C1-5C5A-3086-88D1-802DED946926</keyObject>
+<referredKeyID>DE6A34C1-5C5A-3086-88D1-802DED946926</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

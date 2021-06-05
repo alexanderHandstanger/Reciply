@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="UnitOfMeasurement_RI" directorySegmentName="seg_0" id="795083EE-D785-1111-2B08-82ABA71138E2">
+<createdBy>Alex</createdBy>
+<createdTime>2021-06-02 08:09:15 UTC</createdTime>
+<ownerDesignName>model</ownerDesignName>
+<engineerTo>
+<item key="B381FDBA-2C90-85C3-A505-C149E45A851C" value="true"/>
+</engineerTo>
+<sourcePk>7C9F1698-F1AD-7C95-B14C-61502C4C92A3</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BBA4E452-FA15-058C-2A45-672706AC0218</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>97B000FC-B341-55CA-4A07-57124534FDED</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
