@@ -1,5 +1,6 @@
 ﻿using Reciply.Models;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -9,54 +10,56 @@ namespace Reciply.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EinkaufVerlauf : ContentPage
     {
-        private ObservableCollection<ObservableCollection<Ingredient>> AllLastShoppedItems = new ObservableCollection<ObservableCollection<Ingredient>>();
-        private int LastShoppedItemsId;
+        private ObservableCollection<ShoppedIngredient> ShoppedItems = new ObservableCollection<ShoppedIngredient>();
+        private int ActualShoppedItemsId;
+
         public EinkaufVerlauf()
         {
             InitializeComponent();
-            Initials();
+            ShoppedItems = MainPage.PageInstance.ReadJson<ShoppedIngredient>(MainPage.PageInstance.FilePathForShoppedList) as ObservableCollection<ShoppedIngredient>;
+            if (ShoppedItems == null)
+            {
+                ShoppedItems = new ObservableCollection<ShoppedIngredient>();
+            }
 
-            LastShoppedItemsId = AllLastShoppedItems.Count;
-            Date.Text = Convert.ToString("Test");
-            LastShoppingList.ItemsSource = AllLastShoppedItems[LastShoppedItemsId - 1];
+            if (ShoppedItems.Count > 0)
+            {
+                ActualShoppedItemsId = ShoppedItems.Count - 1;
+                Date.Text = Convert.ToString(ShoppedItems[ActualShoppedItemsId].Time);
+                LastShoppingList.ItemsSource = ShoppedItems[ActualShoppedItemsId].Ingredients;
+            }
+            else
+            {
+                DisplayAlert("", "Noch keine Einkäufe getätigt.", "OK");
+                Date.Text = "Noch keine Einkäufe getätigt.";
+            }
         }
 
         public EinkaufVerlauf(ObservableCollection<Ingredient> shoppedItems, DateTime shoppedDate)
         {
             InitializeComponent();
-
-            foreach (var Ingredient in shoppedItems)
+            
+            ShoppedItems = MainPage.PageInstance.ReadJson<ShoppedIngredient>(MainPage.PageInstance.FilePathForShoppedList) as ObservableCollection<ShoppedIngredient>;
+            if (ShoppedItems == null)
             {
-                Ingredient.IsSelected = false;
+                ShoppedItems = new ObservableCollection<ShoppedIngredient>();
             }
 
-            Initials();
-            AllLastShoppedItems.Add(shoppedItems);
-            LastShoppedItemsId = AllLastShoppedItems.Count;
-            Date.Text = Convert.ToString(shoppedDate);
-            LastShoppingList.ItemsSource = AllLastShoppedItems[LastShoppedItemsId - 1];
-        }
-
-        public void Initials()
-        {
-            ObservableCollection<Ingredient> lastLastShoppedItems = new ObservableCollection<Ingredient>();
-            lastLastShoppedItems.Add(new Ingredient { Item = "Mehl", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Kartoffeln", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Schinken", Amount = 50, UnitOfMeasurement = UnitOfMeasurement.dag, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Eier", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Stück, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Pizzateig", Amount = 1, UnitOfMeasurement = UnitOfMeasurement.Pkg, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Reis", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Wasser", Amount = 5, UnitOfMeasurement = UnitOfMeasurement.l, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Essig", Amount = 2, UnitOfMeasurement = UnitOfMeasurement.Teelöffel, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Salz", Amount = 150, UnitOfMeasurement = UnitOfMeasurement.g, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Mais", Amount = 10, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Zuccini", Amount = 0.5, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Zucker", Amount = 12, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Karotten", Amount = 6, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Haferflocken", Amount = 7, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-            lastLastShoppedItems.Add(new Ingredient { Item = "Pasta", Amount = 3, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-
-            AllLastShoppedItems.Add(lastLastShoppedItems);
+            //Generate newest LastShoppedItems
+            ShoppedIngredient lastShoppedItems = new ShoppedIngredient();
+            lastShoppedItems.Ingredients = new List<Ingredient>();
+            foreach (var ingredient in shoppedItems)
+            {
+                ingredient.IsSelected = false;
+                lastShoppedItems.Ingredients.Add(ingredient);
+            }
+            lastShoppedItems.Time = shoppedDate;
+            ShoppedItems.Add(lastShoppedItems);
+            MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppedList, ShoppedItems);
+            
+            ActualShoppedItemsId = ShoppedItems.Count - 1;
+            Date.Text = Convert.ToString(ShoppedItems[ActualShoppedItemsId].Time);
+            LastShoppingList.ItemsSource = ShoppedItems[ActualShoppedItemsId].Ingredients;
         }
 
         private async void Home_Button_Clicked(object sender, EventArgs e)
@@ -66,25 +69,63 @@ namespace Reciply.Pages
 
         private async void TakeOverSelected_Button_Clicked(object sender, EventArgs e)
         {
-            foreach (var Ingredient in AllLastShoppedItems[LastShoppedItemsId - 1])
+            if (ShoppedItems.Count > 0)
             {
-                if (Ingredient.IsSelected)
+                foreach (var Ingredient in ShoppedItems[ActualShoppedItemsId].Ingredients)
                 {
-                    MainPage.PageInstance.EinkaufsListe.Add(Ingredient);
-                    Ingredient.IsSelected = false;
+                    if (Ingredient.IsSelected)
+                    {
+                        MainPage.PageInstance.AddToShoppingList(Ingredient);
+                        Ingredient.IsSelected = false;
+                    }
                 }
+                MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, MainPage.PageInstance.EinkaufsListe);
+                await DisplayAlert("Erfolg", "Zutaten erfolgreich auf die Einkaufsliste gesetzt", "OK");
+                await Navigation.PopAsync();
             }
-            await Navigation.PopAsync();
+            else
+            {
+                await DisplayAlert("Fehler", "Error", "OK");
+            }
         }
 
         private async void TakeOverEverything_Button_Clicked(object sender, EventArgs e)
         {
-            foreach (var Ingredient in AllLastShoppedItems[LastShoppedItemsId - 1])
+            if (ShoppedItems.Count > 0)
             {
-                MainPage.PageInstance.EinkaufsListe.Add(Ingredient);
-                Ingredient.IsSelected = false;
+                foreach (var Ingredient in ShoppedItems[ActualShoppedItemsId].Ingredients)
+                {
+                    MainPage.PageInstance.AddToShoppingList(Ingredient);
+                    Ingredient.IsSelected = false;
+                }
+                MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, MainPage.PageInstance.EinkaufsListe);
+                await DisplayAlert("Erfolg", "Zutaten erfolgreich auf die Einkaufsliste gesetzt", "OK");
+                await Navigation.PopAsync();
             }
-            await Navigation.PopAsync();
+            else
+            {
+                await DisplayAlert("Fehler", "Error", "OK");
+            }
+        }
+
+        private void Past_Button_Clicked(object sender, EventArgs e)
+        {
+            if (ActualShoppedItemsId > 0)
+            {
+                ActualShoppedItemsId--;
+                LastShoppingList.ItemsSource = ShoppedItems[ActualShoppedItemsId].Ingredients;
+                Date.Text = Convert.ToString(ShoppedItems[ActualShoppedItemsId].Time);
+            }
+        }
+
+        private void Future_Button_Clicked(object sender, EventArgs e)
+        {
+            if (ActualShoppedItemsId < ShoppedItems.Count - 1)
+            {
+                ActualShoppedItemsId++;
+                LastShoppingList.ItemsSource = ShoppedItems[ActualShoppedItemsId].Ingredients;
+                Date.Text = Convert.ToString(ShoppedItems[ActualShoppedItemsId].Time);
+            }
         }
     }
 }

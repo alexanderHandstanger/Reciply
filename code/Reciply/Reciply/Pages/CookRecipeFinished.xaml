@@ -63,7 +63,7 @@
                 </Grid.ColumnDefinitions>
                 
                 <Button Grid.Column="0" Text="Back" Clicked="Back_Button_Clicked"/>
-                <Button Grid.Column="1" Text="Finished" Clicked="Home_Button_Clicked"/>
+                <Button Grid.Column="1" Text="Finished" Clicked="Finished_Button_Clicked"/>
             </Grid>
             
         </StackLayout>
