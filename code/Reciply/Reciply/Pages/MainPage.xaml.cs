@@ -14,6 +14,7 @@ namespace Reciply
         public string FilePathForShoppingList = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "ShoppingList.json");
         public string FilePathForSelectedRecipes = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "SelectedRecipes.json");
         public string FilePathForShoppedList = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "ShoppedList.json");
+        public string FilePathForOwnRecipes = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "OwnRecipes.json");
 
         public ObservableCollection<Ingredient> EinkaufsListe = new ObservableCollection<Ingredient>();
         public ObservableCollection<Recipe> SelectedRecipes = new ObservableCollection<Recipe>();
@@ -94,6 +95,7 @@ namespace Reciply
             {
                 await Navigation.PushAsync(new EinkaufVerlauf(ShoppedItems, DateTime.Now), true);
                 ShoppedItems.Clear();
+                Shopped = false;
             }
             else
             {

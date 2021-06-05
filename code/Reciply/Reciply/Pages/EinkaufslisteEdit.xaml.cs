@@ -2,6 +2,7 @@
 using System;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,9 +13,6 @@ namespace Reciply.Pages
     {
         public ObservableCollection<Ingredient> EinkaufsListe = new ObservableCollection<Ingredient>();
 
-        public string ArticleEntry { get; set; }
-
-        private double _amountEntry;
         public EinkaufslisteEdit()
         {
             InitializeComponent();
@@ -22,25 +20,32 @@ namespace Reciply.Pages
             Edit_Shoppinglist.ItemsSource = EinkaufsListe;
         }
 
+        //Methods
+        public static string RemoveSpaces(string input)
+        {
+            return new string(input.ToCharArray().Where(c => !Char.IsWhiteSpace(c)).ToArray());
+        }
+
+        public void AddIngredient()
+        {
+            if (!string.IsNullOrEmpty(ArcticleEntry.Text) || !string.IsNullOrEmpty(AmountEntry.Text))
+            {
+                if (EinkaufsListe == null)
+                {
+                    EinkaufsListe = new ObservableCollection<Ingredient>();
+                }
+                ArcticleEntry.Text = RemoveSpaces(ArcticleEntry.Text);
+                AmountEntry.Text = RemoveSpaces(AmountEntry.Text);
+
+                MainPage.PageInstance.AddToShoppingList(new Ingredient { Item = ArcticleEntry.Text, Amount = Convert.ToDouble(AmountEntry.Text), UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+                MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, EinkaufsListe);
+            }
+        }
+
         //Buttons
         private async void EinkaufVerlauf_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new EinkaufVerlauf(), true);
-        }
-
-        //Methods
-        public void AddIngredient()
-        {
-            if (string.IsNullOrEmpty(ArcticleEntry.Text) || string.IsNullOrEmpty(AmountEntry.Text) || !double.TryParse(AmountEntry.Text, out _amountEntry)) return;
-            ArticleEntry = ArcticleEntry.Text;
-
-            if (EinkaufsListe == null)
-            {
-                EinkaufsListe = new ObservableCollection<Ingredient>();
-            }
-            MainPage.PageInstance.AddToShoppingList(new Ingredient { Item = ArticleEntry, Amount = _amountEntry, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
-
-            MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, EinkaufsListe);
         }
 
         public void DeleteSelectedItemsButton_Clicked(object sender, EventArgs e)
