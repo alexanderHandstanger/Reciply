@@ -90,6 +90,7 @@
                     CachingStrategy="RecycleElement" 
                     SeparatorColor="Transparent" 
                     BackgroundColor="Transparent"
+                    Grid.ColumnSpan="4"
                     Grid.Row="1">
                     <ListView.ItemTemplate>
                         <DataTemplate>

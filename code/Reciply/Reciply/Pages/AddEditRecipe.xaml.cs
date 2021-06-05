@@ -14,7 +14,7 @@ namespace Reciply.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddEditRecipe : ContentPage
     {
-        public Recipe recipe;
+        public Recipe Recipe;
         public ObservableCollection<Ingredient> ingredients = new ObservableCollection<Ingredient>();
         public List<Ingredient> ingredientList = new List<Ingredient>();
         double entryDouble;
@@ -22,10 +22,27 @@ namespace Reciply.Pages
         //Todo private or public recipe
         public AddEditRecipe()
         {
-            recipe=null;
+            Recipe=null;
             ingredients.Clear();
             ingredientList.Clear();
             InitializeComponent();
+        }
+        public AddEditRecipe(Recipe recipe)
+        {
+            Recipe = recipe;
+
+            foreach (var item in recipe.Ingredient)
+            {
+                ingredients.Add(item);
+                ingredientList.Add(item);
+            }
+            InitializeComponent();
+            Ingrediant_list.ItemsSource = Recipe.Ingredient;
+            portion.Text = Convert.ToString(Recipe.Portion);
+            dauer.Text = Convert.ToString(Recipe.Duration);
+            tag.Text = Convert.ToString(Recipe.Tags);
+            beschreibung.Text = Convert.ToString(Recipe.Description);
+            zubereitung.Text = Convert.ToString(Recipe.Preparation);
         }
 
         public void AddIngrediant_Clicked(object sender, EventArgs e)
@@ -49,7 +66,7 @@ namespace Reciply.Pages
                 || string.IsNullOrEmpty(tag.Text)
                 || string.IsNullOrEmpty(beschreibung.Text)
                 || string.IsNullOrEmpty(zubereitung.Text)) return;
-            recipe = new Recipe
+            Recipe = new Recipe
             {
                 Name = recipeName.Text,
                 Ingredient = ingredientList,
