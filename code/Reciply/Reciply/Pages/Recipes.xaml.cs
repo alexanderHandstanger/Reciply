@@ -17,9 +17,11 @@ namespace Reciply
             InitializeComponent();
         }
         
-        private async void Discover_Button_Clicked(object sender, EventArgs e)
+        //Only for testing, will be removed soon -AH
+        //Please fix spelling mistakes (Forwarding) -LN
+        private async void Temp_Farwarding_Clicked(object sender, EventArgs e)
         {
-            //Code below only for testing
+            //TODO ->
             //await Navigation.PushAsync(new Recipepage(/*"Kartoffelpuffer"*/), true); //instead of null we can now write the name of the desired recipe; f. e. "Vanille Keckse"
             await Navigation.PushAsync(new Discover_RecipePage(), true);
         }

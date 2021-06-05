@@ -26,7 +26,7 @@ namespace Reciply.Pages
             await Navigation.PushAsync(new CookRecipePreparation(Recipe), true);
         }
 
-        private async void Rate_Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
             int rating = int.Parse(Rating.Text);
             if (rating >= 0 && rating <= 5)
