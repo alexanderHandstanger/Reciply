@@ -177,8 +177,5 @@
             ContentLayout="Left,-110" 
             Clicked="EinkaufVerlauf_Clicked"
             HeightRequest="60"/>
-        <Button
-            BackgroundColor="Red"
-            Clicked="Test"/>
     </StackLayout>
 </ContentPage>

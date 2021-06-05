@@ -76,9 +76,12 @@ namespace Reciply.Pages
         //public ICommand AddIngrediantCommand => new Command(AddIngredient);
         public void AddIngredient()
         {
-            if (string.IsNullOrEmpty(ArcticleEntry.Text) || string.IsNullOrEmpty(AmountEntry.Text) || !double.TryParse(AmountEntry.Text, out _amountEntry)) return;
+            if (string.IsNullOrEmpty(ArcticleEntry.Text) || string.IsNullOrEmpty(AmountEntry.Text) 
+                || einheit.SelectedItem == null
+                || !double.TryParse(AmountEntry.Text, out _amountEntry)) return;
+            UnitOfMeasurement unit = (UnitOfMeasurement)Enum.Parse(typeof(UnitOfMeasurement), einheit.SelectedItem.ToString());
             ArticleEntry = ArcticleEntry.Text;
-            EinkaufsListe.Add(new Ingredient { Item = ArticleEntry, Amount = _amountEntry, UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+            EinkaufsListe.Add(new Ingredient { Item = ArticleEntry, Amount = _amountEntry, UnitOfMeasurement = unit, IsSelected = false });
         }
 
         //public ICommand DeleteSelectedCommand => new Command(DeleteSelcted);
@@ -96,6 +99,9 @@ namespace Reciply.Pages
         private void AddIngredientButton_Clicked(object sender, EventArgs e)
         {
             AddIngredient();
+            ArcticleEntry.Text = "";
+            AmountEntry.Text = "";
+            einheit.SelectedItem = einheit.Title;
         }
 
         private void DeleteEveryItemButton_Clicked(object sender, EventArgs e)
