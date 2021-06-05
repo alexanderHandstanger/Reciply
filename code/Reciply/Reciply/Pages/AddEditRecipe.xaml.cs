@@ -19,7 +19,6 @@ namespace Reciply.Pages
         public List<Ingredient> ingredientList = new List<Ingredient>();
         double entryDouble;
         int entryInt;
-        //Todo private or public recipe
         public AddEditRecipe()
         {
             Recipe=null;
@@ -76,7 +75,7 @@ namespace Reciply.Pages
                 Description = beschreibung.Text,
                 Preparation = zubereitung.Text
             };
-            //Todo push into DB
+            
         }
 
         public async void Cancle_Clicked(object sender, EventArgs e)
@@ -93,12 +92,7 @@ namespace Reciply.Pages
             zubereitung.Text = "";
 
 
-            await Navigation.PushAsync(new OwnRecipesPage(), true);
-        }
-
-        private async void Home_Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PopToRootAsync();
+            //await Navigation.PushAsync(new OwnRecipes(), true);
         }
     }
 }

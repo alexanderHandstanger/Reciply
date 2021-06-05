@@ -28,16 +28,17 @@ namespace Reciply.Pages
 
         public void AddIngredient()
         {
-            if (!string.IsNullOrEmpty(ArcticleEntry.Text) || !string.IsNullOrEmpty(AmountEntry.Text))
+            if (!string.IsNullOrEmpty(ArcticleEntry.Text) || !string.IsNullOrEmpty(AmountEntry.Text) || !double.TryParse(AmountEntry.Text, out double amount) || einheit.SelectedItem == null)
             {
                 if (EinkaufsListe == null)
                 {
                     EinkaufsListe = new ObservableCollection<Ingredient>();
                 }
+                UnitOfMeasurement unit = (UnitOfMeasurement)Enum.Parse(typeof(UnitOfMeasurement), einheit.SelectedItem.ToString());
                 ArcticleEntry.Text = RemoveSpaces(ArcticleEntry.Text);
                 AmountEntry.Text = RemoveSpaces(AmountEntry.Text);
 
-                MainPage.PageInstance.AddToShoppingList(new Ingredient { Item = ArcticleEntry.Text, Amount = Convert.ToDouble(AmountEntry.Text), UnitOfMeasurement = UnitOfMeasurement.kg, IsSelected = false });
+                MainPage.PageInstance.AddToShoppingList(new Ingredient { Item = ArcticleEntry.Text, Amount = Convert.ToDouble(AmountEntry.Text), UnitOfMeasurement = unit, IsSelected = false });
                 MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, EinkaufsListe);
             }
         }
@@ -48,6 +49,7 @@ namespace Reciply.Pages
             await Navigation.PushAsync(new EinkaufVerlauf(), true);
         }
 
+        //public ICommand DeleteSelectedCommand => new Command(DeleteSelcted);
         public void DeleteSelectedItemsButton_Clicked(object sender, EventArgs e)
         {
             for (int i = EinkaufsListe.Count - 1; i >= 0; i--)
@@ -64,6 +66,9 @@ namespace Reciply.Pages
         private void AddIngredientButton_Clicked(object sender, EventArgs e)
         {
             AddIngredient();
+            ArcticleEntry.Text = "";
+            AmountEntry.Text = "";
+            einheit.SelectedItem = einheit.Title;
         }
 
         private void DeleteEveryItemButton_Clicked(object sender, EventArgs e)

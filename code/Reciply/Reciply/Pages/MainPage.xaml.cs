@@ -100,7 +100,7 @@ namespace Reciply
             else
             {
                 await Navigation.PushAsync(new EinkaufVerlauf(), true);
-            }         
+            }
         }
 
         private async void ButtonClicked_JetztKochen(object sender, EventArgs e)
