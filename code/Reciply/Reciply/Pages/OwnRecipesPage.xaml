@@ -64,7 +64,7 @@
             </Frame>
             <SearchBar x:Name="SearchBar" Placeholder="Search ..." TextChanged="SearchBar_TextChanged"/>
             <ListView
-            x:Name="ingredients"
+            x:Name="recipes"
             Margin="10"
             HeightRequest="200"
             BackgroundColor="Transparent">

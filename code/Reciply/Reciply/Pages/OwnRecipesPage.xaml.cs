@@ -8,19 +8,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Windows;
+using Reciply.Models;
 
 namespace Reciply.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OwnRecipesPage : ContentPage
     {
-        public ObservableCollection<Models.Recipe> OwnRecipes { get; set; }
-
-        public Command<int> Command1 { get; set; } = new Command<int>(i =>
-        {
-            using var dataContext = new DataContext();
-            var editRecipe = dataContext.Recipes.ElementAt(i);
-        });
+        public ObservableCollection<Recipe> OwnRecipes { get; set; }
 
         public OwnRecipesPage()
         {
@@ -28,8 +23,8 @@ namespace Reciply.Pages
             BindingContext = this;
             Test_AddRecipes.AddRecipes();
             using var dataContext = new DataContext();
-            OwnRecipes = new ObservableCollection<Models.Recipe>(dataContext.Recipes.ToArray());
-            ingredients.ItemsSource = OwnRecipes;
+            OwnRecipes = new ObservableCollection<Recipe>(dataContext.Recipes.ToArray());
+            recipes.ItemsSource = OwnRecipes;
         }
 
         private async void Home_Button_Clicked(object sender, EventArgs e)
@@ -40,7 +35,7 @@ namespace Reciply.Pages
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
             var searchResults = OwnRecipes.Where(r => r.Name.ToLower().Contains(SearchBar.Text.ToLower()));
-            ingredients.ItemsSource = searchResults;
+            recipes.ItemsSource = searchResults;
         }
 
         private void AddButton_Clicked(object sender, EventArgs e)

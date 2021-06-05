@@ -40,15 +40,16 @@
     
     
     <ScrollView>
-        <StackLayout Margin="10" >
+        <StackLayout>
             <Frame BackgroundColor="#70DBFF" Padding="5" CornerRadius="0">
                 <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
             </Frame>
 
             <Label 
-            Text="Zutaten:"
-            FontAttributes="Bold"
-            FontSize="20"/>
+                Text="Zutaten:"
+                FontAttributes="Bold"
+                FontSize="20" 
+                Margin="10,0"/>
 
             <!-- TODO fix refresh bug -->
             <ListView
@@ -74,12 +75,13 @@
             </ListView>
 
             <Label 
-            Text="Portionen:"
-            FontAttributes="Bold"
-            FontSize="20"/>
-            <Label x:Name="Portions" Text="{Binding Portion}"/>
+                Text="Portionen:"
+                FontAttributes="Bold"
+                FontSize="20"
+                Margin="10,0"/>
+            <Label x:Name="Portions" Text="{Binding Portion}" Margin="10,0"/>
 
-            <Grid>
+            <Grid Margin="10,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
@@ -94,37 +96,75 @@
             </Grid>
 
             <Label 
-            Text="Dauer:"
-            FontAttributes="Bold"
-            FontSize="20"/>
-            <Label Text="{Binding Duration}"/>
+                Text="Dauer:"
+                FontAttributes="Bold"
+                FontSize="20"
+                Margin="10,0"/>
+            <Label Text="{Binding Duration}" Margin="10,0"/>
 
             <Label 
-            Text="Tags:"
-            FontAttributes="Bold"
-            FontSize="20"/>
-            <Label Text="{Binding Tags}"/>
+                Text="Tags:"
+                FontAttributes="Bold"
+                FontSize="20"
+                Margin="10,0"/>
+            <Label Text="{Binding Tags}" Margin="10,0"/>
 
             <Label 
-            Text="Beschreibung:"
-            FontAttributes="Bold"
-            FontSize="20"/>
-            <Label Text="{Binding Description}"/>
+                Text="Beschreibung:"
+                FontAttributes="Bold"
+                FontSize="20"
+                Margin="10,0"/>
+            <Label Text="{Binding Description}" Margin="10,0"/>
 
             <Label 
-            Text="Zubereitung:"
-            FontAttributes="Bold"
-            FontSize="20"/>
-            <Label Text="{Binding Preparation}"/>
+                Text="Zubereitung:"
+                FontAttributes="Bold"
+                FontSize="20"
+                Margin="10,0"/>
+            <Label Text="{Binding Preparation}" Margin="10,0"/>
 
-            <Button 
-            Text="Zur Einkaufsliste hinzufügen" 
-            Clicked="AddToShoppingList"
-            Margin="0,0,0,0" 
-            BackgroundColor="#38DA38" 
-            CornerRadius="10" 
-            TextTransform="None"               
-            HeightRequest="60"/>
+            <Grid Margin="10,0,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Button 
+                    Text="Jetzt Kochen" 
+                    Clicked="JetztKochen_Button_Clicked"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,0,0,0" 
+                    BackgroundColor="#38DA38" 
+                    CornerRadius="10" 
+                    TextTransform="None"               
+                    HeightRequest="60"/>
+                <Button 
+                    Text="Zur Einkaufsliste hinzufügen" 
+                    Clicked="AddToShoppingList"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="0,0,0,0" 
+                    BackgroundColor="#38DA38" 
+                    CornerRadius="10" 
+                    TextTransform="None"               
+                    HeightRequest="60"/>
+                <Button 
+                    Text="Nur zu Ausgewählten Rezepte hinzufügen" 
+                    Clicked="AddToSelectedRecipes_Button_Clicked"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="0,0,0,0" 
+                    BackgroundColor="#38DA38" 
+                    CornerRadius="10" 
+                    TextTransform="None"               
+                    HeightRequest="60"/>
+            </Grid>
         </StackLayout>
     </ScrollView>
 </ContentPage>

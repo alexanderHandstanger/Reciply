@@ -38,5 +38,13 @@ namespace Reciply.Pages
                 await DisplayAlert("Invalid rating", "Rating 1-5", "OK");
             }
         }
+
+        private async void Finished_Button_Clicked(object sender, EventArgs e)
+        {
+            MainPage.PageInstance.SelectedRecipes.Remove(Recipe);
+            MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForSelectedRecipes, MainPage.PageInstance.SelectedRecipes);
+
+            await Navigation.PopToRootAsync();
+        }
     }
 }
