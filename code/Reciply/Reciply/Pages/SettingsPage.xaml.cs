@@ -16,5 +16,6 @@ namespace Reciply.Pages
         {
             InitializeComponent();
         }
+
     }
 }

@@ -2,11 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Reciply.Pages.SettingsPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <NavigationPage.TitleView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+
+            <Label 
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Text="Test Username"
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalTextAlignment="Center"/>
+            <!--TODO Add login/logout here with keycloak-->
+            <Button 
+                Grid.Column="2" 
+                ImageSource="logout"
+                BackgroundColor="Transparent"
+                Margin="0,0,10,0"/>
+        </Grid>
+    </NavigationPage.TitleView>
 </ContentPage>
