@@ -38,9 +38,9 @@ namespace Reciply.Pages
             recipes.ItemsSource = searchResults;
         }
 
-        private void AddButton_Clicked(object sender, EventArgs e)
+        private async void AddButton_Clicked(object sender, EventArgs e)
         {
-            //Redirect to Recipes Add/Change Page
+            await Navigation.PushAsync(new AddEditRecipe(), true);
         }
 
         private void EditButton_Clicked(object sender, EventArgs e)

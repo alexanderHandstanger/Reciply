@@ -5,8 +5,6 @@ using System;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Reciply
@@ -36,7 +34,6 @@ namespace Reciply
         public MainPage()
         {
             _instance = this;
-
             InitializeComponent();
 
             EinkaufsListe = ReadJson<Ingredient>(FilePathForShoppingList) as ObservableCollection<Ingredient>;
@@ -103,7 +100,7 @@ namespace Reciply
             else
             {
                 await Navigation.PushAsync(new EinkaufVerlauf(), true);
-            }         
+            }
         }
 
         private async void ButtonClicked_JetztKochen(object sender, EventArgs e)
@@ -129,7 +126,6 @@ namespace Reciply
         {
             SelectedRecipe.IsVisible = !SelectedRecipe.IsVisible;
         }
-
 
         private async void Home_Button_Clicked(object sender, EventArgs e)
         {

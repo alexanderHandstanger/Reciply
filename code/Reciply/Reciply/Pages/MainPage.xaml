@@ -5,38 +5,41 @@
              xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
 
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal">
-            <Button ImageSource="home"
-                    BackgroundColor="Transparent"
-                    HeightRequest="30"
-                    WidthRequest="30"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="EndAndExpand"
-                    Clicked="Home_Button_Clicked"/>
-            <Label Text=""
-                   HorizontalOptions="StartAndExpand"                  
-                   VerticalOptions="CenterAndExpand"
-                   FontAttributes="Bold"
-                   FontSize="20"/>
-            <Label Text="Test Username"
-                   HorizontalOptions="StartAndExpand"
-                   VerticalOptions="CenterAndExpand"
-                   FontAttributes="Bold"
-                   FontSize="20"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+
+            <Button 
+                Grid.Column="0"
+                ImageSource="home"
+                BackgroundColor="Transparent"
+                Clicked="Home_Button_Clicked"/>
+            <Label 
+                Grid.Column="1" 
+                Text="Test Username"
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalTextAlignment="Center"/>
             <!--TODO Add login/logout here with keycloak-->
-            <Button ImageSource="logout"
-                    BackgroundColor="Transparent"
-                    HeightRequest="30"
-                    WidthRequest="30"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="End" />
-            <Button ImageSource="settings"
-                    BackgroundColor="Transparent"
-                    HeightRequest="30"
-                    WidthRequest="30"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="End" />
-        </StackLayout>
+            <Button 
+                Grid.Column="2" 
+                ImageSource="logout"
+                BackgroundColor="Transparent"
+                Margin="0,0,10,0"/>
+            <Button 
+                Grid.Column="3"
+                ImageSource="settings"
+                BackgroundColor="Transparent"
+                Margin="0,0,10,0"/>
+        </Grid>
     </NavigationPage.TitleView>
 
     <StackLayout>
@@ -103,7 +106,7 @@
                             <Label Text="{Binding Item}" />
                             <Label Text="{Binding Amount}" />
                             <Label Text="{Binding UnitOfMeasurement}" />
-                            <input:CheckBox HorizontalOptions="EndAndExpand" TranslationY="-10" TranslationX="-10"/>
+                            <input:CheckBox IsChecked="{Binding IsSelected}" HorizontalOptions="EndAndExpand" TranslationY="-10" TranslationX="-10"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
@@ -116,7 +119,8 @@
             BackgroundColor="#38DA38" 
             CornerRadius="10" 
             TextTransform="None"               
-            HeightRequest="60"/>
+            HeightRequest="60"
+            Clicked="ConfimPurchase_Button_Clicked"/>
 
         <Button 
             Text="Ausgewählte Rezepte" 
