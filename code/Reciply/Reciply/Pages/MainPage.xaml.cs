@@ -37,7 +37,9 @@ namespace Reciply
             InitializeComponent();
 
             EinkaufsListe = ReadJson<Ingredient>(FilePathForShoppingList) as ObservableCollection<Ingredient>;
-            SelectedRecipes = ReadJson<Recipe>(FilePathForSelectedRecipes) as ObservableCollection<Recipe>;
+            var selectedRecipes = ReadJson<Recipe>(FilePathForSelectedRecipes) as ObservableCollection<Recipe>;
+            if (selectedRecipes == null) selectedRecipes = new ObservableCollection<Recipe>();
+            SelectedRecipes = selectedRecipes;
 
             Einkaufsliste.ItemsSource = EinkaufsListe;
             SelectedRecipe.ItemsSource = SelectedRecipes;
@@ -65,7 +67,12 @@ namespace Reciply
         public void SaveJson(string filePath, object dataToSave)
         {
             File.Delete(filePath);
-            string json = JsonConvert.SerializeObject(dataToSave);
+            string json = JsonConvert.SerializeObject(dataToSave, Formatting.None,
+                        new JsonSerializerSettings()
+                        {
+                            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                        });
+            //string json = JsonConvert.SerializeObject(dataToSave);
             File.WriteAllText(filePath, json);
         }
 
@@ -74,8 +81,8 @@ namespace Reciply
         {
             if (EinkaufsListe.Any(x => x.Item == itemToAdd.Item))
             {
-                var ingredient = EinkaufsListe.Where(x => x.Item == itemToAdd.Item && x.UnitOfMeasurement == itemToAdd.UnitOfMeasurement).First();
-                ingredient.Amount += itemToAdd.Amount;
+                var ingredient = EinkaufsListe.Where(x => x.Item == itemToAdd.Item && x.UnitOfMeasurement == itemToAdd.UnitOfMeasurement).FirstOrDefault();
+                if (ingredient != null) ingredient.Amount += itemToAdd.Amount;
             }
             else
             {

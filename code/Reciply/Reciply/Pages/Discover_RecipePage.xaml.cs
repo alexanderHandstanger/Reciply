@@ -1,4 +1,5 @@
-﻿using Reciply.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using Reciply.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,11 +15,12 @@ namespace Reciply.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Discover_RecipePage : ContentPage
     {
-        private ObservableCollection<Recipe> recipes = new ObservableCollection<Recipe>();
+        private List<Recipe> recipes = new List<Recipe>();
         public Discover_RecipePage()
         {
             InitializeComponent();
-            recipes = Initials();
+            using DataContext dataContext = new DataContext();
+            recipes = dataContext.Recipes.Include(x => x.Ingredient).ToList();
             DiscoverRecipesList.ItemsSource = recipes;
             DiscoverRecipesList2.ItemsSource = recipes;
             DiscoverRecipesList3.ItemsSource = recipes;

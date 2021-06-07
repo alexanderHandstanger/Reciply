@@ -141,14 +141,11 @@ namespace Reciply.Pages
             PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
             //Draw the text.
             using var dataContext = new DataContext();
+            var items = MainPage.PageInstance.ReadJson<Ingredient>(MainPage.PageInstance.FilePathForShoppingList) as ObservableCollection<Ingredient>;
             var str = "";
-            foreach (var item in dataContext.Recipes.Include(x => x.Ingredient))
+            foreach (var item in items)
             {
-                str += $"{item.Name}\n";
-                foreach (var ingredient in item.Ingredient)
-                {
-                    str += $"=> {ingredient.Item}: {ingredient.Amount} {ingredient.UnitOfMeasurement}\n";
-                }
+                str += $"=> {item.Item}: {item.Amount} {item.UnitOfMeasurement}\n";
             }
             graphics.DrawString("EinkaufsListe\n" + str, font, PdfBrushes.Black, new PointF(0, 0));
             graphics.Flush();
