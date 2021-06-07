@@ -15,9 +15,8 @@ namespace Reciply
         //Currently the DB is running locally on the phone
         public DataContext()
         {
-            SQLitePCL.Batteries_V2.Init();
-
-            this.Database.EnsureCreated();
+            Database.Migrate();
+            Database.EnsureCreated();
         }
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -28,13 +27,18 @@ namespace Reciply
         //        .OnDelete(DeleteBehavior.Cascade);
         //}
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //If the data in the tables change, rename the xxx.db3 file differently to create a new "migration"
             string dbPath = Path.Combine(FileSystem.AppDataDirectory, "test9.db3");
-
+            string connectionString = "Server=172.17.223.14;Database=reciply;Port=3306;Uid=leon;Pwd=leon;";
             optionsBuilder
-                .UseSqlite($"Filename={dbPath}");
+                .UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         }
     }
 }

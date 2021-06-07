@@ -123,8 +123,6 @@ namespace Reciply.Pages
             using (var dataContext = new DataContext())
             {
                 dataContext.RemoveRange(dataContext.Recipes);
-                dataContext.Database.ExecuteSqlRaw("delete from sqlite_sequence where name='Ingredients';");
-                dataContext.Database.ExecuteSqlRaw("delete from sqlite_sequence where name='Recipes';");
                 dataContext.Recipes.AddRange(recipes);
                 dataContext.SaveChanges();
             }
