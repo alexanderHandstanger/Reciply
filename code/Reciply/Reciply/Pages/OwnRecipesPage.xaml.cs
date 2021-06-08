@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Windows;
 using Reciply.Models;
+using System.IO;
 
 namespace Reciply.Pages
 {
@@ -17,14 +18,27 @@ namespace Reciply.Pages
     {
         public ObservableCollection<Recipe> OwnRecipes = new ObservableCollection<Recipe>();
 
+        private static OwnRecipesPage _instance;
+        public static OwnRecipesPage PageInstance
+        {
+            get
+            {
+                return _instance;
+            }
+        }
+
         public OwnRecipesPage()
         {
             InitializeComponent();
             BindingContext = this;
-           //Test_AddRecipes.AddRecipes();
-           // using var dataContext = new DataContext();
+            _instance = this;
+            //Test_AddRecipes.AddRecipes();
+            // using var dataContext = new DataContext();
             //OwnRecipes = new ObservableCollection<Recipe>(dataContext.Recipes.ToArray());
-            Initialise_OwnRecipes();
+            //Initialise_OwnRecipes();
+            //File.Delete(MainPage.PageInstance.FilePathForOwnRecipes);
+            OwnRecipes = MainPage.PageInstance.ReadJson<Recipe>(MainPage.PageInstance.FilePathForOwnRecipes) as ObservableCollection<Recipe>;
+            if (OwnRecipes == null) OwnRecipes = new ObservableCollection<Recipe>();
             recipes.ItemsSource = OwnRecipes;
         }
 
@@ -89,9 +103,8 @@ namespace Reciply.Pages
 
         private async void EditButton_Clicked(object sender, EventArgs e)
         {
-            var selectedObject = ((Button)sender).CommandParameter;
-            int selectedItemId = int.Parse(string.Format("{0}", selectedObject));
-            Recipe selectedItem = OwnRecipes.Where(x => x.Id == selectedItemId).FirstOrDefault();    
+            var selectedObject = ((Button)sender).CommandParameter as string;
+            Recipe selectedItem = OwnRecipes.Where(x => x.Name == selectedObject).FirstOrDefault();    
             await Navigation.PushAsync(new AddEditRecipe(selectedItem), true);
         }
     }

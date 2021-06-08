@@ -44,38 +44,76 @@ namespace Reciply.Pages
             zubereitung.Text = Convert.ToString(Recipe.Preparation);
         }
 
-        public void AddIngrediant_Clicked(object sender, EventArgs e)
+        public async void AddIngrediant_Clicked(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(ingrediant.Text) 
                 || string.IsNullOrEmpty(amount.Text) || !double.TryParse(amount.Text, out entryDouble)
-                || einheit.SelectedItem == null) return;
+                || einheit.SelectedItem == null)
+            {
+                await DisplayAlert("Invalid Input", "Input is invalid", "OK");
+                return;
+            }
             UnitOfMeasurement unit = (UnitOfMeasurement)Enum.Parse(typeof(UnitOfMeasurement), einheit.SelectedItem.ToString());
             ingredients.Add(new Ingredient { Item = ingrediant.Text, Amount = double.Parse(amount.Text), UnitOfMeasurement = unit });
             ingredientList.Add(new Ingredient { Item = ingrediant.Text, Amount = double.Parse(amount.Text), UnitOfMeasurement = unit });
+            Ingrediant_list.ItemsSource = ingredients;
             ingrediant.Text = null;
             amount.Text = null;
             einheit.SelectedItem = einheit.Title;
         }
 
-        public void AddRecipe_Clicked(object sender, EventArgs e)
+        public async void AddRecipe_Clicked(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(recipeName.Text)
                 || string.IsNullOrEmpty(portion.Text) || !int.TryParse(portion.Text, out entryInt)
                 || string.IsNullOrEmpty(dauer.Text) || !double.TryParse(dauer.Text, out entryDouble)
                 || string.IsNullOrEmpty(tag.Text)
                 || string.IsNullOrEmpty(beschreibung.Text)
-                || string.IsNullOrEmpty(zubereitung.Text)) return;
+                || string.IsNullOrEmpty(zubereitung.Text))
+            {
+                await DisplayAlert("Invalid Input", "Input is invalid", "OK");
+                return;
+            }
             Recipe = new Recipe
             {
                 Name = recipeName.Text,
-                Ingredient = ingredientList,
+                Ingredient = ingredients.ToList(),
                 Portion = int.Parse(portion.Text),
                 Duration = double.Parse(dauer.Text),
                 Tags = tag.Text,
                 Description = beschreibung.Text,
                 Preparation = zubereitung.Text
             };
-            
+
+            //if (OwnRecipesPage.PageInstance.OwnRecipes.Any(x => x.Name == Recipe.Name))
+            //{
+            //    var recipe = OwnRecipesPage.PageInstance.OwnRecipes.Where(x => x.Name == Recipe.Name).FirstOrDefault();
+            //    if (recipe != null) recipe = Recipe;
+
+            //    if (toggle.IsToggled)
+            //    {
+            //        using DataContext datacontext = new DataContext();
+            //        var recipes = datacontext.Recipes.Where(x => x.Name == Recipe.Name).FirstOrDefault();
+            //        if (recipes != null) recipes = Recipe;
+            //        await datacontext.SaveChangesAsync();
+            //    }
+            //}
+            //else
+            //{
+                
+            //}
+
+            if (toggle.IsToggled)
+            {
+                using DataContext datacontext = new DataContext();
+                await datacontext.AddAsync(Recipe);
+                await datacontext.SaveChangesAsync();
+            }
+
+            OwnRecipesPage.PageInstance.OwnRecipes.Add(Recipe);
+            MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForOwnRecipes, OwnRecipesPage.PageInstance.OwnRecipes);
+
+            await Navigation.PopAsync();
         }
 
         public async void Cancle_Clicked(object sender, EventArgs e)

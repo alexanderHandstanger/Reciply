@@ -81,7 +81,7 @@
                                     WidthRequest="30"
                                     VerticalOptions="CenterAndExpand"
                                     HorizontalOptions="EndAndExpand"
-                                    Clicked="EditButton_Clicked" CommandParameter="{Binding Id}"/>
+                                    Clicked="EditButton_Clicked" CommandParameter="{Binding Name}"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

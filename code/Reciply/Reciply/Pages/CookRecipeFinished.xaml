@@ -53,7 +53,6 @@
 
             <Entry x:Name="Rating" Keyboard="Numeric"/>
             <Button Text="Bewerten" Clicked="Button_Clicked"/>
-
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -63,7 +62,9 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
+
                 
+
                 <Button Grid.Column="0" Text="Back" Clicked="Back_Button_Clicked"/>
                 <Button Grid.Column="1" Text="Finished" Clicked="Finished_Button_Clicked"/>
             </Grid>

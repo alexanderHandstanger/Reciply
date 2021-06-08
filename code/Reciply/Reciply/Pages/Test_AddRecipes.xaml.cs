@@ -27,7 +27,7 @@ namespace Reciply.Pages
             InitializeComponent();
         }
 
-        public static void AddRecipes()
+        public async static void AddRecipes()
         {
             var recipes = new List<Recipe>()
             {
@@ -123,8 +123,8 @@ namespace Reciply.Pages
             using (var dataContext = new DataContext())
             {
                 dataContext.RemoveRange(dataContext.Recipes);
-                dataContext.Recipes.AddRange(recipes);
-                dataContext.SaveChanges();
+                await dataContext.Recipes.AddRangeAsync(recipes);
+                await dataContext.SaveChangesAsync();
             }
         }
 

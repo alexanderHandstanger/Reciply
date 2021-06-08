@@ -36,7 +36,7 @@ namespace Reciply
         {
             //If the data in the tables change, rename the xxx.db3 file differently to create a new "migration"
             string dbPath = Path.Combine(FileSystem.AppDataDirectory, "test9.db3");
-            string connectionString = "Server=;Database=reciply;Port=3306;Uid=;Pwd=;";
+            string connectionString = "Server=172.17.223.14;Database=reciply;Port=3306;Uid=leon;Pwd=leon;";
             optionsBuilder
                 .UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         }

@@ -31,7 +31,7 @@ namespace Reciply.Pages
             int rating = int.Parse(Rating.Text);
             if (rating >= 0 && rating <= 5)
             {
-                // TODO add rating to recipe
+                Recipe.Rating = rating;
             }
             else
             {
@@ -41,6 +41,7 @@ namespace Reciply.Pages
 
         private async void Finished_Button_Clicked(object sender, EventArgs e)
         {
+
             MainPage.PageInstance.SelectedRecipes.Remove(Recipe);
             MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForSelectedRecipes, MainPage.PageInstance.SelectedRecipes);
 
