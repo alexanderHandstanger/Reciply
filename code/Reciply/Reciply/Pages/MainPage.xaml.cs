@@ -79,7 +79,7 @@ namespace Reciply
         //Other Methods
         public void AddToShoppingList(Ingredient itemToAdd)
         {
-            if (EinkaufsListe.Any(x => x.Item == itemToAdd.Item))
+            if (EinkaufsListe.Any(x => x.Item == itemToAdd.Item && x.UnitOfMeasurement == itemToAdd.UnitOfMeasurement))
             {
                 var ingredient = EinkaufsListe.Where(x => x.Item == itemToAdd.Item && x.UnitOfMeasurement == itemToAdd.UnitOfMeasurement).FirstOrDefault();
                 if (ingredient != null) ingredient.Amount += itemToAdd.Amount;

@@ -102,8 +102,8 @@
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
 
-                <Entry x:Name="ArcticleEntry" Placeholder="Artikel" Grid.Column="0" HeightRequest="110" FontSize="14"/>
-                <Entry x:Name="AmountEntry" Placeholder="Menge" Grid.Column="1" HeightRequest="110" FontSize="14"/>
+                <Entry x:Name="ArcticleEntry" Placeholder="Artikel" Grid.Column="0" HeightRequest="110" FontSize="14" Keyboard="Text"/>
+                <Entry x:Name="AmountEntry" Placeholder="Menge" Grid.Column="1" HeightRequest="110" FontSize="14" Keyboard="Numeric"/>
                 <Picker x:Name="einheit" Grid.Column="2" Title="Einheit" HeightRequest="110" FontSize="14" Margin="5,0,5,0">
                     <Picker.Items>
                         <x:String>kg</x:String>

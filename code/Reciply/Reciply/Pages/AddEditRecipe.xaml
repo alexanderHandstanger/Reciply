@@ -13,10 +13,9 @@
                    HeightRequest="50"
                    VerticalTextAlignment="Center"
                    HorizontalTextAlignment="Center"/>
-            
-            <Entry Placeholder="Name des Rezepts" x:Name="recipeName"/>
-                            
-            <Grid>
+
+                <Entry Placeholder="Name des Rezepts" x:Name="recipeName"/>
+                <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="100"/>
@@ -28,7 +27,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Entry Placeholder="Zutat" x:Name="ingrediant" Grid.Row="0" Grid.Column="0" Margin="5,0,0,0"/>
-                <Entry Placeholder="Menge" x:Name="amount" Grid.Row="0" Grid.Column="1" Margin="5,0,0,0"/>
+                <Entry Placeholder="Menge" x:Name="amount" Grid.Row="0" Grid.Column="1" Margin="5,0,0,0" Keyboard="Numeric"/>
                 <Picker x:Name="einheit" Grid.Row="0" Grid.Column="2" Title="Einheit" Margin="5,0,5,0">
                     <Picker.Items>
                         <x:String>kg</x:String>

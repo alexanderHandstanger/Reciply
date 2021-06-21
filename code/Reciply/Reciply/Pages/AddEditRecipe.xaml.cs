@@ -36,6 +36,7 @@ namespace Reciply.Pages
                 ingredientList.Add(item);
             }
             InitializeComponent();
+            recipeName.Text = Recipe.Name;
             Ingrediant_list.ItemsSource = Recipe.Ingredient;
             portion.Text = Convert.ToString(Recipe.Portion);
             dauer.Text = Convert.ToString(Recipe.Duration);

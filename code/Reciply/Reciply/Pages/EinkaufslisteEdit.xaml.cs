@@ -26,9 +26,9 @@ namespace Reciply.Pages
             return new string(input.ToCharArray().Where(c => !Char.IsWhiteSpace(c)).ToArray());
         }
 
-        public void AddIngredient()
+        public async void AddIngredient()
         {
-            if (!string.IsNullOrEmpty(ArcticleEntry.Text) || !string.IsNullOrEmpty(AmountEntry.Text) || !double.TryParse(AmountEntry.Text, out double amount) || einheit.SelectedItem == null)
+            if (!string.IsNullOrEmpty(ArcticleEntry.Text) && !string.IsNullOrEmpty(AmountEntry.Text) && double.TryParse(AmountEntry.Text, out double amount) && einheit.SelectedItem != null)
             {
                 if (EinkaufsListe == null)
                 {
@@ -40,6 +40,10 @@ namespace Reciply.Pages
 
                 MainPage.PageInstance.AddToShoppingList(new Ingredient { Item = ArcticleEntry.Text, Amount = Convert.ToDouble(AmountEntry.Text), UnitOfMeasurement = unit, IsSelected = false });
                 MainPage.PageInstance.SaveJson(MainPage.PageInstance.FilePathForShoppingList, EinkaufsListe);
+            }
+            else
+            {
+                await DisplayAlert("Fehler", "Ungültige Eingabe!", "OK");
             }
         }
 
